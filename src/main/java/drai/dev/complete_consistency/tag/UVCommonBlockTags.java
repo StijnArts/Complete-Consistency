@@ -1,10 +1,207 @@
-package drai.dev.upgradedvanilla.tag;
+package drai.dev.complete_consistency.tag;
 
-import drai.dev.upgradedvanilla.helpers.*;
+import drai.dev.complete_consistency.helpers.*;
 import net.minecraft.tags.*;
 import net.minecraft.world.level.block.*;
 
 public class UVCommonBlockTags {
+	public static final TagKey<Block> BARREL = TagManager.BLOCKS.makeCommonTag("barrel");
+	public static final TagKey<Block> BOOKSHELVES = TagManager.BLOCKS.makeCommonTag("bookshelves");
+	public static final TagKey<Block> CHEST = TagManager.BLOCKS.makeCommonTag("chest");
+	public static final TagKey<Block> COMPOSTER = TagManager.BLOCKS.makeCommonTag("composter");
+	public static final TagKey<Block> END_STONES = TagManager.BLOCKS.makeCommonTag("end_stones");
+	public static final TagKey<Block> GEN_END_STONES = END_STONES;
+	public static final TagKey<Block> IMMOBILE = TagManager.BLOCKS.makeCommonTag("immobile");
+	public static final TagKey<Block> LEAVES = TagManager.BLOCKS.makeCommonTag("leaves");
+	public static final TagKey<Block> NETHERRACK = TagManager.BLOCKS.makeCommonTag("netherrack");
+	public static final TagKey<Block> MYCELIUM = TagManager.BLOCKS.makeCommonTag("mycelium");
+	public static final TagKey<Block> NETHER_MYCELIUM = TagManager.BLOCKS.makeCommonTag("nether_mycelium");
+	public static final TagKey<Block> NETHER_PORTAL_FRAME = TagManager.BLOCKS.makeCommonTag("nether_pframe");
+	public static final TagKey<Block> NETHER_STONES = TagManager.BLOCKS.makeCommonTag("nether_stones");
+	public static final TagKey<Block> NETHER_ORES = TagManager.BLOCKS.makeCommonTag("nether_ores");
+	public static final TagKey<Block> ORES = TagManager.BLOCKS.makeCommonTag("ores");
+	public static final TagKey<Block> END_ORES = TagManager.BLOCKS.makeCommonTag("end_ores");
+	public static final TagKey<Block> SAPLINGS = TagManager.BLOCKS.makeCommonTag("saplings");
+	public static final TagKey<Block> SEEDS = TagManager.BLOCKS.makeCommonTag("seeds");
+	public static final TagKey<Block> SOUL_GROUND = TagManager.BLOCKS.makeCommonTag("soul_ground");
+	public static final TagKey<Block> SCULK_LIKE = TagManager.BLOCKS.makeCommonTag("sculk_like");
+	public static final TagKey<Block> WOODEN_BARREL = TagManager.BLOCKS.makeCommonTag("wooden_barrels");
+	public static final TagKey<Block> WOODEN_CHEST = TagManager.BLOCKS.makeCommonTag("wooden_chests");
+	public static final TagKey<Block> WOODEN_COMPOSTER = TagManager.BLOCKS.makeCommonTag("wooden_composter");
+	public static final TagKey<Block> WORKBENCHES = TagManager.BLOCKS.makeCommonTag("workbench");
+
+	public static final TagKey<Block> DRAGON_IMMUNE = TagManager.BLOCKS.makeCommonTag("dragon_immune");
+
+	public static final TagKey<Block> MINABLE_WITH_HAMMER = TagManager.BLOCKS.makeCommonTag("mineable/hammer");
+
+	public static final TagKey<Block> IS_OBSIDIAN = TagManager.BLOCKS.makeCommonTag("is_obsidian");
+	public static final TagKey<Block> TERRAIN = TagManager.BLOCKS.makeCommonTag("terrain");
+	public static final TagKey<Block> GRASS_SOIL = TagManager.BLOCKS.makeCommonTag("grass_soil");
+	public static final TagKey<Block> NETHER_TERRAIN = TagManager.BLOCKS.makeCommonTag("nether_terrain");
+	public static final TagKey<Block> BUDDING_BLOCKS = TagManager.BLOCKS.makeCommonTag("budding_blocks");
+	public static final TagKey<Block> WATER_PLANT = TagManager.BLOCKS.makeCommonTag("water_plant");
+	;
+	public static final TagKey<Block> PLANT = TagManager.BLOCKS.makeCommonTag("plant");
+	;
+
+	static void prepareTags() {
+		TagManager.BLOCKS.addOtherTags(MINABLE_WITH_HAMMER, BlockTags.MINEABLE_WITH_PICKAXE);
+		TagManager.BLOCKS.add(SCULK_LIKE, Blocks.SCULK);
+		TagManager.BLOCKS.addOtherTags(DRAGON_IMMUNE, BlockTags.DRAGON_IMMUNE);
+
+		TagManager.BLOCKS.add(END_STONES, Blocks.END_STONE);
+		TagManager.BLOCKS.addOtherTags(NETHER_STONES, BlockTags.BASE_STONE_NETHER);
+
+		TagManager.BLOCKS.add(
+				NETHERRACK,
+				Blocks.NETHERRACK,
+				Blocks.NETHER_QUARTZ_ORE,
+				Blocks.NETHER_GOLD_ORE,
+				Blocks.CRIMSON_NYLIUM,
+				Blocks.WARPED_NYLIUM
+		);
+
+		TagManager.BLOCKS.add(NETHER_ORES, Blocks.NETHER_QUARTZ_ORE, Blocks.NETHER_GOLD_ORE);
+		TagManager.BLOCKS.add(SOUL_GROUND, Blocks.SOUL_SAND, Blocks.SOUL_SOIL);
+
+		TagManager.BLOCKS.add(IS_OBSIDIAN, Blocks.OBSIDIAN, Blocks.CRYING_OBSIDIAN);
+
+		TagManager.BLOCKS.add(MYCELIUM, Blocks.MYCELIUM);
+		TagManager.BLOCKS.addOtherTags(MYCELIUM, NETHER_MYCELIUM);
+
+		TagManager.BLOCKS.addOtherTags(GRASS_SOIL, BlockTags.DIRT, TERRAIN, BlockTags.LOGS, BlockTags.PLANKS);
+
+
+		TagManager.BLOCKS.add(
+				TERRAIN,
+				Blocks.MAGMA_BLOCK,
+				Blocks.GRAVEL,
+				Blocks.SAND,
+				Blocks.RED_SAND,
+				Blocks.GLOWSTONE,
+				Blocks.BONE_BLOCK,
+				Blocks.SCULK
+		);
+		TagManager.BLOCKS.addOtherTags(
+				TERRAIN,
+				NETHER_TERRAIN,
+				BlockTags.DRIPSTONE_REPLACEABLE,
+				BlockTags.BASE_STONE_OVERWORLD,
+				BlockTags.NYLIUM,
+				MYCELIUM,
+				END_STONES
+		);
+
+		TagManager.BLOCKS.add(
+				NETHER_TERRAIN,
+				Blocks.MAGMA_BLOCK,
+				Blocks.GRAVEL,
+				Blocks.RED_SAND,
+				Blocks.GLOWSTONE,
+				Blocks.BONE_BLOCK,
+				Blocks.BLACKSTONE
+		);
+		TagManager.BLOCKS.addOtherTags(
+				NETHER_TERRAIN,
+				NETHERRACK,
+				BlockTags.NYLIUM,
+				NETHER_ORES,
+				SOUL_GROUND,
+				NETHER_MYCELIUM
+		);
+
+		TagManager.BLOCKS.add(UVCommonBlockTags.BOOKSHELVES, Blocks.BOOKSHELF);
+		TagManager.BLOCKS.add(UVCommonBlockTags.CHEST, Blocks.CHEST);
+
+		TagManager.BLOCKS.add(
+				BlockTags.NETHER_CARVER_REPLACEABLES,
+				Blocks.BASALT,
+				Blocks.RED_SAND,
+				Blocks.MAGMA_BLOCK,
+				Blocks.SCULK
+		);
+		TagManager.BLOCKS.addOtherTags(
+				BlockTags.NETHER_CARVER_REPLACEABLES,
+				UVCommonBlockTags.NETHER_STONES,
+				UVCommonBlockTags.NETHERRACK
+		);
+
+		TagManager.BLOCKS.addOtherTags(
+				BlockTags.MINEABLE_WITH_AXE,
+				WOODEN_BARREL,
+				WOODEN_COMPOSTER,
+				WOODEN_CHEST,
+				WORKBENCHES
+		);
+
+		TagManager.BLOCKS.add(WATER_PLANT, Blocks.KELP, Blocks.KELP_PLANT, Blocks.SEAGRASS, Blocks.TALL_SEAGRASS);
+		TagManager.BLOCKS.add(
+				SAPLINGS,
+				Blocks.OAK_SAPLING,
+				Blocks.SPRUCE_SAPLING,
+				Blocks.BIRCH_SAPLING,
+				Blocks.JUNGLE_SAPLING,
+				Blocks.ACACIA_SAPLING,
+				Blocks.DARK_OAK_SAPLING,
+				Blocks.CHERRY_SAPLING,
+				Blocks.BAMBOO_SAPLING,
+				Blocks.MANGROVE_PROPAGULE
+		);
+		TagManager.BLOCKS.addOtherTags(PLANT, SAPLINGS);
+		TagManager.BLOCKS.add(
+				PLANT,
+				Blocks.MANGROVE_LEAVES,
+				Blocks.SHORT_GRASS,
+				Blocks.FERN,
+				Blocks.DANDELION,
+				Blocks.TORCHFLOWER,
+				Blocks.POPPY,
+				Blocks.BLUE_ORCHID,
+				Blocks.ALLIUM,
+				Blocks.AZURE_BLUET,
+				Blocks.RED_TULIP,
+				Blocks.ORANGE_TULIP,
+				Blocks.WHITE_TULIP,
+				Blocks.PINK_TULIP,
+				Blocks.OXEYE_DAISY,
+				Blocks.CORNFLOWER,
+				Blocks.WITHER_ROSE,
+				Blocks.LILY_OF_THE_VALLEY,
+				Blocks.WHEAT,
+				Blocks.CACTUS,
+				Blocks.SUGAR_CANE,
+				Blocks.ATTACHED_PUMPKIN_STEM,
+				Blocks.ATTACHED_MELON_STEM,
+				Blocks.PUMPKIN_STEM,
+				Blocks.MELON_STEM,
+				Blocks.VINE,
+				Blocks.LILY_PAD,
+				Blocks.COCOA,
+				Blocks.CARROTS,
+				Blocks.POTATOES,
+				Blocks.SUNFLOWER,
+				Blocks.LILAC,
+				Blocks.ROSE_BUSH,
+				Blocks.PEONY,
+				Blocks.TALL_GRASS,
+				Blocks.LARGE_FERN,
+				Blocks.TORCHFLOWER_CROP,
+				Blocks.PITCHER_CROP,
+				Blocks.PITCHER_PLANT,
+				Blocks.BEETROOTS,
+				Blocks.BAMBOO,
+				Blocks.SWEET_BERRY_BUSH,
+				Blocks.CAVE_VINES,
+				Blocks.CAVE_VINES_PLANT,
+				Blocks.SPORE_BLOSSOM,
+				Blocks.AZALEA,
+				Blocks.FLOWERING_AZALEA,
+				Blocks.PINK_PETALS,
+				Blocks.BIG_DRIPLEAF,
+				Blocks.BIG_DRIPLEAF_STEM,
+				Blocks.SMALL_DRIPLEAF
+		);
+	}
 	public static boolean initialized = false;
 	public static void register(){
 		if(!initialized){
@@ -39,13 +236,11 @@ public class UVCommonBlockTags {
 			ASTEROID_TIN_ORES = TagKeyHelper.createCommonBlockTagKey("asteroid_tin_ores");
 			BANGLUM_BLOCKS = TagKeyHelper.createCommonBlockTagKey("banglum_blocks");
 			BANGLUM_ORES = TagKeyHelper.createCommonBlockTagKey("banglum_ores");
-			BARREL = TagKeyHelper.createCommonBlockTagKey("barrel");
 			BASALT = TagKeyHelper.createCommonBlockTagKey("basalt");
 			BAUXITE_ORES = TagKeyHelper.createCommonBlockTagKey("bauxite_ores");
 			BLACK_SAND = TagKeyHelper.createCommonBlockTagKey("black_sand");
 			BLUE_SAND = TagKeyHelper.createCommonBlockTagKey("blue_sand");
 			BONE_BLOCKS = TagKeyHelper.createCommonBlockTagKey("bone_blocks");
-			BOOKSHELVES = TagKeyHelper.createCommonBlockTagKey("bookshelves");
 			BRASS_BLOCKS = TagKeyHelper.createCommonBlockTagKey("brass_blocks");
 			BRONZE_BLOCKS = TagKeyHelper.createCommonBlockTagKey("bronze_blocks");
 			BUSHES = TagKeyHelper.createCommonBlockTagKey("bushes");
@@ -54,7 +249,6 @@ public class UVCommonBlockTags {
 			CELESTIUM_BLOCKS = TagKeyHelper.createCommonBlockTagKey("celestium_blocks");
 			CERTUS_QUARTZ_BLOCKS = TagKeyHelper.createCommonBlockTagKey("certus_quartz_blocks");
 			CERTUS_QUARTZ_ORES = TagKeyHelper.createCommonBlockTagKey("certus_quartz_ores");
-			CHEST = TagKeyHelper.createCommonBlockTagKey("chest");
 			CHROME_BLOCKS = TagKeyHelper.createCommonBlockTagKey("chrome_blocks");
 			CINNABAR_ORES = TagKeyHelper.createCommonBlockTagKey("cinnabar_ores");
 			COAL_BLOCKS = TagKeyHelper.createCommonBlockTagKey("coal_blocks");
@@ -84,13 +278,11 @@ public class UVCommonBlockTags {
 			DOUBLE_COMPRESSED_GLOW_STONE = TagKeyHelper.createCommonBlockTagKey("double_compressed_glow_stone");
 			DOUBLE_COMPRESSED_OBSIDIAN = TagKeyHelper.createCommonBlockTagKey("double_compressed_obsidian");
 			DOUBLE_COMPRESSED_STONE = TagKeyHelper.createCommonBlockTagKey("double_compressed_stone");
-			DRAGON_IMMUNE = TagKeyHelper.createCommonBlockTagKey("dragon_immune");
 			DURASTEEL_BLOCKS = TagKeyHelper.createCommonBlockTagKey("durasteel_blocks");
 			ELECTRUM_BLOCKS = TagKeyHelper.createCommonBlockTagKey("electrum_blocks");
 			EMERALD_BLOCKS = TagKeyHelper.createCommonBlockTagKey("emerald_blocks");
 			EMERALD_GRAVELS = TagKeyHelper.createCommonBlockTagKey("emerald_gravels");
 			EMERALD_ORES = TagKeyHelper.createCommonBlockTagKey("emerald_ores");
-			END_STONES = TagKeyHelper.createCommonBlockTagKey("end_stones");
 			ETHERITE_BLOCKS = TagKeyHelper.createCommonBlockTagKey("etherite_blocks");
 			FARMLANDS = TagKeyHelper.createCommonBlockTagKey("farmlands");
 			FENCE_GATES = TagKeyHelper.createCommonBlockTagKey("fence_gates");
@@ -109,7 +301,6 @@ public class UVCommonBlockTags {
 			GRASS = TagKeyHelper.createCommonBlockTagKey("grass");
 			GRASS_LIKE = TagKeyHelper.createCommonBlockTagKey("grass_like");
 			GRAVEL = TagKeyHelper.createCommonBlockTagKey("gravel");
-			IMMOBILE = TagKeyHelper.createCommonBlockTagKey("immobile");
 			INVAR_BLOCKS = TagKeyHelper.createCommonBlockTagKey("invar_blocks");
 			IRIDIUM_BLOCKS = TagKeyHelper.createCommonBlockTagKey("iridium_blocks");
 			IRIDIUM_ORES = TagKeyHelper.createCommonBlockTagKey("iridium_ores");
@@ -125,7 +316,6 @@ public class UVCommonBlockTags {
 			LAPIS_ORES = TagKeyHelper.createCommonBlockTagKey("lapis_ores");
 			LEAD_BLOCKS = TagKeyHelper.createCommonBlockTagKey("lead_blocks");
 			LEAD_ORES = TagKeyHelper.createCommonBlockTagKey("lead_ores");
-			LEAVES = TagKeyHelper.createCommonBlockTagKey("leaves");
 			LIMESTONE = TagKeyHelper.createCommonBlockTagKey("limestone");
 			LUNUM_BLOCKS = TagKeyHelper.createCommonBlockTagKey("lunum_blocks");
 			LUNUM_ORES = TagKeyHelper.createCommonBlockTagKey("lunum_ores");
@@ -147,14 +337,10 @@ public class UVCommonBlockTags {
 			MYTHRIL_ORES = TagKeyHelper.createCommonBlockTagKey("mythril_ores");
 			NATURAL_STONES = TagKeyHelper.createCommonBlockTagKey("natural_stones");
 			NETHERITE_BLOCKS = TagKeyHelper.createCommonBlockTagKey("netherite_blocks");
-			NETHER_MYCELIUM = TagKeyHelper.createCommonBlockTagKey("nether_mycelium");
 			NETHER_PFRAME = TagKeyHelper.createCommonBlockTagKey("nether_pframe");
-			NETHERRACK = TagKeyHelper.createCommonBlockTagKey("netherrack");
 			NETHERRACKS = TagKeyHelper.createCommonBlockTagKey("netherracks");
-			NETHER_STONES = TagKeyHelper.createCommonBlockTagKey("nether_stones");
 			NICKEL_BLOCKS = TagKeyHelper.createCommonBlockTagKey("nickel_blocks");
 			NICKEL_ORES = TagKeyHelper.createCommonBlockTagKey("nickel_ores");
-			ORES = TagKeyHelper.createCommonBlockTagKey("ores");
 			ORES_COAL = TagKeyHelper.createCommonBlockTagKey("ores/coal");
 			ORES_DIAMOND = TagKeyHelper.createCommonBlockTagKey("ores/diamond");
 			ORES_EMERALD = TagKeyHelper.createCommonBlockTagKey("ores/emerald");
@@ -209,7 +395,6 @@ public class UVCommonBlockTags {
 			SALT_ORES = TagKeyHelper.createCommonBlockTagKey("salt_ores");
 			SAND = TagKeyHelper.createCommonBlockTagKey("sand");
 			SANDSTONE = TagKeyHelper.createCommonBlockTagKey("sandstone");
-			SAPLINGS = TagKeyHelper.createCommonBlockTagKey("saplings");
 			SAPPHIRE_BLOCKS = TagKeyHelper.createCommonBlockTagKey("sapphire_blocks");
 			SAPPHIRE_ORES = TagKeyHelper.createCommonBlockTagKey("sapphire_ores");
 			SHELDONITE_ORES = TagKeyHelper.createCommonBlockTagKey("sheldonite_ores");
@@ -218,7 +403,6 @@ public class UVCommonBlockTags {
 			SLIME_BLOCKS = TagKeyHelper.createCommonBlockTagKey("slime_blocks");
 			SLOWSILVER_BLOCKS = TagKeyHelper.createCommonBlockTagKey("slowsilver_blocks");
 			SODALITE_ORES = TagKeyHelper.createCommonBlockTagKey("sodalite_ores");
-			SOUL_GROUND = TagKeyHelper.createCommonBlockTagKey("soul_ground");
 			SPHALERITE_ORES = TagKeyHelper.createCommonBlockTagKey("sphalerite_ores");
 			STAINED_GLASS = TagKeyHelper.createCommonBlockTagKey("stained_glass");
 			STARRITE_BLOCKS = TagKeyHelper.createCommonBlockTagKey("starrite_blocks");
@@ -302,13 +486,11 @@ public class UVCommonBlockTags {
 	public static TagKey<Block> ASTEROID_TIN_ORES;
 	public static TagKey<Block> BANGLUM_BLOCKS;
 	public static TagKey<Block> BANGLUM_ORES;
-	public static TagKey<Block> BARREL;
 	public static TagKey<Block> BASALT;
 	public static TagKey<Block> BAUXITE_ORES;
 	public static TagKey<Block> BLACK_SAND;
 	public static TagKey<Block> BLUE_SAND;
 	public static TagKey<Block> BONE_BLOCKS;
-	public static TagKey<Block> BOOKSHELVES;
 	public static TagKey<Block> BRASS_BLOCKS;
 	public static TagKey<Block> BRONZE_BLOCKS;
 	public static TagKey<Block> BUSHES;
@@ -317,7 +499,6 @@ public class UVCommonBlockTags {
 	public static TagKey<Block> CELESTIUM_BLOCKS;
 	public static TagKey<Block> CERTUS_QUARTZ_BLOCKS;
 	public static TagKey<Block> CERTUS_QUARTZ_ORES;
-	public static TagKey<Block> CHEST;
 	public static TagKey<Block> CHROME_BLOCKS;
 	public static TagKey<Block> CINNABAR_ORES;
 	public static TagKey<Block> COAL_BLOCKS;
@@ -347,13 +528,11 @@ public class UVCommonBlockTags {
 	public static TagKey<Block> DOUBLE_COMPRESSED_GLOW_STONE;
 	public static TagKey<Block> DOUBLE_COMPRESSED_OBSIDIAN;
 	public static TagKey<Block> DOUBLE_COMPRESSED_STONE;
-	public static TagKey<Block> DRAGON_IMMUNE;
 	public static TagKey<Block> DURASTEEL_BLOCKS;
 	public static TagKey<Block> ELECTRUM_BLOCKS;
 	public static TagKey<Block> EMERALD_BLOCKS;
 	public static TagKey<Block> EMERALD_GRAVELS;
 	public static TagKey<Block> EMERALD_ORES;
-	public static TagKey<Block> END_STONES;
 	public static TagKey<Block> ETHERITE_BLOCKS;
 	public static TagKey<Block> FARMLANDS;
 	public static TagKey<Block> FENCE_GATES;
@@ -372,7 +551,6 @@ public class UVCommonBlockTags {
 	public static TagKey<Block> GRASS;
 	public static TagKey<Block> GRASS_LIKE;
 	public static TagKey<Block> GRAVEL;
-	public static TagKey<Block> IMMOBILE;
 	public static TagKey<Block> INVAR_BLOCKS;
 	public static TagKey<Block> IRIDIUM_BLOCKS;
 	public static TagKey<Block> IRIDIUM_ORES;
@@ -388,7 +566,6 @@ public class UVCommonBlockTags {
 	public static TagKey<Block> LAPIS_ORES;
 	public static TagKey<Block> LEAD_BLOCKS;
 	public static TagKey<Block> LEAD_ORES;
-	public static TagKey<Block> LEAVES;
 	public static TagKey<Block> LIMESTONE;
 	public static TagKey<Block> LUNUM_BLOCKS;
 	public static TagKey<Block> LUNUM_ORES;
@@ -410,14 +587,10 @@ public class UVCommonBlockTags {
 	public static TagKey<Block> MYTHRIL_ORES;
 	public static TagKey<Block> NATURAL_STONES;
 	public static TagKey<Block> NETHERITE_BLOCKS;
-	public static TagKey<Block> NETHER_MYCELIUM;
 	public static TagKey<Block> NETHER_PFRAME;
-	public static TagKey<Block> NETHERRACK;
 	public static TagKey<Block> NETHERRACKS;
-	public static TagKey<Block> NETHER_STONES;
 	public static TagKey<Block> NICKEL_BLOCKS;
 	public static TagKey<Block> NICKEL_ORES;
-	public static TagKey<Block> ORES;
 	public static TagKey<Block> ORES_COAL;
 	public static TagKey<Block> ORES_DIAMOND;
 	public static TagKey<Block> ORES_EMERALD;
@@ -470,7 +643,6 @@ public class UVCommonBlockTags {
 	public static TagKey<Block> SALT_ORES;
 	public static TagKey<Block> SAND;
 	public static TagKey<Block> SANDSTONE;
-	public static TagKey<Block> SAPLINGS;
 	public static TagKey<Block> SAPPHIRE_BLOCKS;
 	public static TagKey<Block> SAPPHIRE_ORES;
 	public static TagKey<Block> SHELDONITE_ORES;
@@ -479,7 +651,6 @@ public class UVCommonBlockTags {
 	public static TagKey<Block> SLIME_BLOCKS;
 	public static TagKey<Block> SLOWSILVER_BLOCKS;
 	public static TagKey<Block> SODALITE_ORES;
-	public static TagKey<Block> SOUL_GROUND;
 	public static TagKey<Block> SPHALERITE_ORES;
 	public static TagKey<Block> STAINED_GLASS;
 	public static TagKey<Block> STARRITE_BLOCKS;

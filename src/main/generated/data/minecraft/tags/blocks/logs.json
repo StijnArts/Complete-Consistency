@@ -1,0 +1,36 @@
+{
+  "values": [
+    {
+      "id": "#complete_consistency:oak_log",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_wood",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_log",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_wood",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_stripped_wood",
+      "required": false
+    }
+  ]
+}

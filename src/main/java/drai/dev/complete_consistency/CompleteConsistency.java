@@ -38,13 +38,10 @@ public class CompleteConsistency implements ModInitializer {
         BlockReplacements.replaceBlocks();
         UpgradedVanillaTags.register();
         TagManager.ensureStaticallyLoaded();
-        ModuleRegistry.registerModule(new MinecraftModule());
-        ModuleRegistry.registerModuleFactories();
-        MaterialRegistry.runFactories();
-        onFinishLoading();
+        MinecraftModule.register();
     }
 
-    public void onFinishLoading(){
+    public static void onFinishLoading(){
         ItemGroupHelper.registerSelf();
     }
 }

@@ -1,16 +1,9 @@
-package drai.dev.upgradedvanilla.helpers;
+package drai.dev.complete_consistency.helpers;
 
 import com.google.common.collect.*;
-import com.ibm.icu.impl.*;
-
-import drai.dev.upgradedvanilla.datageneration.providers.loottables.*;
-import net.minecraft.data.models.*;
-import net.minecraft.resources.*;
-import net.minecraft.world.level.*;
+import drai.dev.complete_consistency.datageneration.providers.loottables.*;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.storage.loot.*;
 
-import java.util.*;
 import java.util.function.*;
 
 public class BlockLootHelper {

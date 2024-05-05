@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "complete_consistency:mushroom_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:mushroom_planks"
+  }
+}

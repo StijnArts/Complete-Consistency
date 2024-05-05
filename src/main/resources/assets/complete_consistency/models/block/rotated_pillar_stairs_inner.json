@@ -1,0 +1,13 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "complete_consistency:block/custom_stairs_inner",
+	"textures": {
+		"up": "#y",
+		"down": "#y",
+		"north": "#x",
+		"south": "#x",
+		"east": "#z",
+		"west": "#z",
+		"particle": "#up"
+	}
+}

@@ -1,11 +1,10 @@
-package drai.dev.upgradedvanilla.helpers;
+package drai.dev.complete_consistency.helpers;
 
-import com.ibm.icu.impl.*;
-
-import drai.dev.upgradedvanilla.helpers.composites.*;
+import com.mojang.datafixers.util.*;
+import drai.dev.complete_consistency.helpers.composites.*;
+import net.minecraft.world.item.*;
 
 import javax.imageio.*;
-
 import java.awt.*;
 import java.awt.image.*;
 import java.io.*;
@@ -70,7 +69,7 @@ public class TextureHelper {
 					Color replacement = new Color(map.get(color).getRed(), map.get(color).getGreen(), map.get(color).getBlue(), toReplace.get(key).getAlpha());
 					//System.out.println(replacement);
 					g.setColor(replacement);
-					g.fillRect(key.first, key.second, 1, 1);
+					g.fillRect(key.getFirst(), key.getSecond(), 1, 1);
 				}
 			}
 		}
@@ -351,6 +350,7 @@ public class TextureHelper {
 	}
 
 	private static void saveImage(BufferedImage image, String outputLocation, String outputDir, String id) throws IOException {
+
 		File outputFile = RelativeFileHelper.getAssetLocation("/"+id +"/textures/" + outputLocation + ".png");
 		File dir = RelativeFileHelper.getAssetLocation("/"+id +"/textures/"+ outputDir);
 		Files.createDirectories(dir.toPath());

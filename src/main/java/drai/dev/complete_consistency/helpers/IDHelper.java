@@ -1,7 +1,9 @@
-package drai.dev.upgradedvanilla.helpers;
+package drai.dev.complete_consistency.helpers;
+
+import net.minecraft.resources.*;
 
 public class IDHelper {
-	public static String createID(String name, String modID){
-		return modID+":"+name;
+	public static ResourceLocation createID(String name, String modID){
+		return new ResourceLocation(modID, name);
 	}
 }

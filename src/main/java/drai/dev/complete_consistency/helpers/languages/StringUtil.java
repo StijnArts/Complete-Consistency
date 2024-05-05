@@ -1,4 +1,4 @@
-package drai.dev.upgradedvanilla.helpers.languages;
+package drai.dev.complete_consistency.helpers.languages;
 
 public class StringUtil {
 	public static String capitalizeWord(String str){

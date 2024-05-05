@@ -1,9 +1,6 @@
-package drai.dev.upgradedvanilla.datageneration.providers;
+package drai.dev.complete_consistency.datageneration.providers;
 
-import drai.dev.upgradedvanilla.helpers.*;
-import net.minecraft.data.*;
-
-import java.io.*;
+import drai.dev.complete_consistency.helpers.*;
 
 public class TextureProvider{
 	public static void run(){

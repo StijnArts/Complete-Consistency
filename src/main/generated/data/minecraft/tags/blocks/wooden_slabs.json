@@ -1,0 +1,36 @@
+{
+  "values": [
+    {
+      "id": "#complete_consistency:oak_stripped_log_slab",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_log_slab",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_stripped_log_slab",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_log_slab",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_wood_slab",
+      "required": false
+    }
+  ]
+}

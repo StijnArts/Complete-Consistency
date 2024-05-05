@@ -1,0 +1,9 @@
+{
+  "parent": "complete_consistency:block/rotated_pillar_stairs",
+  "textures": {
+    "particle": "minecraft:block/oak_wood",
+    "x": "minecraft:block/oak_wood_top",
+    "y": "minecraft:block/oak_wood",
+    "z": "minecraft:block/oak_wood"
+  }
+}

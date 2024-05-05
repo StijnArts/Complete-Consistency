@@ -1,9 +1,8 @@
-package drai.dev.upgradedvanilla.tag;
+package drai.dev.complete_consistency.tag;
 
+import net.minecraft.resources.*;
 import net.minecraft.tags.*;
 import net.minecraft.world.level.block.*;
-
-import org.betterx.worlds.together.tag.v3.TagManager;
 
 public class PoiTags {
 	public static final TagKey<Block> LIBRARIAN_WORKSTATION;

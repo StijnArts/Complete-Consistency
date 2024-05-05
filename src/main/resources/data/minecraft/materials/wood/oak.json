@@ -1,0 +1,10 @@
+{
+  "materialName": "Oak",
+  "palette": "minecraft:palettes/wood/oak_palette",
+  "blocks": [
+    {
+      "type": "planks",
+      "id": "minecraft:oak_planks"
+    }
+  ]
+}

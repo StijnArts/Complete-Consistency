@@ -1,7 +1,6 @@
-package drai.dev.upgradedvanilla.helpers.languages;
+package drai.dev.complete_consistency.helpers.languages;
 
-import com.ibm.icu.impl.*;
-
+import com.mojang.datafixers.util.*;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.*;
 

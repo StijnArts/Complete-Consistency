@@ -13,11 +13,10 @@ import net.minecraft.util.*;
 import net.minecraft.world.entity.vehicle.*;
 import org.joml.*;
 
-import java.lang.*;
 import java.lang.Math;
 
 @Environment(value = EnvType.CLIENT)
-public class BoatRenderer {
+public class CustomBoatRenderer {
 
     public static boolean render(
             Boat boat,

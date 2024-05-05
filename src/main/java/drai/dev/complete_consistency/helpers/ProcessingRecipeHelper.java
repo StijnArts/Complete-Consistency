@@ -1,15 +1,14 @@
-package drai.dev.upgradedvanilla.helpers;
+package drai.dev.complete_consistency.helpers;
 
 import com.google.common.collect.*;
-
-import drai.dev.upgradedvanilla.datageneration.recipes.processing.*;
+import drai.dev.complete_consistency.datageneration.recipes.processing.*;
 import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.*;
 
 import java.util.function.*;
 
 public class ProcessingRecipeHelper {
-	private static LinkedHashMultimap<Block, BiConsumer<UVWashingRecipeGen, ItemLike>> washingRecipes = LinkedHashMultimap.create();
+	/*private static LinkedHashMultimap<Block, BiConsumer<UVWashingRecipeGen, ItemLike>> washingRecipes = LinkedHashMultimap.create();
 
 	public static void addWashingRecipe(Block itemLike, BiConsumer<UVWashingRecipeGen, ItemLike> recipeConsumer){
 		washingRecipes.put(itemLike, recipeConsumer);
@@ -57,5 +56,5 @@ public class ProcessingRecipeHelper {
 
 	public static LinkedHashMultimap<ItemLike, BiConsumer<UVMillingRecipeGen, ItemLike>> getMillingRecipes() {
 		return millingRecipes;
-	}
+	}*/
 }

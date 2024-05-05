@@ -1,4 +1,4 @@
-package drai.dev.upgradedvanilla.model;
+package drai.dev.complete_consistency.model;
 
 import net.minecraft.core.*;
 import net.minecraft.data.models.blockstates.*;

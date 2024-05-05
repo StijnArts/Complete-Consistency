@@ -1,6 +1,6 @@
-package drai.dev.upgradedvanilla.helpers;
+package drai.dev.complete_consistency.helpers;
 
-import drai.dev.upgradedvanilla.helpers.languages.*;
+import drai.dev.complete_consistency.helpers.languages.*;
 
 public class LanguageHelper {
 	private static EnglishTranslations englishTranslations = new EnglishTranslations();

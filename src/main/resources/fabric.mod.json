@@ -2,25 +2,35 @@
   "schemaVersion": 1,
   "id": "complete_consistency",
   "version": "${version}",
-
   "name": "Complete Consistency",
   "description": "Adds that missing consistency to minecraft!",
-  "authors": [],
-  "contact": {},
-
+  "authors": [
+    "Drai"
+  ],
+  "contact": {
+    "repo": "https://github.com/Stijn/complete-consistency"
+  },
   "license": "All-Rights-Reserved",
   "icon": "assets/complete_consistency/icon.png",
-
   "environment": "*",
-  "entrypoints": {},
-
-          "mixins": [
-        "complete_consistency.mixins.json"
-      ],
-    
+  "entrypoints": {
+    "fabric-datagen": [
+      "drai.dev.complete_consistency.datageneration.DataGeneration"
+    ],
+    "client": [
+      "drai.dev.complete_consistency.client.CompleteConsistencyClient"
+    ],
+    "main": [
+      "drai.dev.complete_consistency.CompleteConsistency"
+    ]
+  },
+  "mixins": [
+    "complete_consistency.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-              "fabric": "*",
-          "minecraft": "${minecraft_version}"
-  }
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  },
+  "accessWidener" : "completeconsistency.accesswidener"
 }

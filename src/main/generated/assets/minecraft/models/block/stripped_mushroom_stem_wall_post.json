@@ -1,0 +1,9 @@
+{
+  "parent": "complete_consistency:block/log_wall_post",
+  "textures": {
+    "bottom": "minecraft:block/stripped_mushroom_stem_top",
+    "particle": "minecraft:block/stripped_mushroom_stem",
+    "side": "minecraft:block/stripped_mushroom_stem",
+    "top": "minecraft:block/stripped_mushroom_stem_top"
+  }
+}

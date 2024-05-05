@@ -1,4 +1,4 @@
-package drai.dev.upgradedvanilla.helpers.composites;
+package drai.dev.complete_consistency.helpers.composites;
 
 import java.awt.*;
 import java.awt.image.*;

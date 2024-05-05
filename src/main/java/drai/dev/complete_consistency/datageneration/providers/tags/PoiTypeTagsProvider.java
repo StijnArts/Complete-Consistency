@@ -1,21 +1,22 @@
-package drai.dev.upgradedvanilla.datageneration.providers.tags;
+package drai.dev.complete_consistency.datageneration.providers.tags;
 
-import drai.dev.upgradedvanilla.helpers.*;
+import drai.dev.complete_consistency.helpers.*;
 import net.fabricmc.fabric.api.datagen.v1.*;
-import net.fabricmc.fabric.api.datagen.v1.provider.*;
 import net.minecraft.core.*;
+import net.minecraft.core.registries.*;
+import net.minecraft.data.*;
 import net.minecraft.data.tags.*;
 import net.minecraft.resources.*;
 import net.minecraft.tags.*;
 import net.minecraft.world.entity.ai.village.poi.*;
-import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.*;
+
+import java.util.concurrent.*;
 
 public class PoiTypeTagsProvider extends TagsProvider<PoiType> {
-
-	public PoiTypeTagsProvider(FabricDataGenerator dataGenerator) {
-		super(dataGenerator, Registry.POINT_OF_INTEREST_TYPE);
+	public PoiTypeTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+		super(output, Registries.POINT_OF_INTEREST_TYPE, lookupProvider);
 	}
+
 
 //	@Override
 //	protected void generateTags() {
@@ -39,9 +40,9 @@ public class PoiTypeTagsProvider extends TagsProvider<PoiType> {
 //	}
 
 	@Override
-	protected void addTags() {
+	protected void addTags(HolderLookup.Provider provider) {
 		for (TagKey<PoiType> poiTypeTag : TagHelper.getPoiTypeTags().keySet()) {
-			for (PoiType poiType : TagHelper.getPoiTypeTags().get(poiTypeTag)) {
+			for (var poiType : TagHelper.getPoiTypeTags().get(poiTypeTag)) {
 				this.tag(poiTypeTag).add(poiType);
 			}
 		}

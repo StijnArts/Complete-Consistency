@@ -1,10 +1,8 @@
-package drai.dev.upgradedvanilla.model;
+package drai.dev.complete_consistency.model;
 
 import net.minecraft.data.models.model.*;
 import net.minecraft.resources.*;
 import net.minecraft.world.level.block.state.properties.*;
-
-import org.w3c.dom.*;
 
 import java.util.*;
 
@@ -20,38 +18,41 @@ public class UpgradedVanillaModelTemplates {
 	public static TextureSlot HOOK = TextureSlot.create("hook");
 	public static TextureSlot OVERLAY = TextureSlot.create("overlay");
 	public static TextureSlot BODY = TextureSlot.create("body");
+	public static TextureSlot X = TextureSlot.create("x");
+	public static TextureSlot Y = TextureSlot.create("y");
+	public static TextureSlot Z = TextureSlot.create("z");
 	public static final BooleanProperty MAP = BooleanProperty.create("map");
-	public static final ModelTemplate WALL_POST_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/wall_post_side_bottom_top")),
+	public static final ModelTemplate WALL_POST_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/wall_post_side_bottom_top")),
 			Optional.of("_post"),TextureSlot.SIDE,TextureSlot.PARTICLE, TextureSlot.TOP, TextureSlot.BOTTOM);
-	public static final ModelTemplate WALL_SIDE_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/wall_side_side_bottom_top")),
+	public static final ModelTemplate WALL_SIDE_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/wall_side_side_bottom_top")),
 			Optional.of("_side"),TextureSlot.SIDE,TextureSlot.PARTICLE, TextureSlot.TOP, TextureSlot.BOTTOM);
-	public static final ModelTemplate WALL_SIDE_TALL_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/wall_side_tall_side_bottom_top")),
+	public static final ModelTemplate WALL_SIDE_TALL_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/wall_side_tall_side_bottom_top")),
 			Optional.of("_side_tall"),TextureSlot.SIDE,TextureSlot.PARTICLE, TextureSlot.TOP, TextureSlot.BOTTOM);
-	public static final ModelTemplate WALL_INVENTORY_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/wall_inventory_side_bottom_top")),
+	public static final ModelTemplate WALL_INVENTORY_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/wall_inventory_side_bottom_top")),
 			Optional.of("_inventory"),TextureSlot.SIDE,TextureSlot.PARTICLE, TextureSlot.TOP, TextureSlot.BOTTOM);
-	public static final ModelTemplate PATH_WALL_POST = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/path_wall_post")),
+	public static final ModelTemplate PATH_WALL_POST = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/path_wall_post")),
 			Optional.of("_post"),TextureSlot.SIDE,TextureSlot.PARTICLE, TextureSlot.TOP, TextureSlot.BOTTOM);
-	public static final ModelTemplate PATH_WALL_SIDE = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/path_wall_side")),
+	public static final ModelTemplate PATH_WALL_SIDE = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/path_wall_side")),
 			Optional.of("_side"),TextureSlot.SIDE,TextureSlot.PARTICLE, TextureSlot.TOP, TextureSlot.BOTTOM);
-	public static final ModelTemplate PATH_WALL_SIDE_TALL = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/path_wall_side_tall")),
+	public static final ModelTemplate PATH_WALL_SIDE_TALL = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/path_wall_side_tall")),
 			Optional.of("_side_tall"),TextureSlot.SIDE,TextureSlot.PARTICLE, TextureSlot.TOP, TextureSlot.BOTTOM);
-	public static final ModelTemplate PATH_WALL_INVENTORY = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/path_wall_inventory")),
+	public static final ModelTemplate PATH_WALL_INVENTORY = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/path_wall_inventory")),
 			Optional.of("_inventory"),TextureSlot.SIDE,TextureSlot.PARTICLE, TextureSlot.TOP, TextureSlot.BOTTOM);
-	public static final ModelTemplate GRASS_WALL_POST_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/grass_wall_post_side_bottom_top")),
+	public static final ModelTemplate GRASS_WALL_POST_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/grass_wall_post_side_bottom_top")),
 			Optional.of("_post"),TextureSlot.SIDE,TextureSlot.PARTICLE, TextureSlot.TOP, TextureSlot.BOTTOM);
-	public static final ModelTemplate GRASS_WALL_SIDE_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/grass_wall_side_side_bottom_top")),
+	public static final ModelTemplate GRASS_WALL_SIDE_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/grass_wall_side_side_bottom_top")),
 			Optional.of("_side"),TextureSlot.SIDE,TextureSlot.PARTICLE, TextureSlot.TOP, TextureSlot.BOTTOM);
-	public static final ModelTemplate GRASS_WALL_SIDE_TALL_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/grass_wall_side_tall_side_bottom_top")),
+	public static final ModelTemplate GRASS_WALL_SIDE_TALL_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/grass_wall_side_tall_side_bottom_top")),
 			Optional.of("_side_tall"),TextureSlot.SIDE,TextureSlot.PARTICLE, TextureSlot.TOP, TextureSlot.BOTTOM);
-	public static final ModelTemplate GRASS_WALL_INVENTORY_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/grass_wall_inventory_side_bottom_top")),
+	public static final ModelTemplate GRASS_WALL_INVENTORY_SIDE_BOTTOM_TOP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/grass_wall_inventory_side_bottom_top")),
 			Optional.of("_inventory"),TextureSlot.SIDE,TextureSlot.PARTICLE, TextureSlot.TOP, TextureSlot.BOTTOM);
-	public static final ModelTemplate LADDER = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/ladder")),
+	public static final ModelTemplate LADDER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/ladder")),
 			Optional.of(""),TextureSlot.ALL);
-	public static final ModelTemplate LEVER_ON = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/lever_on")),
+	public static final ModelTemplate LEVER_ON = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/lever_on")),
 			Optional.of("_on"),TextureSlot.PARTICLE,BASE,LEVER);
-	public static final ModelTemplate LEVER_OFF = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/lever")),
+	public static final ModelTemplate LEVER_OFF = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/lever")),
 			Optional.of(""),TextureSlot.PARTICLE,BASE,LEVER);
-	public static final ModelTemplate CAMPFIRE_OFF = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/campfire_off")),
+	public static final ModelTemplate CAMPFIRE_OFF = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/campfire_off")),
 			Optional.of("_off"),TextureSlot.PARTICLE,LOG);
 	public static final ModelTemplate CAMPFIRE_TEMPLATE = new ModelTemplate(Optional.of(new ResourceLocation("minecraft","block/template_campfire")),
 			Optional.of("_template"),TextureSlot.PARTICLE,LOG);
@@ -83,100 +84,118 @@ public class UpgradedVanillaModelTemplates {
 			Optional.of(""), TextureSlot.FRONT, TextureSlot.SIDE, TextureSlot.TOP, TextureSlot.BOTTOM, TextureSlot.PARTICLE);
 	public static final ModelTemplate OBSERVER_ON = new ModelTemplate(Optional.of(new ResourceLocation("minecraft","block/observer_on")),
 			Optional.of("_on"), TextureSlot.FRONT, TextureSlot.SIDE, TextureSlot.TOP, TextureSlot.BOTTOM, TextureSlot.PARTICLE);
-	public static final ModelTemplate PATH_SLAB = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/path_slab")),
+	public static final ModelTemplate PATH_SLAB = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/path_slab")),
 			Optional.of(""), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate PATH_SLAB_TOP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/path_slab_top")),
+	public static final ModelTemplate PATH_SLAB_TOP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/path_slab_top")),
 			Optional.of("_top"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate PATH_STAIRS = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/path_stairs")),
+	public static final ModelTemplate PATH_STAIRS = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/path_stairs")),
 			Optional.of(""), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate PATH_STAIRS_INNER = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/path_stairs_inner")),
+	public static final ModelTemplate PATH_STAIRS_INNER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/path_stairs_inner")),
 			Optional.of("_inner"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate PATH_STAIRS_OUTER = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/path_stairs_outer")),
+	public static final ModelTemplate PATH_STAIRS_OUTER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/path_stairs_outer")),
 			Optional.of("_outer"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate PATH_STAIRS_UP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/path_stairs_up")),
+	public static final ModelTemplate PATH_STAIRS_UP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/path_stairs_up")),
 			Optional.of("_up"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate PATH_STAIRS_INNER_UP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/path_stairs_inner_up")),
+	public static final ModelTemplate PATH_STAIRS_INNER_UP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/path_stairs_inner_up")),
 			Optional.of("_inner_up"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate PATH_STAIRS_OUTER_UP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/path_stairs_outer_up")),
+	public static final ModelTemplate PATH_STAIRS_OUTER_UP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/path_stairs_outer_up")),
 			Optional.of("_outer_up"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate GRASS_SLAB = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/grass_slab_template")),
+	public static final ModelTemplate GRASS_SLAB = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/grass_slab_template")),
 			Optional.of(""), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE, OVERLAY);
-	public static final ModelTemplate GRASS_SLAB_TOP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/grass_slab_top_template")),
+	public static final ModelTemplate GRASS_SLAB_TOP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/grass_slab_top_template")),
 			Optional.of("_top"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE, OVERLAY);
-	public static final ModelTemplate GRASS_STAIRS = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/grass_stairs_template")),
+	public static final ModelTemplate GRASS_STAIRS = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/grass_stairs_template")),
 			Optional.of(""), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE, OVERLAY);
-	public static final ModelTemplate GRASS_STAIRS_INNER = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/grass_stairs_inner_template")),
+	public static final ModelTemplate GRASS_STAIRS_INNER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/grass_stairs_inner_template")),
 			Optional.of("_inner"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE, OVERLAY);
-	public static final ModelTemplate GRASS_STAIRS_OUTER = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/grass_stairs_outer_template")),
+	public static final ModelTemplate GRASS_STAIRS_OUTER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/grass_stairs_outer_template")),
 			Optional.of("_outer"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE, OVERLAY);
-	public static final ModelTemplate GRASS_STAIRS_UP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/grass_stairs_up_template")),
+	public static final ModelTemplate GRASS_STAIRS_UP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/grass_stairs_up_template")),
 			Optional.of("_up"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE, OVERLAY);
-	public static final ModelTemplate GRASS_STAIRS_INNER_UP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/grass_stairs_inner_up_template")),
+	public static final ModelTemplate GRASS_STAIRS_INNER_UP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/grass_stairs_inner_up_template")),
 			Optional.of("_inner_up"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE, OVERLAY);
-	public static final ModelTemplate GRASS_STAIRS_OUTER_UP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/grass_stairs_outer_up_template")),
+	public static final ModelTemplate GRASS_STAIRS_OUTER_UP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/grass_stairs_outer_up_template")),
 			Optional.of("_outer_up"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE, OVERLAY);
-	public static final ModelTemplate COLUMN_STAIRS_UP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/column_stairs_up_template")),
+	public static final ModelTemplate COLUMN_STAIRS_UP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/column_stairs_up_template")),
 			Optional.of("_up"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate COLUMN_STAIRS_INNER_UP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/column_stairs_inner_up_template")),
+	public static final ModelTemplate COLUMN_STAIRS_INNER_UP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/column_stairs_inner_up_template")),
 			Optional.of("_inner_up"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate COLUMN_STAIRS_OUTER_UP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/column_stairs_outer_up_template")),
+	public static final ModelTemplate COLUMN_STAIRS_OUTER_UP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/column_stairs_outer_up_template")),
 			Optional.of("_outer_up"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate LEAVES_STAIRS = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/leaves_stairs")),
+	public static final ModelTemplate LEAVES_STAIRS = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/leaves_stairs")),
 			Optional.of("_up"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE);
-	public static final ModelTemplate LEAVES_STAIRS_INNER = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/leaves_inner_stairs")),
+	public static final ModelTemplate LEAVES_STAIRS_INNER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/leaves_inner_stairs")),
 			Optional.of("_inner_up"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE);
-	public static final ModelTemplate LEAVES_STAIRS_OUTER = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/leaves_outer_stairs")),
+	public static final ModelTemplate LEAVES_STAIRS_OUTER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/leaves_outer_stairs")),
 			Optional.of("_outer_up"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE);
-	public static final ModelTemplate LEAVES_SLAB = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/leaves_slab")),
+	public static final ModelTemplate LEAVES_SLAB = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/leaves_slab")),
 			Optional.of(""), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE);
-	public static final ModelTemplate LEAVES_SLAB_TOP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/leaves_slab_top")),
+	public static final ModelTemplate LEAVES_SLAB_TOP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/leaves_slab_top")),
 			Optional.of("_top"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE);
-	public static final ModelTemplate LEAVES_WALL_POST = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/leaves_template_wall_post")),
+	public static final ModelTemplate LEAVES_WALL_POST = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/leaves_template_wall_post")),
 			Optional.of("_post"),TextureSlot.WALL);
-	public static final ModelTemplate LEAVES_WALL_SIDE = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/leaves_template_wall_side")),
+	public static final ModelTemplate LEAVES_WALL_SIDE = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/leaves_template_wall_side")),
 			Optional.of("_side"),TextureSlot.WALL);
-	public static final ModelTemplate LEAVES_WALL_SIDE_TALL = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/leaves_template_wall_side_tall")),
+	public static final ModelTemplate LEAVES_WALL_SIDE_TALL = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/leaves_template_wall_side_tall")),
 			Optional.of("_side_tall"),TextureSlot.WALL);
-	public static final ModelTemplate LEAVES_WALL_INVENTORY = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/leaves_wall_inventory")),
+	public static final ModelTemplate LEAVES_WALL_INVENTORY = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/leaves_wall_inventory")),
 			Optional.of("_inventory"),TextureSlot.WALL);
-	public static final ModelTemplate LOG_WALL_POST = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/log_wall_post")),
+	public static final ModelTemplate LOG_WALL_POST = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/log_wall_post")),
 			Optional.of("_post"),TextureSlot.BOTTOM, TextureSlot.TOP,TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate LOG_WALL_SIDE = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/log_wall_side")),
+	public static final ModelTemplate LOG_WALL_SIDE = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/log_wall_side")),
 			Optional.of("_side"),TextureSlot.BOTTOM, TextureSlot.TOP,TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate LOG_WALL_SIDE_TALL = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/log_wall_side_tall")),
+	public static final ModelTemplate LOG_WALL_SIDE_TALL = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/log_wall_side_tall")),
 			Optional.of("_side_tall"),TextureSlot.BOTTOM, TextureSlot.TOP,TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate LOG_WALL_INVENTORY = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/log_wall_inventory")),
+	public static final ModelTemplate LOG_WALL_INVENTORY = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/log_wall_inventory")),
 			Optional.of("_inventory"),TextureSlot.BOTTOM, TextureSlot.TOP,TextureSlot.SIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate GLAZED_STAIRS = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/glazed_terracotta_stairs")),
+	public static final ModelTemplate GLAZED_STAIRS = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/glazed_terracotta_stairs")),
 			Optional.of(""), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE);
-	public static final ModelTemplate GLAZED_STAIRS_INNER = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/glazed_terracotta_stairs_inner")),
+	public static final ModelTemplate GLAZED_STAIRS_INNER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/glazed_terracotta_stairs_inner")),
 			Optional.of("_inner"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE);
-	public static final ModelTemplate GLAZED_STAIRS_OUTER = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/glazed_terracotta_stairs_outer")),
+	public static final ModelTemplate GLAZED_STAIRS_OUTER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/glazed_terracotta_stairs_outer")),
 			Optional.of("_outer"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE);
-	public static final ModelTemplate GLAZED_SLAB = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/glazed_terracotta_slab")),
+	public static final ModelTemplate GLAZED_SLAB = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/glazed_terracotta_slab")),
 			Optional.of(""), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE);
-	public static final ModelTemplate GLAZED_SLAB_TOP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/glazed_terracotta_slab_top")),
+	public static final ModelTemplate GLAZED_SLAB_TOP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/glazed_terracotta_slab_top")),
 			Optional.of("_top"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE);
-	public static final ModelTemplate GLASS_STAIRS = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/glass/glass_stairs")),
+	public static final ModelTemplate GLASS_STAIRS = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/glass/glass_stairs")),
 			Optional.of(""), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE, TextureSlot.FRONT);
-	public static final ModelTemplate GLASS_STAIRS_INNER = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/glass/glass_stairs_inner")),
+	public static final ModelTemplate GLASS_STAIRS_INNER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/glass/glass_stairs_inner")),
 			Optional.of("_inner"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE, TextureSlot.FRONT);
-	public static final ModelTemplate GLASS_STAIRS_OUTER = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/glass/glass_stairs_outer")),
+	public static final ModelTemplate GLASS_STAIRS_OUTER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/glass/glass_stairs_outer")),
 			Optional.of("_outer"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PARTICLE, TextureSlot.FRONT);
-	public static final ModelTemplate GLASS_SLAB_BOTTOM = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/glass/glass_slab")),
+	public static final ModelTemplate GLASS_SLAB_BOTTOM = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/glass/glass_slab")),
 			Optional.of(""), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE);
-	public static final ModelTemplate GLASS_SLAB_TOP = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/glass/glass_slab_top")),
+	public static final ModelTemplate GLASS_SLAB_TOP = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/glass/glass_slab_top")),
 			Optional.of("_top"), TextureSlot.BOTTOM, TextureSlot.TOP, TextureSlot.SIDE);
-	public static final ModelTemplate LIGHTNING_ROD = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/lightning_rod")),
+	public static final ModelTemplate LIGHTNING_ROD = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/lightning_rod")),
 			Optional.of(""), TextureSlot.TEXTURE, TextureSlot.PARTICLE);
-	public static final ModelTemplate LIGHTNING_ROD_ON = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/lightning_rod_on")),
+	public static final ModelTemplate LIGHTNING_ROD_ON = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/lightning_rod_on")),
 			Optional.of("_on"), TextureSlot.TEXTURE, TextureSlot.PARTICLE);
-	public static final ModelTemplate CHAIN = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/chain")),
+	public static final ModelTemplate CHAIN = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/chain")),
 			Optional.of(""), TextureSlot.ALL, TextureSlot.PARTICLE);
-	public static final ModelTemplate HOPPER = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/hopper")),
+	public static final ModelTemplate HOPPER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/hopper")),
 			Optional.of(""), TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.INSIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate HOPPER_SIDE = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/hopper_side")),
+	public static final ModelTemplate HOPPER_SIDE = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/hopper_side")),
 			Optional.of("_side"), TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.INSIDE, TextureSlot.PARTICLE);
-	public static final ModelTemplate ANVIL = new ModelTemplate(Optional.of(new ResourceLocation("upgradedvanilla","block/template_anvil")),
+	public static final ModelTemplate ANVIL = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/template_anvil")),
 			Optional.of(""), TextureSlot.TOP, BODY, TextureSlot.PARTICLE);
+	public static final ModelTemplate ROTATED_PILLAR_STAIRS = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs")),
+			Optional.of(""), X, Y, Z, TextureSlot.PARTICLE);
+	public static final ModelTemplate ROTATED_PILLAR_STAIRS_INNER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs_inner")),
+			Optional.of("_inner"), X, Y, Z, TextureSlot.PARTICLE);
+	public static final ModelTemplate ROTATED_PILLAR_STAIRS_OUTER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs_outer")),
+			Optional.of("_outer"), X, Y, Z, TextureSlot.PARTICLE);
+	public static final ModelTemplate ROTATED_PILLAR_STAIRS_HORIZONTAL_X = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs")),
+			Optional.of("_horizontal_x"), X, Y, Z, TextureSlot.PARTICLE);
+	public static final ModelTemplate ROTATED_PILLAR_STAIRS_INNER_HORIZONTAL_X = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs_inner")),
+			Optional.of("_inner_horizontal_x"), X, Y, Z, TextureSlot.PARTICLE);
+	public static final ModelTemplate ROTATED_PILLAR_STAIRS_OUTER_HORIZONTAL_X = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs_outer")),
+			Optional.of("_outer_horizontal_x"), X, Y, Z, TextureSlot.PARTICLE);
+	public static final ModelTemplate ROTATED_PILLAR_STAIRS_HORIZONTAL_Z = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs")),
+			Optional.of("_horizontal_z"), X, Y, Z, TextureSlot.PARTICLE);
+	public static final ModelTemplate ROTATED_PILLAR_STAIRS_INNER_HORIZONTAL_Z = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs_inner")),
+			Optional.of("_inner_horizontal_z"), X, Y, Z, TextureSlot.PARTICLE);
+	public static final ModelTemplate ROTATED_PILLAR_STAIRS_OUTER_HORIZONTAL_Z = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs_outer")),
+			Optional.of("_outer_horizontal_z"), X, Y, Z, TextureSlot.PARTICLE);
 }

@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#complete_consistency:oak_planks",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_planks",
+      "required": false
+    }
+  ]
+}

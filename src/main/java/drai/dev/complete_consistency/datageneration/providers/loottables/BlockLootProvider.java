@@ -1,21 +1,20 @@
-package drai.dev.upgradedvanilla.datageneration.providers.loottables;
+package drai.dev.complete_consistency.datageneration.providers.loottables;
 
-import drai.dev.upgradedvanilla.helpers.*;
+import drai.dev.complete_consistency.helpers.*;
 import net.fabricmc.fabric.api.datagen.v1.*;
 import net.fabricmc.fabric.api.datagen.v1.provider.*;
-import net.minecraft.resources.*;
-import net.minecraft.world.level.storage.loot.*;
-import net.minecraft.world.level.storage.loot.parameters.*;
+import net.minecraft.core.*;
 
-import java.util.function.*;
+import java.util.concurrent.*;
 
 public class BlockLootProvider extends FabricBlockLootTableProvider {
-	public BlockLootProvider(FabricDataGenerator dataGenerator) {
-		super(dataGenerator);
+
+	public BlockLootProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
+		super(dataOutput, registryLookup);
 	}
 
 	@Override
-	protected void generateBlockLootTables() {
+	public void generate() {
 		BlockLootHelper.getBlockLoot().forEach((block, consumer)-> consumer.accept(this,block));
 	}
 }

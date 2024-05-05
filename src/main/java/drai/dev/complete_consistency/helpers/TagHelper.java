@@ -1,7 +1,7 @@
-package drai.dev.upgradedvanilla.helpers;
+package drai.dev.complete_consistency.helpers;
 
 import com.google.common.collect.*;
-
+import net.minecraft.core.registries.*;
 import net.minecraft.resources.*;
 import net.minecraft.tags.*;
 import net.minecraft.world.entity.ai.village.poi.*;
@@ -19,11 +19,13 @@ public class TagHelper {
 	private static LinkedHashMultimap<TagKey<Item>, TagKey<Item>> compositeItemTags = LinkedHashMultimap.create();
 
 	private static LinkedHashMultimap<TagKey<PoiType>, ResourceLocation> resourcePoiTypeTags = LinkedHashMultimap.create();
-	private static LinkedHashMultimap<TagKey<PoiType>, PoiType> poiTypeTags = LinkedHashMultimap.create();
+	private static LinkedHashMultimap<TagKey<PoiType>, ResourceKey<PoiType>> poiTypeTags = LinkedHashMultimap.create();
 	private static LinkedHashMultimap<TagKey<PoiType>, TagKey<PoiType>> compositePoiTypeTags = LinkedHashMultimap.create();
 	public static void addItemTags(ResourceLocation item, List<TagKey<Item>> tags){
 		for (TagKey<Item> tag : tags) {
-			resourceItemTags.put(tag,item);
+			if(!item.getPath().equalsIgnoreCase("air")){
+				resourceItemTags.put(tag,item);
+			}
 		}
 	}
 	public static void addItemTags(TagKey<Item> itemTag, List<TagKey<Item>> tags){
@@ -33,7 +35,9 @@ public class TagHelper {
 	}
 	public static void addItemTags(Item item, List<TagKey<Item>> tags){
 		for (TagKey<Item> tag : tags) {
-			itemTags.put(tag,item);
+			if(!BuiltInRegistries.ITEM.getKey(item).getPath().equalsIgnoreCase("air")){
+				itemTags.put(tag,item);
+			}
 		}
 	}
 	public static void addBlockTags(ResourceLocation block, List<TagKey<Block>> tags){
@@ -62,7 +66,7 @@ public class TagHelper {
 			compositePoiTypeTags.put(tag,poiTypeTag);
 		}
 	}
-	public static void addPoiTypeTags(PoiType poiType, List<TagKey<PoiType>> tags){
+	public static void addPoiTypeTags(ResourceKey<PoiType> poiType, List<TagKey<PoiType>> tags){
 		for (TagKey<PoiType> tag : tags) {
 			poiTypeTags.put(tag,poiType);
 		}
@@ -86,7 +90,7 @@ public class TagHelper {
 	public static LinkedHashMultimap<TagKey<Block>, TagKey<Block>> getCompositeBlockTags() {
 		return compositeBlockTags;
 	}
-	public static LinkedHashMultimap<TagKey<PoiType>, PoiType> getPoiTypeTags(){
+	public static LinkedHashMultimap<TagKey<PoiType>, ResourceKey<PoiType>> getPoiTypeTags(){
 		return poiTypeTags;
 	}
 	public static LinkedHashMultimap<TagKey<PoiType>, ResourceLocation> getResourcePoiTypeTags() {

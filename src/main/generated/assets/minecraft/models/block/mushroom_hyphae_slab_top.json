@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "minecraft:block/mushroom_hyphae_top",
+    "side": "minecraft:block/mushroom_hyphae",
+    "top": "minecraft:block/mushroom_hyphae_top"
+  }
+}

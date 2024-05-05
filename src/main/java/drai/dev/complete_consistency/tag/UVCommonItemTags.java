@@ -1,10 +1,21 @@
-package drai.dev.upgradedvanilla.tag;
+package drai.dev.complete_consistency.tag;
 
-import drai.dev.upgradedvanilla.helpers.*;
+import drai.dev.complete_consistency.helpers.*;
 import net.minecraft.tags.*;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.*;
 
 public class UVCommonItemTags {
+	;
+
+	static void prepareTags() {
+		TagManager.ITEMS.add(SOUL_GROUND, Blocks.SOUL_SAND.asItem(), Blocks.SOUL_SOIL.asItem());
+
+		TagManager.ITEMS.add(UVCommonItemTags.CHEST, Items.CHEST);
+		TagManager.ITEMS.add(UVCommonItemTags.IRON_INGOTS, Items.IRON_INGOT);
+		TagManager.ITEMS.add(UVCommonItemTags.FURNACES, Blocks.FURNACE.asItem());
+		TagManager.ITEMS.add(UVCommonItemTags.WATER_BOTTLES, Items.WATER_BUCKET);
+	}
 
 	public static boolean initialized = false;
 	public static void register(){

@@ -1,16 +1,15 @@
-package drai.dev.upgradedvanilla.datageneration.providers;
+/*
+package drai.dev.complete_consistency.datageneration.providers;
 
 import com.google.common.collect.*;
 import com.google.gson.*;
-
 import com.mojang.datafixers.util.*;
-
-import com.simibubi.create.content.curiosities.deco.*;
-
-import drai.dev.upgradedvanilla.mixin.*;
+//import com.simibubi.create.content.curiosities.deco.*;
+import drai.dev.complete_consistency.mixin.*;
 import net.fabricmc.fabric.api.object.builder.v1.block.*;
 import net.minecraft.*;
 import net.minecraft.core.*;
+import net.minecraft.core.registries.*;
 import net.minecraft.data.models.blockstates.*;
 import net.minecraft.resources.*;
 import net.minecraft.world.level.block.*;
@@ -35,7 +34,7 @@ public class ItemFrameBlockStateGenerator implements BlockStateGenerator {
 
 	@Override
 	public Block getBlock() {
-		return Registry.register(Registry.BLOCK, item,new PlacardBlock(FabricBlockSettings.copyOf(Blocks.ACACIA_BUTTON)));
+		return Registry.register(BuiltInRegistries.BLOCK, item,new PlacardBlock(FabricBlockSettings.copyOf(Blocks.ACACIA_BUTTON)));
 	}
 
 	@Override
@@ -74,3 +73,4 @@ public class ItemFrameBlockStateGenerator implements BlockStateGenerator {
 		return new ItemFrameBlockStateGenerator(resourceLocation, ImmutableList.copyOf(variants));
 	}
 }
+*/

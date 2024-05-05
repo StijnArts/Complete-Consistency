@@ -1,12 +1,9 @@
-package drai.dev.upgradedvanilla.helpers;
+package drai.dev.complete_consistency.helpers;
 
 import com.google.common.collect.*;
-
 import net.minecraft.data.models.*;
-import net.minecraft.world.item.*;
 import net.minecraft.world.level.*;
 
-import java.util.*;
 import java.util.function.*;
 
 public class BlockStateHelper {

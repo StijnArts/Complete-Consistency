@@ -1,14 +1,12 @@
-package drai.dev.upgradedvanilla.datageneration.providers;
+package drai.dev.complete_consistency.datageneration.providers;
 
-import drai.dev.upgradedvanilla.helpers.*;
+import drai.dev.complete_consistency.helpers.*;
 import net.fabricmc.fabric.api.datagen.v1.*;
 import net.fabricmc.fabric.api.datagen.v1.provider.*;
 import net.minecraft.data.models.*;
-import net.minecraft.data.models.model.*;
-import net.minecraft.world.level.block.*;
 
 public class ModelProvider extends FabricModelProvider{
-	public ModelProvider(FabricDataGenerator dataGenerator) {
+	public ModelProvider(FabricDataOutput dataGenerator) {
 		super(dataGenerator);
 	}
 
