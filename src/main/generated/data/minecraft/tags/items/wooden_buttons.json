@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "#complete_consistency:oak_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_wood_button",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_button",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_wood_button",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_button",
+      "required": false
+    }
+  ]
+}

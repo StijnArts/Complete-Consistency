@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "P": {
+      "tag": "complete_consistency:mushroom_stripped_wood"
+    },
+    "S": {
+      "item": "complete_consistency:mushroom_stick"
+    }
+  },
+  "pattern": [
+    "SPS",
+    "SPS"
+  ],
+  "result": {
+    "count": 2,
+    "id": "minecraft:stripped_mushroom_hyphae_fence_gate"
+  }
+}

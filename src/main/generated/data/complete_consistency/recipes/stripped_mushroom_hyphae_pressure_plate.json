@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "P": {
+      "tag": "complete_consistency:mushroom_stripped_wood"
+    }
+  },
+  "pattern": [
+    "PP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:stripped_mushroom_hyphae_pressure_plate"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "#complete_consistency:oak_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_fence_gate",
+      "required": false
+    }
+  ]
+}

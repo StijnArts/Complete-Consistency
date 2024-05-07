@@ -9,11 +9,19 @@
       "required": false
     },
     {
+      "id": "#complete_consistency:oak_slab",
+      "required": false
+    },
+    {
       "id": "#complete_consistency:mushroom_stripped_wood_slab",
       "required": false
     },
     {
       "id": "#complete_consistency:mushroom_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_slab",
       "required": false
     }
   ]

@@ -153,4 +153,8 @@ public abstract class BlockMaterial {
     public MapColor getColor() {
         return this.mapColor;
     }
+
+    public Item getItem(String name) {
+        return items.get(name);
+    }
 }

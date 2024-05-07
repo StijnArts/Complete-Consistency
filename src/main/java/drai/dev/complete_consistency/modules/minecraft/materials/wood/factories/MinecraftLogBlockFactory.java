@@ -44,19 +44,6 @@ public class MinecraftLogBlockFactory {
                     BlockLootSubProvider::dropSelf,
                     blockTags, itemTags);
         GenericBlockFactory.createBlock(material, MinecraftWoodBlocks.LOG.getName(), material + material.getLogAffix().toLowerCase().replaceAll(" ", "_"), blockSupplier, blockTags, itemTags);
-//        if(returnBlock == null) {
-//            var block  = material.getBlock(MinecraftWoodBlocks.LOG.getName());
-//            BlockStateHelper.addBlockModel(block, blockModelGeneratorsConsumer);
-//            BlockLootHelper.addBlockLoot(block, BlockLootSubProvider::dropSelf);
-//            var location = BuiltInRegistries.BLOCK.getKey(block);
-//            TagHelper.addBlockTags(block, blockTags);
-//            BlockHandler.registerBlockItem(location.getPath(), location.getNamespace(), block, consumer, itemTags);
-//            String blockLangFileName = "";
-//            for (String segment : location.getPath().split("_")) {
-//                blockLangFileName = blockLangFileName +" "+ StringUtil.capitalizeWord(segment);
-//            }
-//            LanguageHelper.getEnglishTranslations().addTranslation(block,blockLangFileName.trim());
-//        }
         var blockTag = material.getBlockTag(MinecraftWoodBlocks.LOG.getName());
         var itemTag = material.getItemTag(MinecraftWoodBlocks.LOG.getName());
         TagHelper.addBlockTags(blockTag, List.of(BlockTags.LOGS, BlockTags.LOGS_THAT_BURN, BlockTags.MINEABLE_WITH_AXE));
@@ -219,7 +206,7 @@ public class MinecraftLogBlockFactory {
         Block plankBlock = material.getBlock(MinecraftWoodBlocks.PLANKS.getName());
         Block strippedWall = material.getBlock(STRIPPED_WOOD_WALL.getName());
         var returnBlock = GenericBlockFactory.createWall(material, WOOD_WALL.getName(), logBlock, WOOD.getName(),
-                ()->new StrippableFenceBlock(strippedWall, BlockBehaviour.Properties.ofFullCopy(plankBlock)));
+                ()->new StrippableWallBlock(strippedWall, BlockBehaviour.Properties.ofFullCopy(plankBlock)));
         if(returnBlock!=null && CompleteConsistency.isClient()){
             BlockRenderLayerMap.INSTANCE.putBlock(returnBlock, RenderType.cutout());
         }
@@ -229,7 +216,7 @@ public class MinecraftLogBlockFactory {
         TagHelper.addItemTags(itemTag, List.of(UpgradedVanillaTags.WOODEN_WALLS_ITEM_TAG, ItemTags.WALLS));
     }
 
-    public static void strippedLogWallBlock(WoodMaterial material) {
+    public static void strippedWoodWallBlock(WoodMaterial material) {
         Block logBlock = material.getBlock(STRIPPED_WOOD.getName());
         Block plankBlock = material.getBlock(MinecraftWoodBlocks.PLANKS.getName());
         var returnBlock = GenericBlockFactory.createWall(material, STRIPPED_WOOD_WALL.getName(), logBlock, STRIPPED_WOOD.getName(),
@@ -241,5 +228,110 @@ public class MinecraftLogBlockFactory {
         TagKey<Item> itemTag = material.getItemTag((STRIPPED_WOOD_WALL.getName()));
         TagHelper.addBlockTags(blockTag, List.of(UpgradedVanillaTags.WOODEN_WALLS_BLOCK_TAG, BlockTags.WALLS, BlockTags.MINEABLE_WITH_AXE));
         TagHelper.addItemTags(itemTag, List.of(UpgradedVanillaTags.WOODEN_WALLS_ITEM_TAG, ItemTags.WALLS));
+    }
+
+    public static void woodButtonBlock(WoodMaterial material) {
+        Block logBlock = material.getBlock(WOOD.getName());
+        Block strippedButton = material.getBlock(STRIPPED_WOOD_BUTTON.getName());
+        GenericBlockFactory.createButton(material, WOOD_BUTTON.getName(), logBlock, WOOD.getName(),
+                ()->new StrippableButtonBlock(strippedButton, material.getBlockSetType()));
+        TagKey<Block> blockTag = material.getBlockTag((WOOD_BUTTON.getName()));
+        TagKey<Item> itemTag = material.getItemTag((WOOD_BUTTON.getName()));
+        TagHelper.addBlockTags(blockTag, List.of(BlockTags.WOODEN_BUTTONS, BlockTags.MINEABLE_WITH_AXE));
+        TagHelper.addItemTags(itemTag, List.of(ItemTags.WOODEN_BUTTONS));
+    }
+
+    public static void strippedWoodButtonBlock(WoodMaterial material) {
+        Block logBlock = material.getBlock(STRIPPED_WOOD.getName());
+        GenericBlockFactory.createButton(material, STRIPPED_WOOD_BUTTON.getName(), logBlock, WOOD.getName(),
+                ()->Blocks.woodenButton(material.getBlockSetType()));
+        TagKey<Block> blockTag = material.getBlockTag((STRIPPED_WOOD_BUTTON.getName()));
+        TagKey<Item> itemTag = material.getItemTag((STRIPPED_WOOD_BUTTON.getName()));
+        TagHelper.addBlockTags(blockTag, List.of(BlockTags.WOODEN_BUTTONS, BlockTags.MINEABLE_WITH_AXE));
+        TagHelper.addItemTags(itemTag, List.of(ItemTags.WOODEN_BUTTONS));
+    }
+
+    public static void strippedWoodPressurePlateBlock(WoodMaterial material) {
+        Block logBlock = material.getBlock(STRIPPED_WOOD.getName());
+        GenericBlockFactory.createPressurePlate(material, STRIPPED_WOOD_PRESSURE_PLATE.getName(), logBlock, STRIPPED_WOOD.getName(),
+                ()->new PressurePlateBlock(material.getBlockSetType(), BlockBehaviour.Properties.ofFullCopy(logBlock)));
+        TagKey<Block> blockTag = material.getBlockTag((STRIPPED_WOOD_PRESSURE_PLATE.getName()));
+        TagKey<Item> itemTag = material.getItemTag((STRIPPED_WOOD_PRESSURE_PLATE.getName()));
+        TagHelper.addBlockTags(blockTag, List.of(BlockTags.WOODEN_PRESSURE_PLATES, BlockTags.MINEABLE_WITH_AXE));
+        TagHelper.addItemTags(itemTag, List.of(ItemTags.WOODEN_PRESSURE_PLATES));
+    }
+
+    public static void woodPressurePlateBlock(WoodMaterial material) {
+        Block logBlock = material.getBlock(WOOD.getName());
+        Block strippedPlate = material.getBlock(STRIPPED_WOOD_PRESSURE_PLATE.getName());
+        GenericBlockFactory.createPressurePlate(material, WOOD_PRESSURE_PLATE.getName(), logBlock, WOOD.getName(),
+                ()->new StrippablePressurePlateBlock(strippedPlate, material.getBlockSetType(), BlockBehaviour.Properties.ofFullCopy(logBlock)));
+        TagKey<Block> blockTag = material.getBlockTag((WOOD_PRESSURE_PLATE.getName()));
+        TagKey<Item> itemTag = material.getItemTag((WOOD_PRESSURE_PLATE.getName()));
+        TagHelper.addBlockTags(blockTag, List.of(BlockTags.WOODEN_PRESSURE_PLATES, BlockTags.MINEABLE_WITH_AXE));
+        TagHelper.addItemTags(itemTag, List.of(ItemTags.WOODEN_PRESSURE_PLATES));
+    }
+
+    public static void strippedWoodTrapdoorBlock(WoodMaterial material) {
+        Block logBlock = material.getBlock(STRIPPED_WOOD.getName());
+        GenericBlockFactory.createTrapdoor(material, STRIPPED_WOOD_TRAPDOOR.getName(), logBlock, STRIPPED_WOOD.getName(),
+                ()-> new TrapDoorBlock(material.getBlockSetType(), BlockBehaviour.Properties.ofFullCopy(logBlock).noOcclusion()));
+        TagKey<Block> blockTag = material.getBlockTag((STRIPPED_WOOD_TRAPDOOR.getName()));
+        TagKey<Item> itemTag = material.getItemTag((STRIPPED_WOOD_TRAPDOOR.getName()));
+        TagHelper.addBlockTags(blockTag, List.of(BlockTags.WOODEN_TRAPDOORS, BlockTags.MINEABLE_WITH_AXE));
+        TagHelper.addItemTags(itemTag, List.of(ItemTags.WOODEN_TRAPDOORS));
+    }
+
+    public static void woodTrapdoorBlock(WoodMaterial material) {
+        Block logBlock = material.getBlock(WOOD.getName());
+        Block strippedTrapdoor = material.getBlock(STRIPPED_WOOD_TRAPDOOR.getName());
+        GenericBlockFactory.createTrapdoor(material, TRAPDOOR.getName(), logBlock, WOOD.getName(),
+                ()-> new StrippableTrapdoorBlock(material.getBlockSetType(), BlockBehaviour.Properties.ofFullCopy(logBlock).noOcclusion(), strippedTrapdoor));
+        TagKey<Block> blockTag = material.getBlockTag((WOOD_TRAPDOOR.getName()));
+        TagKey<Item> itemTag = material.getItemTag((WOOD_TRAPDOOR.getName()));
+        TagHelper.addBlockTags(blockTag, List.of(BlockTags.WOODEN_TRAPDOORS, BlockTags.MINEABLE_WITH_AXE));
+        TagHelper.addItemTags(itemTag, List.of(ItemTags.WOODEN_TRAPDOORS));
+    }
+
+    public static void strippedWoodFenceBlock(WoodMaterial material) {
+        Block logBlock = material.getBlock(STRIPPED_WOOD.getName());
+        Item stickItem = material.getItem(STICK.getName());
+        GenericBlockFactory.createFenceBlock(material, STRIPPED_WOOD_FENCE.getName(), logBlock, stickItem, STRIPPED_WOOD.getName(),
+                ()-> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(logBlock)));
+        TagKey<Block> blockTag = material.getBlockTag((STRIPPED_WOOD_FENCE.getName()));
+        TagKey<Item> itemTag = material.getItemTag((STRIPPED_WOOD_FENCE.getName()));
+        TagHelper.addBlockTags(blockTag, List.of(BlockTags.WOODEN_FENCES, BlockTags.MINEABLE_WITH_AXE));
+        TagHelper.addItemTags(itemTag, List.of(ItemTags.WOODEN_FENCES));
+    }
+
+    public static void woodFenceBlock(WoodMaterial material) {
+        Block logBlock = material.getBlock(WOOD.getName());
+        Item stickItem = material.getItem(STICK.getName());
+        Block strippedFence = material.getBlock(STRIPPED_WOOD_FENCE.getName());
+        GenericBlockFactory.createFenceBlock(material, WOOD_FENCE.getName(), logBlock, stickItem, WOOD.getName(),
+                ()-> new StrippableFenceBlock(strippedFence, BlockBehaviour.Properties.ofFullCopy(logBlock)));
+        TagKey<Block> blockTag = material.getBlockTag((WOOD_FENCE.getName()));
+        TagKey<Item> itemTag = material.getItemTag((WOOD_FENCE.getName()));
+        TagHelper.addBlockTags(blockTag, List.of(BlockTags.WOODEN_FENCES, BlockTags.MINEABLE_WITH_AXE));
+        TagHelper.addItemTags(itemTag, List.of(ItemTags.WOODEN_FENCES));
+    }
+
+    public static void strippedWoodFenceGateBlock(WoodMaterial material) {
+        Block logBlock = material.getBlock(STRIPPED_WOOD.getName());
+        Item stickItem = material.getItem(STICK.getName());
+        GenericBlockFactory.createFenceGateBlock(material, STRIPPED_WOOD_FENCE_GATE.getName(), logBlock, stickItem, STRIPPED_WOOD.getName(),
+                ()-> new FenceGateBlock(material.getWoodType(), BlockBehaviour.Properties.ofFullCopy(logBlock)));
+        TagKey<Block> blockTag = material.getBlockTag((STRIPPED_WOOD_FENCE_GATE.getName()));
+        TagHelper.addBlockTags(blockTag, List.of(BlockTags.FENCE_GATES, BlockTags.MINEABLE_WITH_AXE));
+    }
+
+    public static void woodFenceGateBlock(WoodMaterial material) {
+        Block logBlock = material.getBlock(WOOD.getName());
+        Item stickItem = material.getItem(STICK.getName());
+        Block strippedFenceGate = material.getBlock(STRIPPED_WOOD_FENCE_GATE.getName());
+        GenericBlockFactory.createFenceGateBlock(material, WOOD_FENCE_GATE.getName(), logBlock, stickItem, WOOD.getName(),
+                ()-> new StrippableFenceGateBlock(material.getWoodType(), BlockBehaviour.Properties.ofFullCopy(logBlock), strippedFenceGate));
+        TagKey<Block> blockTag = material.getBlockTag((WOOD_FENCE_GATE.getName()));
+        TagHelper.addBlockTags(blockTag, List.of(BlockTags.FENCE_GATES, BlockTags.MINEABLE_WITH_AXE));
     }
 }

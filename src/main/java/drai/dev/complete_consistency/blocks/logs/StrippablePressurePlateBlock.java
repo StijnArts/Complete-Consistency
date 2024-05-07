@@ -13,7 +13,7 @@ import net.minecraft.world.phys.*;
 public class StrippablePressurePlateBlock extends PressurePlateBlock {
     private final Block strippedBlock;
 
-    public StrippablePressurePlateBlock(BlockSetType blockSetType, Properties properties, Block strippedBlock) {
+    public StrippablePressurePlateBlock(Block strippedBlock, BlockSetType blockSetType, Properties properties) {
         super(blockSetType, properties);
         this.strippedBlock = strippedBlock;
     }

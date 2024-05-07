@@ -1,5 +1,7 @@
 {
   "values": [
-    "minecraft:stick"
+    "minecraft:stick",
+    "complete_consistency:oak_stick",
+    "complete_consistency:mushroom_stick"
   ]
 }

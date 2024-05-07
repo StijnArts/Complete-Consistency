@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "#complete_consistency:oak_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_trapdoor",
+      "required": false
+    }
+  ]
+}

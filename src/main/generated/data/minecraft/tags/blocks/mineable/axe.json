@@ -33,6 +33,26 @@
       "required": false
     },
     {
+      "id": "#complete_consistency:oak_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_stripped_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
       "id": "#complete_consistency:oak_wood_stairs",
       "required": false
     },
@@ -42,6 +62,58 @@
     },
     {
       "id": "#complete_consistency:oak_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_wood_button",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_stairs",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_slab",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_wall",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_button",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_fence",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:oak_pressure_plate",
       "required": false
     },
     {
@@ -77,6 +149,26 @@
       "required": false
     },
     {
+      "id": "#complete_consistency:mushroom_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_stripped_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
       "id": "#complete_consistency:mushroom_wood_stairs",
       "required": false
     },
@@ -86,6 +178,58 @@
     },
     {
       "id": "#complete_consistency:mushroom_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_wood_button",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_stairs",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_slab",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_wall",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_button",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_fence",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_pressure_plate",
       "required": false
     }
   ]

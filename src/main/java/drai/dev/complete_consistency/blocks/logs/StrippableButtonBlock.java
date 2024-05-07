@@ -8,13 +8,14 @@ import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.*;
 import net.minecraft.world.level.block.state.properties.*;
+import net.minecraft.world.level.material.*;
 import net.minecraft.world.phys.*;
 
 public class StrippableButtonBlock extends ButtonBlock {
     private final Block strippedBlock;
 
-    public StrippableButtonBlock(BlockSetType type, int ticksToStayPressed, Properties properties, Block strippedBlock) {
-        super(type, ticksToStayPressed, properties);
+    public StrippableButtonBlock(Block strippedBlock, BlockSetType type) {
+        super(type, 30, BlockBehaviour.Properties.of().noCollission().strength(0.5f).pushReaction(PushReaction.DESTROY));
         this.strippedBlock = strippedBlock;
     }
 

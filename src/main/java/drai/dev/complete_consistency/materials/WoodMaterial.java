@@ -7,8 +7,6 @@ import drai.dev.complete_consistency.mixin.accessors.*;
 import drai.dev.complete_consistency.modules.*;
 import drai.dev.complete_consistency.modules.minecraft.materials.wood.*;
 import drai.dev.complete_consistency.registry.*;
-import net.minecraft.core.registries.*;
-import net.minecraft.resources.*;
 import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.*;
@@ -42,7 +40,7 @@ public class WoodMaterial extends BlockMaterial {
         this.isFungal = isFungal;
     }
 
-    public static void addBlockType(MaterialModule module, String blockName, BlockConsumer<WoodMaterial> consumer) {
+    public static void addFactoryType(MaterialModule module, String blockName, BlockConsumer<WoodMaterial> consumer) {
         factories.compute(module, ((materialModule, blockFactories) -> Objects.requireNonNullElseGet(blockFactories, ArrayList::new))).add(new BlockFactory<>(blockName, consumer));
     }
 
@@ -79,5 +77,13 @@ public class WoodMaterial extends BlockMaterial {
 
     public String getWoodAffix() {
         return (isFungal ? " Hyphae" : " Wood");
+    }
+
+    public BlockSetType getBlockSetType() {
+        return this.blockSetType;
+    }
+
+    public WoodType getWoodType() {
+        return this.woodType;
     }
 }

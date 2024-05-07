@@ -9,11 +9,19 @@
       "required": false
     },
     {
+      "id": "#complete_consistency:oak_stairs",
+      "required": false
+    },
+    {
       "id": "#complete_consistency:mushroom_stripped_wood_stairs",
       "required": false
     },
     {
       "id": "#complete_consistency:mushroom_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_stairs",
       "required": false
     }
   ]

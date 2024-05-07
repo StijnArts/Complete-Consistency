@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "P": {
+      "tag": "complete_consistency:mushroom_planks"
+    }
+  },
+  "pattern": [
+    "PP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:mushroom_planks_pressure_plate"
+  }
+}

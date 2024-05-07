@@ -9,11 +9,19 @@
       "required": false
     },
     {
+      "id": "#complete_consistency:oak_wall",
+      "required": false
+    },
+    {
       "id": "#complete_consistency:mushroom_stripped_wood_wall",
       "required": false
     },
     {
       "id": "#complete_consistency:mushroom_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#complete_consistency:mushroom_wall",
       "required": false
     }
   ]
