@@ -75,4 +75,9 @@ public enum MinecraftWoodBlocks {
     public String getName(){
         return this.name().toLowerCase();
     }
+
+    @Override
+    public String toString() {
+        return getName();
+    }
 }

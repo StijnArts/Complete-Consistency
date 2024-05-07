@@ -34,13 +34,11 @@ public class StrippableWallBlock extends WallBlock {
 		} else {
 			if (!world.isClientSide) {
 				world.setBlockAndUpdate(pos, strippedBlock.withPropertiesOf(state));
-				player.getMainHandItem().hurtAndBreak(1, RandomSource.create(), (ServerPlayer) player, () -> {
-					player.broadcastBreakEvent(Player.getSlotForHand(hand));
-				});
+				player.getMainHandItem().hurtAndBreak(1, RandomSource.create(), (ServerPlayer) player,
+						() -> player.broadcastBreakEvent(LivingEntity.getSlotForHand(hand)));
 			} else {
 				world.playSound(player, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
 			}
-
 			return ItemInteractionResult.SUCCESS;
 		}
 	}

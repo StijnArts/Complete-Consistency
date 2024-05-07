@@ -1,11 +1,7 @@
 package drai.dev.complete_consistency.blocks.logs;
 
 import net.minecraft.core.*;
-import net.minecraft.server.level.*;
-import net.minecraft.sounds.*;
-import net.minecraft.util.*;
 import net.minecraft.world.*;
-import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.*;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.*;
