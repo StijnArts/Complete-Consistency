@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "minecraft:block/stripped_mushroom_hyphae_top",
+    "side": "minecraft:block/stripped_mushroom_hyphae_side"
+  }
+}

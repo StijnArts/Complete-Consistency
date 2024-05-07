@@ -1,0 +1,9 @@
+{
+  "parent": "complete_consistency:block/log_wall_side_tall",
+  "textures": {
+    "bottom": "minecraft:block/oak_wood_top",
+    "particle": "minecraft:block/oak_wood",
+    "side": "minecraft:block/oak_wood",
+    "top": "minecraft:block/oak_wood_top"
+  }
+}

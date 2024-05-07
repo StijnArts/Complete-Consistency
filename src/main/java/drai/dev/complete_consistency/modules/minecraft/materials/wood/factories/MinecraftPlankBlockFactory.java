@@ -27,12 +27,12 @@ public class MinecraftPlankBlockFactory {
         var logTag = material.getItemTag(MinecraftWoodBlocks.LOG.getName());
         List<TagKey<Block>> blockTags = material.getBlockTags(Stream.of(MinecraftWoodBlocks.STRIPPED_WOOD).map(MinecraftWoodBlocks::getName).toList());
         List<TagKey<Item>> itemTags = material.getItemTags(Stream.of(MinecraftWoodBlocks.STRIPPED_WOOD).map(MinecraftWoodBlocks::getName).toList());
-        BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) -> BlockHandler.registerBlockWithRecipe(MinecraftWoodBlocks.indexOf(MinecraftWoodBlocks.PLANKS),
+        BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) -> BlockHandler.registerBlockWithRecipe(
                 id, langFileName,
                 material.getNamespace(),
                 new Block(BlockBehaviour.Properties.of().mapColor(material.getColor()).instrument(NoteBlockInstrument.BASS)
                         .strength(2.0f, 3.0f).sound(SoundType.WOOD).ignitedByLava()),
-                ItemGroupHelper.createAfterConsumer(CreativeModeTabs.BUILDING_BLOCKS, () -> material.getNextBlock(MinecraftWoodBlocks.PLANKS.getName())),
+                item->ItemGroupHelper.addToGroup(CreativeModeTabs.BUILDING_BLOCKS, item, () -> material.getPreviousBlock(MinecraftWoodBlocks.PLANKS.getName())),
                 (blockModelGenerators,block)->{
                     var output = TexturedModel.CUBE.create((Block) block, blockModelGenerators.modelOutput);
                     blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock((Block) block, output));
