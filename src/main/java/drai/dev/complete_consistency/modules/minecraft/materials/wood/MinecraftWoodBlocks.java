@@ -1,11 +1,9 @@
 package drai.dev.complete_consistency.modules.minecraft.materials.wood;
 
+import java.util.*;
+
 public enum MinecraftWoodBlocks {
     LOG,
-    LOG_STAIRS,
-    LOG_SLAB,
-    LOG_WALL,
-    LOG_TRAPDOOR,
     WOOD,
     WOOD_STAIRS,
     WOOD_SLAB,
@@ -16,9 +14,6 @@ public enum MinecraftWoodBlocks {
     WOOD_FENCE_GATE,
     WOOD_PRESSURE_PLATE,
     STRIPPED_LOG,
-    STRIPPED_LOG_STAIRS,
-    STRIPPED_LOG_WALL,
-    STRIPPED_LOG_SLAB,
     STRIPPED_WOOD,
     STRIPPED_WOOD_STAIRS,
     STRIPPED_WOOD_SLAB,
@@ -72,6 +67,10 @@ public enum MinecraftWoodBlocks {
     SCAFFOLDING,
     ITEM_FRAME,
     GLOW_ITEM_FRAME;
+
+    public static int indexOf(MinecraftWoodBlocks minecraftWoodBlocks) {
+        return Arrays.stream(values()).toList().indexOf(minecraftWoodBlocks);
+    }
 
     public String getName(){
         return this.name().toLowerCase();

@@ -21,18 +21,6 @@
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stripped_log_stairs",
-      "required": false
-    },
-    {
-      "id": "#complete_consistency:oak_stripped_log_slab",
-      "required": false
-    },
-    {
-      "id": "#complete_consistency:oak_stripped_log_wall",
-      "required": false
-    },
-    {
       "id": "#complete_consistency:oak_stripped_wood_stairs",
       "required": false
     },
@@ -42,18 +30,6 @@
     },
     {
       "id": "#complete_consistency:oak_stripped_wood_wall",
-      "required": false
-    },
-    {
-      "id": "#complete_consistency:oak_log_stairs",
-      "required": false
-    },
-    {
-      "id": "#complete_consistency:oak_log_slab",
-      "required": false
-    },
-    {
-      "id": "#complete_consistency:oak_log_wall",
       "required": false
     },
     {
@@ -89,18 +65,6 @@
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_log_stairs",
-      "required": false
-    },
-    {
-      "id": "#complete_consistency:mushroom_stripped_log_slab",
-      "required": false
-    },
-    {
-      "id": "#complete_consistency:mushroom_stripped_log_wall",
-      "required": false
-    },
-    {
       "id": "#complete_consistency:mushroom_stripped_wood_stairs",
       "required": false
     },
@@ -110,18 +74,6 @@
     },
     {
       "id": "#complete_consistency:mushroom_stripped_wood_wall",
-      "required": false
-    },
-    {
-      "id": "#complete_consistency:mushroom_log_stairs",
-      "required": false
-    },
-    {
-      "id": "#complete_consistency:mushroom_log_slab",
-      "required": false
-    },
-    {
-      "id": "#complete_consistency:mushroom_log_wall",
       "required": false
     },
     {

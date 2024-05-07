@@ -41,12 +41,12 @@ public class GenericBlockFactory {
         }
     }
 
-    public static Block createStairs(BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Supplier<Block> stairsSupplier) {
+    public static Block createStairs(int number, BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Supplier<Block> stairsSupplier) {
 
-        return createStairs(material, blockType, sourceBlock, sourceBlockType, stairsSupplier.get());
+        return createStairs(number, material, blockType, sourceBlock, sourceBlockType, stairsSupplier.get());
     }
 
-    public static Block createStairs(BlockMaterial material, String blockType, Block sourceBlock, BiFunction<String, String, Block> blockSupplier,
+    public static Block createStairs(int number, BlockMaterial material, String blockType, Block sourceBlock, BiFunction<String, String, Block> blockSupplier,
                                      List<TagKey<Block>> blockTags,
                                      List<TagKey<Item>> itemTags) {
         var sourceBlockId = BuiltInRegistries.BLOCK.getKey(sourceBlock).getPath();
@@ -54,11 +54,11 @@ public class GenericBlockFactory {
         return createBlock(material, blockType, blockId, blockSupplier, blockTags, itemTags);
     }
 
-    public static Block createStairs(BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Block stairs) {
+    public static Block createStairs(int number, BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Block stairs) {
         List<TagKey<Block>> blockTags = material.getBlockTags(List.of(blockType));
         List<TagKey<Item>> itemTags = material.getItemTags(List.of(blockType));
         TagKey<Item> sourceBlockTag = material.getItemTag(sourceBlockType);
-        BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) -> BlockHandler.registerBlockWithRecipe(id, langFileName,
+        BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) -> BlockHandler.registerBlockWithRecipe(number, id, langFileName,
                 material.getNamespace(), stairs,
                 ItemGroupHelper.createAfterConsumer(CreativeModeTabs.BUILDING_BLOCKS, () -> material.getPreviousBlock(blockType)),
                 (blockModelGenerators, block) -> {
@@ -83,14 +83,14 @@ public class GenericBlockFactory {
                 }),
                 BlockLootSubProvider::dropSelf,
                 blockTags, itemTags);
-        return createStairs(material, blockType, sourceBlock, blockSupplier, blockTags, itemTags);
+        return createStairs(number, material, blockType, sourceBlock, blockSupplier, blockTags, itemTags);
     }
 
-    public static Block createStairs(BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Block stairs, BiConsumer<BlockModelGenerators, ItemLike> modelGenerator) {
+    public static Block createStairs(int number, BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Block stairs, BiConsumer<BlockModelGenerators, ItemLike> modelGenerator) {
         List<TagKey<Block>> blockTags = material.getBlockTags(List.of(blockType));
         List<TagKey<Item>> itemTags = material.getItemTags(List.of(blockType));
         TagKey<Item> sourceBlockTag = material.getItemTag(sourceBlockType);
-        BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) -> BlockHandler.registerBlockWithRecipe(id, langFileName,
+        BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) -> BlockHandler.registerBlockWithRecipe(number, id, langFileName,
                 material.getNamespace(), stairs,
                 ItemGroupHelper.createAfterConsumer(CreativeModeTabs.BUILDING_BLOCKS, () -> material.getPreviousBlock(blockType)),
                 modelGenerator,
@@ -104,17 +104,17 @@ public class GenericBlockFactory {
                 }),
                 BlockLootSubProvider::dropSelf,
                 blockTags, itemTags);
-        return createStairs(material, blockType, sourceBlock, blockSupplier, blockTags, itemTags);
+        return createStairs(number, material, blockType, sourceBlock, blockSupplier, blockTags, itemTags);
     }
 
-    public static Block createSlab(BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Supplier<Block> slabSupplier) {
+    public static Block createSlab(int number, BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Supplier<Block> slabSupplier) {
         var sourceBlockId = BuiltInRegistries.BLOCK.getKey(sourceBlock).getPath();
         String blockId = sourceBlockId + "_slab";
         
         List<TagKey<Block>> blockTags = material.getBlockTags(List.of(blockType));
         List<TagKey<Item>> itemTags = material.getItemTags(List.of(blockType));
         TagKey<Item> sourceBlockTag = material.getItemTag(sourceBlockType);
-        BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) ->  BlockHandler.registerBlockWithRecipe(id, langFileName,
+        BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) ->  BlockHandler.registerBlockWithRecipe(number, id, langFileName,
                 material.getNamespace(), slabSupplier.get(),
                 ItemGroupHelper.createAfterConsumer(CreativeModeTabs.BUILDING_BLOCKS, () -> material.getPreviousBlock(blockType)),
                 (blockModelGenerators, block) -> {
@@ -140,13 +140,13 @@ public class GenericBlockFactory {
         return createBlock(material, blockType, blockId, blockSupplier, blockTags, itemTags);
     }
 
-    public static Block createWall(BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Supplier<Block> wallSupplier) {
+    public static Block createWall(int number, BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Supplier<Block> wallSupplier) {
         var sourceBlockId = BuiltInRegistries.BLOCK.getKey(sourceBlock).getPath();
         String blockId = sourceBlockId + "_wall";
         List<TagKey<Block>> blockTags = material.getBlockTags(List.of(blockType));
         List<TagKey<Item>> itemTags = material.getItemTags(List.of(blockType));
         TagKey<Item> sourceBlockTag = material.getItemTag(sourceBlockType);
-        BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) ->  BlockHandler.registerBlockWithRecipe(id, langFileName,
+        BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) ->  BlockHandler.registerBlockWithRecipe(number, id, langFileName,
                 material.getNamespace(), wallSupplier.get(),
                 ItemGroupHelper.createAfterConsumer(CreativeModeTabs.BUILDING_BLOCKS, () -> material.getPreviousBlock(blockType)),
                 (blockModelGenerators, block) -> {

@@ -1,9 +1,0 @@
-{
-  "parent": "complete_consistency:block/rotated_pillar_stairs_inner",
-  "textures": {
-    "particle": "minecraft:block/mushroom_stem",
-    "x": "minecraft:block/mushroom_stem",
-    "y": "minecraft:block/mushroom_stem_top",
-    "z": "minecraft:block/mushroom_stem"
-  }
-}

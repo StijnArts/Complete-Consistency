@@ -29,13 +29,13 @@ public class BlockHandler {
 		TagHelper.addBlockTags(returnBlock,blockTags);
 		return returnBlock;
 	}
-	public static Block registerBlockWithRecipe(String name, String translation, String modId, Block block,
+	public static Block registerBlockWithRecipe(int number, String name, String translation, String modId, Block block,
 												Consumer<ItemLike> itemGroupEntriesConsumer,
 												BiConsumer<BlockModelGenerators, ItemLike> blockModelGeneratorsConsumer,
 												BiConsumer<RecipeOutput, ItemLike> recipeConsumer,
 												BiConsumer<BlockLootProvider, Block> lootTableConsumer,
 												List<TagKey<Block>> blockTags, List<TagKey<Item>> itemTags){
-		Item returnedItem = registerBlockItem(name, modId, block, itemGroupEntriesConsumer, itemTags);
+		Item returnedItem = registerBlockItem(name, modId, block, itemGroupEntriesConsumer, itemTags, number);
 		Block returnBlock = Registry.register(BuiltInRegistries.BLOCK, IDHelper.createID(name,modId),block);
 		LanguageHelper.getEnglishTranslations().addTranslation(returnBlock,translation);
 		BlockStateHelper.addBlockModel(returnBlock, blockModelGeneratorsConsumer);
@@ -46,13 +46,13 @@ public class BlockHandler {
 		return returnBlock;
 	}
 
-	public static Block registerNonStackableBlockWithRecipe(String name, String translation, String modId, Block block,
+	public static Block registerNonStackableBlockWithRecipe(int number, String name, String translation, String modId, Block block,
 															Consumer<ItemLike> itemGroupEntriesConsumer,
 												BiConsumer<BlockModelGenerators, ItemLike> blockModelGeneratorsConsumer,
 												BiConsumer<RecipeOutput, ItemLike> recipeConsumer,
 												BiConsumer<BlockLootProvider, Block> lootTableConsumer,
 												List<TagKey<Block>> blockTags, List<TagKey<Item>> itemTags){
-		Item returnedItem = registerNonStackableBlockItem(name, modId, block, itemGroupEntriesConsumer, itemTags);
+		Item returnedItem = registerNonStackableBlockItem(name, modId, block, itemGroupEntriesConsumer, itemTags, number);
 		Block returnBlock = Registry.register(BuiltInRegistries.BLOCK, IDHelper.createID(name,modId),block);
 		LanguageHelper.getEnglishTranslations().addTranslation(returnBlock,translation);
 		BlockStateHelper.addBlockModel(returnBlock, blockModelGeneratorsConsumer);
@@ -62,14 +62,14 @@ public class BlockHandler {
 
 		return returnBlock;
 	}
-	public static Block registerBlockWithRecipe(String name, String translation, String modId, Block block,
+	public static Block registerBlockWithRecipe(int number, String name, String translation, String modId, Block block,
 												Consumer<ItemLike> itemGroupEntriesConsumer,
 									  	BiConsumer<BlockModelGenerators, ItemLike> blockModelGeneratorsConsumer,
 									  	BiConsumer<ItemModelGenerators, Item> itemModelGeneratorsConsumer,
 										BiConsumer<RecipeOutput, ItemLike> recipeConsumer,
 												BiConsumer<BlockLootProvider, Block> lootTableConsumer,
 									  	List<TagKey<Block>> blockTags, List<TagKey<Item>> itemTags){
-		Item returnedItem = registerBlockItem(name, modId, block, itemGroupEntriesConsumer, itemTags);
+		Item returnedItem = registerBlockItem(name, modId, block, itemGroupEntriesConsumer, itemTags, number);
 		Block returnBlock = Registry.register(BuiltInRegistries.BLOCK, IDHelper.createID(name,modId),block);
 		LanguageHelper.getEnglishTranslations().addTranslation(returnBlock,translation);
 		BlockStateHelper.addBlockModel(returnBlock, blockModelGeneratorsConsumer);
@@ -80,12 +80,12 @@ public class BlockHandler {
 		return returnBlock;
 	}
 
-	public static Block registerBlock(String name, String translation, String modId, Block block,
+	public static Block registerBlock(int number, String name, String translation, String modId, Block block,
 									  Consumer<ItemLike> itemGroupEntriesConsumer,
 									  BiConsumer<BlockModelGenerators, ItemLike> blockModelGeneratorsConsumer,
 									  BiConsumer<BlockLootProvider, Block> lootTableConsumer,
 									  List<TagKey<Block>> blockTags, List<TagKey<Item>> itemTags){
-		Item returnedItem = registerBlockItem(name, modId, block, itemGroupEntriesConsumer, itemTags);
+		Item returnedItem = registerBlockItem(name, modId, block, itemGroupEntriesConsumer, itemTags, number);
 		Block returnBlock = Registry.register(BuiltInRegistries.BLOCK, IDHelper.createID(name,modId),block);
 		LanguageHelper.getEnglishTranslations().addTranslation(returnBlock,translation);
 		BlockStateHelper.addBlockModel(returnBlock, blockModelGeneratorsConsumer);
@@ -94,13 +94,13 @@ public class BlockHandler {
 		return returnBlock;
 	}
 
-	public static Block registerBlock(String name, String translation, String modId, Block block,
+	public static Block registerBlock(int number, String name, String translation, String modId, Block block,
 									  Consumer<ItemLike> itemGroupEntriesConsumer,
 									  BiConsumer<BlockModelGenerators, ItemLike> blockModelGeneratorsConsumer,
 									  BiConsumer<ItemModelGenerators, Item> itemModelGeneratorsConsumer,
 									  BiConsumer<BlockLootProvider, Block> lootTableConsumer,
 									  List<TagKey<Block>> blockTags, List<TagKey<Item>> itemTags){
-		Item returnedItem = registerBlockItem(name, modId, block, itemGroupEntriesConsumer, itemTags);
+		Item returnedItem = registerBlockItem(name, modId, block, itemGroupEntriesConsumer, itemTags, number);
 		Block returnBlock = Registry.register(BuiltInRegistries.BLOCK, IDHelper.createID(name,modId),block);
 		LanguageHelper.getEnglishTranslations().addTranslation(returnBlock,translation);
 		BlockStateHelper.addBlockModel(returnBlock, blockModelGeneratorsConsumer);
@@ -111,20 +111,20 @@ public class BlockHandler {
 	}
 
 	public static Item registerBlockItem(String name, String modId, Block block,
-									  Consumer<ItemLike> itemGroupEntriesConsumer, List<TagKey<Item>> itemTags){
+									  Consumer<ItemLike> itemGroupEntriesConsumer, List<TagKey<Item>> itemTags, int number){
 		BlockItem returnItem = Registry.register(BuiltInRegistries.ITEM,IDHelper.createID(name,modId),new BlockItem(block, new Item.Properties()));
 		returnItem.registerBlocks(Item.BY_BLOCK, returnItem);
 		TagHelper.addItemTags(returnItem, itemTags);
-		ItemGroupHelper.addToGroup(returnItem, itemGroupEntriesConsumer);
+		ItemGroupHelper.addToGroup(number, returnItem, itemGroupEntriesConsumer);
 		return returnItem;
 	}
 
 	public static Item registerNonStackableBlockItem(String name, String modId, Block block,
-									  Consumer<ItemLike> itemGroupEntriesConsumer, List<TagKey<Item>> itemTags){
+									  Consumer<ItemLike> itemGroupEntriesConsumer, List<TagKey<Item>> itemTags, int number){
 		BlockItem returnItem = Registry.register(BuiltInRegistries.ITEM,IDHelper.createID(name,modId),new BlockItem(block, new Item.Properties().stacksTo(1)));
 		returnItem.registerBlocks(Item.BY_BLOCK, returnItem);
 		TagHelper.addItemTags(returnItem, itemTags);
-		ItemGroupHelper.addToGroup(returnItem, itemGroupEntriesConsumer);
+		ItemGroupHelper.addToGroup(number, returnItem, itemGroupEntriesConsumer);
 		return returnItem;
 	}
 }

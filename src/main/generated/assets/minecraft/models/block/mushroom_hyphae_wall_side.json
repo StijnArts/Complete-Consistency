@@ -1,9 +1,0 @@
-{
-  "parent": "complete_consistency:block/log_wall_side",
-  "textures": {
-    "bottom": "minecraft:block/mushroom_hyphae_top",
-    "particle": "minecraft:block/mushroom_hyphae",
-    "side": "minecraft:block/mushroom_hyphae",
-    "top": "minecraft:block/mushroom_hyphae_top"
-  }
-}

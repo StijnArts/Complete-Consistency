@@ -15,7 +15,7 @@ import net.minecraft.world.phys.*;
 
 import static drai.dev.complete_consistency.blocks.logs.StrippableWallBlock.getStrippedBlockInteractionResult;
 
-public class StrippableStairsBlock extends RotatedPillarStairBlock {
+public class StrippableStairsBlock extends StairBlock {
 	private Block strippedBlock;
 
 	public StrippableStairsBlock(Block strippedBlock, Properties settings) {

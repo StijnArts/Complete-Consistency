@@ -186,16 +186,11 @@ public class UpgradedVanillaModelTemplates {
 			Optional.of("_inner"), X, Y, Z, TextureSlot.PARTICLE);
 	public static final ModelTemplate ROTATED_PILLAR_STAIRS_OUTER = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs_outer")),
 			Optional.of("_outer"), X, Y, Z, TextureSlot.PARTICLE);
-	public static final ModelTemplate ROTATED_PILLAR_STAIRS_HORIZONTAL_X = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs")),
-			Optional.of("_horizontal_x"), X, Y, Z, TextureSlot.PARTICLE);
-	public static final ModelTemplate ROTATED_PILLAR_STAIRS_INNER_HORIZONTAL_X = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs_inner")),
-			Optional.of("_inner_horizontal_x"), X, Y, Z, TextureSlot.PARTICLE);
-	public static final ModelTemplate ROTATED_PILLAR_STAIRS_OUTER_HORIZONTAL_X = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs_outer")),
-			Optional.of("_outer_horizontal_x"), X, Y, Z, TextureSlot.PARTICLE);
-	public static final ModelTemplate ROTATED_PILLAR_STAIRS_HORIZONTAL_Z = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs")),
-			Optional.of("_horizontal_z"), X, Y, Z, TextureSlot.PARTICLE);
-	public static final ModelTemplate ROTATED_PILLAR_STAIRS_INNER_HORIZONTAL_Z = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs_inner")),
-			Optional.of("_inner_horizontal_z"), X, Y, Z, TextureSlot.PARTICLE);
-	public static final ModelTemplate ROTATED_PILLAR_STAIRS_OUTER_HORIZONTAL_Z = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs_outer")),
-			Optional.of("_outer_horizontal_z"), X, Y, Z, TextureSlot.PARTICLE);
+	public static final ModelTemplate ROTATED_PILLAR_STAIRS_HORIZONTAL = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs")),
+			Optional.of("_horizontal"), X, Y, Z, TextureSlot.PARTICLE);
+	public static final ModelTemplate ROTATED_PILLAR_STAIRS_INNER_HORIZONTAL = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs_inner")),
+			Optional.of("_inner_horizontal"), X, Y, Z, TextureSlot.PARTICLE);
+	public static final ModelTemplate ROTATED_PILLAR_STAIRS_OUTER_HORIZONTAL = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/rotated_pillar_stairs_outer")),
+			Optional.of("_outer_horizontal"), X, Y, Z, TextureSlot.PARTICLE);
+
 }

@@ -31,17 +31,11 @@ public class MinecraftModule extends MaterialModule {
         WoodMaterial.addBlockType(this, MinecraftWoodBlocks.STRIPPED_LOG.getName(), MinecraftLogBlockFactory::strippedLogBlock);
         WoodMaterial.addBlockType(this, MinecraftWoodBlocks.STRIPPED_WOOD.getName(), MinecraftLogBlockFactory::strippedWoodBlock);
         WoodMaterial.addBlockType(this, MinecraftWoodBlocks.PLANKS.getName(), MinecraftPlankBlockFactory::plankBlock);
-        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.STRIPPED_LOG_STAIRS.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.strippedLogStairsBlock(material, MinecraftWoodBlocks.LOG.getName()));
-        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.STRIPPED_LOG_SLAB.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.strippedLogSlabBlock(material, MinecraftWoodBlocks.LOG.getName()));
-        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.STRIPPED_LOG_WALL.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.strippedLogWallBlock(material, MinecraftWoodBlocks.LOG.getName()));
-        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.STRIPPED_WOOD_STAIRS.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.strippedLogStairsBlock(material, MinecraftWoodBlocks.WOOD.getName()));
-        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.STRIPPED_WOOD_SLAB.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.strippedLogSlabBlock(material, MinecraftWoodBlocks.WOOD.getName()));
+        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.STRIPPED_WOOD_STAIRS.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.strippedWoodStairsBlock(material, MinecraftWoodBlocks.WOOD.getName()));
+        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.STRIPPED_WOOD_SLAB.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.strippedWoodSlabBlock(material, MinecraftWoodBlocks.WOOD.getName()));
         WoodMaterial.addBlockType(this, MinecraftWoodBlocks.STRIPPED_WOOD_WALL.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.strippedLogWallBlock(material, MinecraftWoodBlocks.WOOD.getName()));
-        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.LOG_STAIRS.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.logStairsBlock(material, MinecraftWoodBlocks.LOG.getName()));
-        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.LOG_SLAB.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.logSlabBlock(material, MinecraftWoodBlocks.LOG.getName()));
-        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.LOG_WALL.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.logWallBlock(material, MinecraftWoodBlocks.LOG.getName()));
-        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.WOOD_STAIRS.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.logStairsBlock(material, MinecraftWoodBlocks.WOOD.getName()));
-        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.WOOD_SLAB.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.logSlabBlock(material, MinecraftWoodBlocks.WOOD.getName()));
-        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.WOOD_WALL.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.logWallBlock(material, MinecraftWoodBlocks.WOOD.getName()));
+        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.WOOD_STAIRS.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.woodStairsBlock(material, MinecraftWoodBlocks.WOOD.getName()));
+        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.WOOD_SLAB.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.woodSlabBlock(material, MinecraftWoodBlocks.WOOD.getName()));
+        WoodMaterial.addBlockType(this, MinecraftWoodBlocks.WOOD_WALL.getName(), (WoodMaterial material)-> MinecraftLogBlockFactory.woodWallBlock(material, MinecraftWoodBlocks.WOOD.getName()));
     }
 }

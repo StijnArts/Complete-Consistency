@@ -1,9 +1,0 @@
-{
-  "parent": "complete_consistency:block/rotated_pillar_stairs_inner",
-  "textures": {
-    "particle": "minecraft:block/oak_log",
-    "x": "minecraft:block/oak_log_top",
-    "y": "minecraft:block/oak_log",
-    "z": "minecraft:block/oak_log"
-  }
-}

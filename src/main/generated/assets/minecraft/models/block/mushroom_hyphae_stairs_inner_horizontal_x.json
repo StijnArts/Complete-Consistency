@@ -1,9 +1,0 @@
-{
-  "parent": "complete_consistency:block/rotated_pillar_stairs_inner",
-  "textures": {
-    "particle": "minecraft:block/mushroom_hyphae",
-    "x": "minecraft:block/mushroom_hyphae_top",
-    "y": "minecraft:block/mushroom_hyphae",
-    "z": "minecraft:block/mushroom_hyphae"
-  }
-}
