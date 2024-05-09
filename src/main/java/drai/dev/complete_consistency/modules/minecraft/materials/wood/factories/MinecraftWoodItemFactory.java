@@ -21,7 +21,7 @@ import java.util.function.*;
 public class MinecraftWoodItemFactory {
     public static void stickItem(WoodMaterial material){
         TagKey<Item> plankTag = material.getItemTag(MinecraftWoodBlocks.PLANKS.getName());
-        BiFunction<String, String, Item> itemSupplier = (String id, String langFileName) -> ItemHandler.registerItemWithRecipe(id, langFileName,
+        BiFunction<String, String, Item> itemSupplier = (String id, String langFileName) -> ItemHandler.registerItemWithRecipe(id, langFileName, material.getNamespace(),
                 new Item(new Item.Properties().stacksTo(64)),
                 (itemModelGenerator,item)->{itemModelGenerator.generateFlatItem(item, ModelTemplates.FLAT_ITEM);},
                 (finishedRecipeConsumer, item) -> {

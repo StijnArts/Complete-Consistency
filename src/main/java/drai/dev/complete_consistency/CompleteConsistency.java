@@ -13,6 +13,7 @@ import javax.xml.transform.*;
 import java.util.logging.*;
 
 public class CompleteConsistency implements ModInitializer {
+    public static boolean STARTED_GENERATION = false;
     /**
      * Runs the mod initializer.
      */

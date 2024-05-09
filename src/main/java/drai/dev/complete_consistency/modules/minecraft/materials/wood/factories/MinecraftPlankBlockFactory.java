@@ -78,10 +78,10 @@ public class MinecraftPlankBlockFactory {
     }
 
     public static void plankStairsBlock(WoodMaterial material) {
-        Block plankBlock = material.getBlock(PLANKS.getName());
+        Block plankBlock = material.getBlock(MinecraftWoodBlocks.PLANKS.getName());
         var defaultState = plankBlock.defaultBlockState();
         GenericBlockFactory.createStairs(material, MinecraftWoodBlocks.STAIRS.getName(), plankBlock, PLANKS.getName(),
-                new StairBlock(defaultState, BlockBehaviour.Properties.ofFullCopy(plankBlock)));
+                ()->new StairBlock(defaultState, BlockBehaviour.Properties.ofFullCopy(plankBlock)));
 
         TagKey<Block> blockTag = material.getBlockTag((MinecraftWoodBlocks.STAIRS.getName()));
         TagKey<Item> itemTag = material.getItemTag((MinecraftWoodBlocks.STAIRS.getName()));

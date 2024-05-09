@@ -19,9 +19,11 @@ public class GenericItemFactory {
         }
         if(!material.hasBlock(blockType)) {
             Item returnItem = supplier.apply(blockId, blockLangFileName.trim());
+            System.out.println("Created an item through the generic item factory");
             material.addItem(blockType, returnItem);
             return returnItem;
         } else {
+            System.out.println("item existed already");
             var block = material.getItem(blockType);
             TagHelper.addItemTags(block, itemTags);
             return null;

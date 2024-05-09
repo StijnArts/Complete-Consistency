@@ -31,19 +31,16 @@ public class GenericBlockFactory {
         }
         if(!material.hasBlock(blockType)) {
             Block returnBlock = supplier.apply(blockId, blockLangFileName.trim());
+            System.out.println("Created a block through the generic block factory");
             material.addBlock(blockType, returnBlock);
             return returnBlock;
         } else {
+            System.out.println("block existed already");
             var block = material.getBlock(blockType);
             TagHelper.addBlockTags(block, blockTags);
             TagHelper.addItemTags(block.asItem(), itemTags);
             return null;
         }
-    }
-
-    public static Block createStairs(BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Supplier<Block> stairsSupplier) {
-
-        return createStairs(material, blockType, sourceBlock, sourceBlockType, stairsSupplier.get());
     }
 
     public static Block createStairs(BlockMaterial material, String blockType, Block sourceBlock, BiFunction<String, String, Block> blockSupplier,
@@ -54,12 +51,12 @@ public class GenericBlockFactory {
         return createBlock(material, blockType, blockId, blockSupplier, blockTags, itemTags);
     }
 
-    public static Block createStairs(BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Block stairs) {
+    public static Block createStairs(BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Supplier<Block> stairsSupplier) {
         List<TagKey<Block>> blockTags = material.getBlockTags(List.of(blockType));
         List<TagKey<Item>> itemTags = material.getItemTags(List.of(blockType));
         TagKey<Item> sourceBlockTag = material.getItemTag(sourceBlockType);
         BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) -> BlockHandler.registerBlockWithRecipe(id, langFileName,
-                material.getNamespace(), stairs,
+                material.getNamespace(), stairsSupplier.get(),
                 item->ItemGroupHelper.addToGroup(CreativeModeTabs.BUILDING_BLOCKS, item, () -> material.getPreviousBlock(blockType)),
                 (blockModelGenerators, block) -> {
                     TextureMapping textureMapping = new TextureMapping()
@@ -73,27 +70,6 @@ public class GenericBlockFactory {
                     blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createStairs((Block) block, inner, straight, outer));
                     blockModelGenerators.delegateItemModel((Block) block, straight);
                 },
-                ((finishedRecipeConsumer, item) -> {
-                    FabricRecipeProvider.stonecutterResultFromBase(finishedRecipeConsumer, RecipeCategory.BUILDING_BLOCKS, item, sourceBlock);
-                    ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, item, 4).define('P', sourceBlockTag)
-                            .pattern("P  ")
-                            .pattern("PP ")
-                            .pattern("PPP")
-                            .unlockedBy("has_" + material + "_logs", FabricRecipeProvider.has(sourceBlockTag)).save(finishedRecipeConsumer);
-                }),
-                BlockLootSubProvider::dropSelf,
-                blockTags, itemTags);
-        return createStairs(material, blockType, sourceBlock, blockSupplier, blockTags, itemTags);
-    }
-
-    public static Block createStairs(BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Block stairs, BiConsumer<BlockModelGenerators, ItemLike> modelGenerator) {
-        List<TagKey<Block>> blockTags = material.getBlockTags(List.of(blockType));
-        List<TagKey<Item>> itemTags = material.getItemTags(List.of(blockType));
-        TagKey<Item> sourceBlockTag = material.getItemTag(sourceBlockType);
-        BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) -> BlockHandler.registerBlockWithRecipe(id, langFileName,
-                material.getNamespace(), stairs,
-                item->ItemGroupHelper.addToGroup(CreativeModeTabs.BUILDING_BLOCKS, item, () -> material.getPreviousBlock(blockType)),
-                modelGenerator,
                 ((finishedRecipeConsumer, item) -> {
                     FabricRecipeProvider.stonecutterResultFromBase(finishedRecipeConsumer, RecipeCategory.BUILDING_BLOCKS, item, sourceBlock);
                     ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, item, 4).define('P', sourceBlockTag)
@@ -175,14 +151,14 @@ public class GenericBlockFactory {
         return createBlock(material, blockType, blockId, blockSupplier, blockTags, itemTags);
     }
 
-    public static Block createButton(BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Supplier<Block> buttonSupplieer) {
+    public static Block createButton(BlockMaterial material, String blockType, Block sourceBlock, String sourceBlockType, Supplier<Block> buttonSupplier) {
         var sourceBlockId = BuiltInRegistries.BLOCK.getKey(sourceBlock).getPath();
         String blockId = sourceBlockId + "_button";
         List<TagKey<Block>> blockTags = material.getBlockTags(List.of(blockType));
         List<TagKey<Item>> itemTags = material.getItemTags(List.of(blockType));
         TagKey<Item> sourceBlockTag = material.getItemTag(sourceBlockType);
         BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) ->  BlockHandler.registerBlockWithRecipe(id, langFileName,
-                material.getNamespace(), buttonSupplieer.get(),
+                material.getNamespace(), buttonSupplier.get(),
                 item->ItemGroupHelper.addToGroup(CreativeModeTabs.BUILDING_BLOCKS, item, () -> material.getPreviousBlock(blockType)),
                 (blockModelGenerators,block)->{
                     TextureMapping textureMapping = TextureMapping.cube(sourceBlock);

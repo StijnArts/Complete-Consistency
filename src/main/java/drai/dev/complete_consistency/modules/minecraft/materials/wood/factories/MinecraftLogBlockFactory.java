@@ -156,7 +156,7 @@ public class MinecraftLogBlockFactory {
         Block plankBlock = material.getBlock(MinecraftWoodBlocks.PLANKS.getName());
         Block strippedStairs = material.getBlock(STRIPPED_WOOD_STAIRS.getName());
         GenericBlockFactory.createStairs(material, WOOD_STAIRS.getName(), logBlock, WOOD.getName(),
-                new StrippableStairsBlock(strippedStairs, BlockBehaviour.Properties.ofFullCopy(plankBlock)));
+                ()->new StrippableStairsBlock(strippedStairs, BlockBehaviour.Properties.ofFullCopy(plankBlock)));
 
         TagKey<Block> blockTag = material.getBlockTag((WOOD_STAIRS.getName()));
         TagKey<Item> itemTag = material.getItemTag((WOOD_STAIRS.getName()));
@@ -169,7 +169,7 @@ public class MinecraftLogBlockFactory {
         Block plankBlock = material.getBlock(MinecraftWoodBlocks.PLANKS.getName());
         var defaultState = plankBlock.defaultBlockState();
         GenericBlockFactory.createStairs(material, MinecraftWoodBlocks.STRIPPED_WOOD_STAIRS.getName(), logBlock, STRIPPED_WOOD.getName(),
-                new StairBlock(defaultState, BlockBehaviour.Properties.ofFullCopy(plankBlock)));
+                ()->new StairBlock(defaultState, BlockBehaviour.Properties.ofFullCopy(plankBlock)));
 
         TagKey<Block> blockTag = material.getBlockTag((MinecraftWoodBlocks.STRIPPED_WOOD_STAIRS.getName()));
         TagKey<Item> itemTag = material.getItemTag((MinecraftWoodBlocks.STRIPPED_WOOD_STAIRS.getName()));

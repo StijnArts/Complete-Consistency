@@ -26,6 +26,7 @@ public class BlockReplacements {
 
     public static Block registerReplacement(ResourceLocation location, Block block) {
         var registeredBlock =  Registry.register(BuiltInRegistries.BLOCK, location, block);
+        System.out.println("registered block replacement");
 //        Registry.register(BuiltInRegistries.ITEM, location,new BlockItem(registeredBlock, new Item.Properties()));
         REPLACED_BLOCKS.add(registeredBlock);
         return registeredBlock;

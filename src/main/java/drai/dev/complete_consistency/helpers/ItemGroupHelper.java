@@ -28,20 +28,20 @@ public class ItemGroupHelper {
             var groupLocation = BuiltInRegistries.CREATIVE_MODE_TAB.getResourceKey(group);
             if(groupLocation.isPresent()){
                 if(ITEMS_FOR_GROUPS.containsKey(groupLocation.get())){
-                    for(var itemPair : ITEMS_FOR_GROUPS.get(groupLocation.get()).entrySet()){
-                        var previousItem = itemPair.getValue().get();
+                    for(var key : ITEMS_FOR_GROUPS.get(groupLocation.get()).keySet()){
+                        var value = ITEMS_FOR_GROUPS.get(groupLocation.get()).get(key);
+                        var previousItem = value.get();
                         if(previousItem == null){
-                            entries.accept(itemPair.getKey());
+                            entries.accept(key);
                         } else {
                             try{
-                                entries.addAfter(previousItem, itemPair.getKey());
+                                entries.addAfter(previousItem, key);
                             } catch (NullPointerException e){
                                 CompleteConsistency.LOGGER.log(Level.SEVERE,
                                         "cant find itemlike " + previousItem +
-                                        "for itemlike " + itemPair.getKey().toString());
-                                entries.accept(itemPair.getKey());
+                                        "for itemlike " + key.toString());
+                                entries.accept(key);
                             }
-
                         }
                     }
                 }

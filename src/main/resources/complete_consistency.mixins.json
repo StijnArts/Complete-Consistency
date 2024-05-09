@@ -7,8 +7,8 @@
     "accessors.BlockSetTypeAccessor",
     "accessors.DiggerItemAccessor",
     "accessors.WoodTypeAccessor",
-    "common.BlocksMixin",
-    "registration.BlockRegistrationMixin"
+    "debug.BlockMixin",
+    "debug.ItemMixin"
   ],
   "client": [
     "client.BoatRendererMixin"

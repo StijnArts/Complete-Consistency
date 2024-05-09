@@ -1,6 +1,7 @@
 package drai.dev.complete_consistency.registry;
 
 import com.google.common.collect.*;
+import drai.dev.complete_consistency.*;
 import drai.dev.complete_consistency.materials.*;
 import drai.dev.complete_consistency.modules.*;
 import drai.dev.complete_consistency.modules.minecraft.*;
@@ -23,6 +24,7 @@ public class ModuleRegistry {
         }
         MODULES.put(materialModule.namespace, materialModule);
         if(allModulesLoaded()){
+            CompleteConsistency.STARTED_GENERATION = true;
             ModuleRegistry.registerModuleFactories();
             MaterialRegistry.runFactories();
             onFinishLoading();
