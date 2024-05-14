@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "P": {
+      "tag": "minecraft:birch_wood"
+    },
+    "S": {
+      "item": "minecraft:birch_stick"
+    }
+  },
+  "pattern": [
+    "SPS",
+    "SPS"
+  ],
+  "result": {
+    "count": 2,
+    "id": "minecraft:birch_wood_fence_gate"
+  }
+}

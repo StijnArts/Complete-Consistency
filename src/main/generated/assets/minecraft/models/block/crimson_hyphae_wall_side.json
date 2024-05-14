@@ -1,0 +1,9 @@
+{
+  "parent": "complete_consistency:block/log_wall_side",
+  "textures": {
+    "bottom": "minecraft:block/crimson_stem",
+    "particle": "minecraft:block/crimson_stem",
+    "side": "minecraft:block/crimson_stem",
+    "top": "minecraft:block/crimson_stem"
+  }
+}

@@ -3,10 +3,10 @@
   "category": "redstone",
   "key": {
     "P": {
-      "tag": "complete_consistency:mushroom_wood"
+      "tag": "minecraft:mushroom_wood"
     },
     "S": {
-      "item": "complete_consistency:mushroom_stick"
+      "item": "minecraft:mushroom_stick"
     }
   },
   "pattern": [

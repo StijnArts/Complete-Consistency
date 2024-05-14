@@ -1,35 +1,195 @@
 {
   "values": [
     {
-      "id": "#complete_consistency:oak_log",
+      "id": "#minecraft:oak_log",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood",
+      "id": "#minecraft:oak_wood",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stripped_log",
+      "id": "#minecraft:oak_stripped_log",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stripped_wood",
+      "id": "#minecraft:oak_stripped_wood",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_log",
+      "id": "#minecraft:spruce_log",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood",
+      "id": "#minecraft:spruce_wood",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_log",
+      "id": "#minecraft:spruce_stripped_log",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood",
+      "id": "#minecraft:spruce_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood",
       "required": false
     }
   ]

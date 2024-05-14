@@ -82,6 +82,8 @@ public class UpgradedVanillaModelTemplates {
 			Optional.of(""), TextureSlot.PARTICLE, TextureSlot.BOTTOM, TextureSlot.SIDE, TextureSlot.TOP);
 	public static final ModelTemplate OBSERVER = new ModelTemplate(Optional.of(new ResourceLocation("minecraft","block/observer")),
 			Optional.of(""), TextureSlot.FRONT, TextureSlot.SIDE, TextureSlot.TOP, TextureSlot.BOTTOM, TextureSlot.PARTICLE);
+	public static final ModelTemplate CHEST = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/chest_item")),
+			Optional.of("_item"), TextureSlot.TEXTURE);
 	public static final ModelTemplate OBSERVER_ON = new ModelTemplate(Optional.of(new ResourceLocation("minecraft","block/observer_on")),
 			Optional.of("_on"), TextureSlot.FRONT, TextureSlot.SIDE, TextureSlot.TOP, TextureSlot.BOTTOM, TextureSlot.PARTICLE);
 	public static final ModelTemplate PATH_SLAB = new ModelTemplate(Optional.of(new ResourceLocation("complete_consistency","block/path_slab")),

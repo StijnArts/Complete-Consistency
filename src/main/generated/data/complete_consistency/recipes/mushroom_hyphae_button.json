@@ -3,7 +3,7 @@
   "category": "redstone",
   "ingredients": [
     {
-      "tag": "complete_consistency:mushroom_wood"
+      "tag": "minecraft:mushroom_wood"
     }
   ],
   "result": {

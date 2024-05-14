@@ -1,11 +1,8 @@
 package drai.dev.complete_consistency.registry;
 
 import com.google.common.collect.*;
-import drai.dev.complete_consistency.materials.*;
-import net.minecraft.client.resources.model.*;
+import drai.dev.complete_consistency.materials.impl.*;
 import net.minecraft.resources.*;
-
-import java.util.*;
 
 public class MaterialRegistry {
     public static LinkedHashMultimap<ResourceLocation, BrickMaterial> BRICK_MATERIALS = LinkedHashMultimap.create();

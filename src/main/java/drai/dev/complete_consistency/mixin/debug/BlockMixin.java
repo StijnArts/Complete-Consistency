@@ -14,7 +14,7 @@ public class BlockMixin {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void reset(BlockBehaviour.Properties properties, CallbackInfo ci){
-        if(CompleteConsistency.STARTED_GENERATION) System.out.println("Created a block");
-        else System.out.println("Created a block but outside of the generation for complete consistency");
+//        if(CompleteConsistency.STARTED_GENERATION) System.out.println("Created a block");
+//        else System.out.println("Created a block but outside of the generation for complete consistency");
     }
 }

@@ -1,0 +1,9 @@
+{
+  "parent": "complete_consistency:block/log_wall_inventory",
+  "textures": {
+    "bottom": "minecraft:block/acacia_planks",
+    "particle": "minecraft:block/acacia_planks",
+    "side": "minecraft:block/acacia_planks",
+    "top": "minecraft:block/acacia_planks"
+  }
+}

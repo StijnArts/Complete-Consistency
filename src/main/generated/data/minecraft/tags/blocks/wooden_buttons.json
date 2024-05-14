@@ -1,27 +1,147 @@
 {
   "values": [
     {
-      "id": "#complete_consistency:oak_stripped_wood_button",
+      "id": "#minecraft:oak_stripped_wood_button",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood_button",
+      "id": "#minecraft:oak_wood_button",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_button",
+      "id": "#minecraft:oak_button",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood_button",
+      "id": "#minecraft:spruce_stripped_wood_button",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood_button",
+      "id": "#minecraft:spruce_wood_button",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_button",
+      "id": "#minecraft:spruce_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_button",
       "required": false
     }
   ]

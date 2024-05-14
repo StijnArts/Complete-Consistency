@@ -1,6 +1,7 @@
 package drai.dev.complete_consistency.items.boat;
 
 import drai.dev.complete_consistency.*;
+import drai.dev.complete_consistency.model.*;
 import net.minecraft.client.model.*;
 import net.minecraft.client.model.geom.*;
 import net.minecraft.client.renderer.entity.*;
@@ -13,7 +14,7 @@ import java.util.stream.*;
 
 public class BoatTypeOverride {
     private static final String DEFAULT_LAYER = "main";
-    private static final List<BoatTypeOverride> values = new ArrayList(8);
+    private static final List<BoatTypeOverride> values = new ArrayList<>(8);
     private final String name;
     private final Block planks;
     private final int ordinal;
@@ -22,8 +23,8 @@ public class BoatTypeOverride {
     public final ResourceLocation chestBoatTexture;
     public final ModelLayerLocation boatModelName;
     public final ModelLayerLocation chestBoatModelName;
-    private BoatModel boatModel;
-    private BoatModel chestBoatModel;
+    public boolean isRaft = false;
+    private BoatModelHolder boatModelHolder;
     private BoatItem boat;
     private BoatItem chestBoat;
 
@@ -61,13 +62,12 @@ public class BoatTypeOverride {
     }
 
     public BoatModel getBoatModel(boolean chest) {
-        return chest ? this.chestBoatModel : this.boatModel;
+        return boatModelHolder.getBoatModel(chest);
     }
 
     public void createBoatModels(EntityRendererProvider.Context context) {
-        if (this.boatModel == null) {
-            this.boatModel = new BoatModel(context.bakeLayer(this.boatModelName));
-            this.chestBoatModel = new ChestBoatModel(context.bakeLayer(this.chestBoatModelName));
+        if(this.boatModelHolder == null) {
+            this.boatModelHolder = new BoatModelHolder(context, this.boatModelName, this.chestBoatModelName);
         }
 
     }
@@ -129,7 +129,7 @@ public class BoatTypeOverride {
     }
 
     public static BoatTypeOverride byId(int i) {
-        Iterator var1 = values.iterator();
+        Iterator<BoatTypeOverride> var1 = values.iterator();
 
         BoatTypeOverride t;
         do {
@@ -137,7 +137,7 @@ public class BoatTypeOverride {
                 return null;
             }
 
-            t = (BoatTypeOverride)var1.next();
+            t = var1.next();
         } while(t.ordinal != i);
 
         return t;

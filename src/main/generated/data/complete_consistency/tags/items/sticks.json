@@ -1,7 +1,15 @@
 {
   "values": [
     "minecraft:stick",
-    "complete_consistency:oak_stick",
-    "complete_consistency:mushroom_stick"
+    "minecraft:oak_stick",
+    "minecraft:birch_stick",
+    "minecraft:jungle_stick",
+    "minecraft:acacia_stick",
+    "minecraft:dark_oak_stick",
+    "minecraft:mangrove_stick",
+    "minecraft:cherry_stick",
+    "minecraft:crimson_stick",
+    "minecraft:warped_stick",
+    "minecraft:mushroom_stick"
   ]
 }

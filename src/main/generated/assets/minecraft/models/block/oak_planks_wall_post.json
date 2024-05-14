@@ -1,9 +1,0 @@
-{
-  "parent": "complete_consistency:block/log_wall_post",
-  "textures": {
-    "bottom": "minecraft:block/oak_planks_top",
-    "particle": "minecraft:block/oak_planks_side",
-    "side": "minecraft:block/oak_planks_side",
-    "top": "minecraft:block/oak_planks_top"
-  }
-}

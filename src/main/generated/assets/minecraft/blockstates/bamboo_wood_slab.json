@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "minecraft:block/bamboo_wood_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/bamboo_wood"
+    },
+    "type=top": {
+      "model": "minecraft:block/bamboo_wood_slab_top"
+    }
+  }
+}

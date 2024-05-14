@@ -1,27 +1,147 @@
 {
   "values": [
     {
-      "id": "#complete_consistency:oak_stripped_wood_fence_gate",
+      "id": "#minecraft:oak_stripped_wood_fence_gate",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood_fence_gate",
+      "id": "#minecraft:oak_wood_fence_gate",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_fence_gate",
+      "id": "#minecraft:oak_fence_gate",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood_fence_gate",
+      "id": "#minecraft:spruce_stripped_wood_fence_gate",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood_fence_gate",
+      "id": "#minecraft:spruce_wood_fence_gate",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_fence_gate",
+      "id": "#minecraft:spruce_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_fence_gate",
       "required": false
     }
   ]

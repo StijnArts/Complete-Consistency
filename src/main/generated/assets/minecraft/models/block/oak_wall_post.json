@@ -1,0 +1,9 @@
+{
+  "parent": "complete_consistency:block/log_wall_post",
+  "textures": {
+    "bottom": "minecraft:block/oak_planks",
+    "particle": "minecraft:block/oak_planks",
+    "side": "minecraft:block/oak_planks",
+    "top": "minecraft:block/oak_planks"
+  }
+}

@@ -1,15 +1,13 @@
 package drai.dev.complete_consistency;
 
 import drai.dev.complete_consistency.helpers.*;
+import drai.dev.complete_consistency.helpers.itemgroup.*;
 import drai.dev.complete_consistency.modules.minecraft.*;
 import drai.dev.complete_consistency.registry.*;
 import drai.dev.complete_consistency.tag.*;
 import net.fabricmc.api.*;
-import net.fabricmc.fabric.api.itemgroup.v1.*;
 import net.fabricmc.loader.api.*;
-import net.minecraft.world.item.*;
 
-import javax.xml.transform.*;
 import java.util.logging.*;
 
 public class CompleteConsistency implements ModInitializer {
@@ -39,10 +37,12 @@ public class CompleteConsistency implements ModInitializer {
         BlockReplacements.replaceBlocks();
         UpgradedVanillaTags.register();
         TagManager.ensureStaticallyLoaded();
+        BaseBlockEntities.register();
         MinecraftModule.register();
     }
 
     public static void onFinishLoading(){
         ItemGroupHelper.registerSelf();
+        RecipeReplacementsHelper.bakeReplacements();
     }
 }

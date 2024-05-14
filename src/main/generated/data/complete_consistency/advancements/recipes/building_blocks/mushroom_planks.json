@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#complete_consistency:mushroom_log"
+            "items": "#minecraft:mushroom_log"
           }
         ]
       },

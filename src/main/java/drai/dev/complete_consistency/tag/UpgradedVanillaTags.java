@@ -81,6 +81,7 @@ public class UpgradedVanillaTags {
 					new ResourceLocation("createdeco:dean_brick")*/
 					)
 			);
+
 			initialized = true;
 		}
 	}

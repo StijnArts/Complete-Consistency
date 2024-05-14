@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "minecraft:block/bamboo_wood_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "minecraft:block/bamboo_wood"
+    },
+    "axis=z": {
+      "model": "minecraft:block/bamboo_wood_horizontal",
+      "x": 90
+    }
+  }
+}

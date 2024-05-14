@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "P": {
-      "tag": "complete_consistency:mushroom_planks"
+      "tag": "minecraft:mushroom_planks"
     }
   },
   "pattern": [
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 4,
-    "id": "complete_consistency:mushroom_stick"
+    "id": "minecraft:mushroom_stick"
   }
 }

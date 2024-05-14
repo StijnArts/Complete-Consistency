@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#complete_consistency:oak_planks"
+            "items": "#minecraft:oak_planks"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "complete_consistency:oak_stick"
+        "recipe": "minecraft:oak_stick"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "complete_consistency:oak_stick"
+      "minecraft:oak_stick"
     ]
   }
 }

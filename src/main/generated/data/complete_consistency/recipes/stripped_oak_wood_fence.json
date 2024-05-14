@@ -3,10 +3,10 @@
   "category": "redstone",
   "key": {
     "P": {
-      "tag": "complete_consistency:oak_stripped_wood"
+      "tag": "minecraft:oak_stripped_wood"
     },
     "S": {
-      "item": "complete_consistency:oak_stick"
+      "item": "minecraft:oak_stick"
     }
   },
   "pattern": [

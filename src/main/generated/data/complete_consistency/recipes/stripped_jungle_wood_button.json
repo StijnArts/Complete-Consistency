@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "tag": "minecraft:jungle_wood"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:stripped_jungle_wood_button"
+  }
+}

@@ -15,7 +15,6 @@ import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.*;
 
 @Mixin(Boat.class)
-
 public abstract class BoatMixin extends Entity implements CustomBoatTypeOverride {
     @Unique
     private BoatTypeOverride bcl_type = null;
@@ -30,10 +29,12 @@ public abstract class BoatMixin extends Entity implements CustomBoatTypeOverride
     @Override
     public void bcl_setCustomType(BoatTypeOverride type) {
         bcl_type = type;
+        var data = this.getEntityData();
+        var dataType = DATA_ID_TYPE;
         if (type == null)
-            this.entityData.set(DATA_ID_TYPE, Boat.Type.OAK.ordinal());
+            data.set(dataType, Boat.Type.OAK.ordinal());
         else
-            this.entityData.set(DATA_ID_TYPE, bcl_type.ordinal());
+            data.set(dataType, bcl_type.ordinal());
     }
 
     @Override
@@ -103,8 +104,6 @@ public abstract class BoatMixin extends Entity implements CustomBoatTypeOverride
                 this.resetFallDistance();
                 ci.cancel();
             }
-
-
         }
     }
 }

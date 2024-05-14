@@ -1,0 +1,9 @@
+{
+  "parent": "complete_consistency:block/log_wall_post",
+  "textures": {
+    "bottom": "minecraft:block/cherry_planks",
+    "particle": "minecraft:block/cherry_planks",
+    "side": "minecraft:block/cherry_planks",
+    "top": "minecraft:block/cherry_planks"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "values": [
+    "minecraft:oak_chest",
+    "minecraft:trapped_oak_chest",
+    "minecraft:spruce_chest",
+    "minecraft:trapped_spruce_chest",
+    "minecraft:birch_chest",
+    "minecraft:trapped_birch_chest",
+    "minecraft:jungle_chest",
+    "minecraft:trapped_jungle_chest",
+    "minecraft:acacia_chest",
+    "minecraft:trapped_acacia_chest",
+    "minecraft:dark_oak_chest",
+    "minecraft:trapped_dark_oak_chest",
+    "minecraft:mangrove_chest",
+    "minecraft:trapped_mangrove_chest",
+    "minecraft:cherry_chest",
+    "minecraft:trapped_cherry_chest",
+    "minecraft:bamboo_chest",
+    "minecraft:trapped_bamboo_chest",
+    "minecraft:crimson_chest",
+    "minecraft:trapped_crimson_chest",
+    "minecraft:warped_chest",
+    "minecraft:trapped_warped_chest",
+    "minecraft:mushroom_chest",
+    "minecraft:trapped_mushroom_chest"
+  ]
+}

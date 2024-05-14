@@ -1,27 +1,147 @@
 {
   "values": [
     {
-      "id": "#complete_consistency:oak_stripped_wood_pressure_plate",
+      "id": "#minecraft:oak_stripped_wood_pressure_plate",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood_pressure_plate",
+      "id": "#minecraft:oak_wood_pressure_plate",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_pressure_plate",
+      "id": "#minecraft:oak_pressure_plate",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood_pressure_plate",
+      "id": "#minecraft:spruce_stripped_wood_pressure_plate",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood_pressure_plate",
+      "id": "#minecraft:spruce_wood_pressure_plate",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_pressure_plate",
+      "id": "#minecraft:spruce_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_pressure_plate",
       "required": false
     }
   ]

@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "P": {
-      "tag": "complete_consistency:oak_planks"
+      "tag": "minecraft:oak_planks"
     }
   },
   "pattern": [
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 4,
-    "id": "complete_consistency:oak_stick"
+    "id": "minecraft:oak_stick"
   }
 }

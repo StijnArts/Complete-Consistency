@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "P": {
+      "tag": "minecraft:mushroom_planks"
+    },
+    "S": {
+      "item": "minecraft:mushroom_stick"
+    }
+  },
+  "pattern": [
+    "PSP",
+    "PSP"
+  ],
+  "result": {
+    "count": 2,
+    "id": "minecraft:mushroom_fence"
+  }
+}

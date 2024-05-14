@@ -1,27 +1,147 @@
 {
   "values": [
     {
-      "id": "#complete_consistency:oak_stripped_wood_stairs",
+      "id": "#minecraft:oak_stripped_wood_stairs",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood_stairs",
+      "id": "#minecraft:oak_wood_stairs",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stairs",
+      "id": "#minecraft:oak_stairs",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood_stairs",
+      "id": "#minecraft:spruce_stripped_wood_stairs",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood_stairs",
+      "id": "#minecraft:spruce_wood_stairs",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stairs",
+      "id": "#minecraft:spruce_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stairs",
       "required": false
     }
   ]

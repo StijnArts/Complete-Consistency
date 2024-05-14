@@ -16,20 +16,22 @@ import java.util.*;
 import java.util.function.*;
 
 public abstract class BlockMaterial {
-    String name;
-    String namespace;
-    HashMap<String, Block> blocks = new HashMap<>();
-    HashMap<String, Supplier<Block>> suppliedBlocks = new HashMap<>();
-    HashMap<String, TagKey<Block>> blockTags = new HashMap<>();
-    HashMap<String, Item> items = new HashMap<>();
-    HashMap<String, TagKey<Item>> itemTags = new HashMap<>();
-    private MapColor mapColor;
+    protected String name;
+    protected String namespace;
+    protected HashMap<String, Block> blocks = new HashMap<>();
+    protected HashMap<String, Supplier<Block>> suppliedBlocks = new HashMap<>();
+    protected HashMap<String, TagKey<Block>> blockTags = new HashMap<>();
+    protected HashMap<String, Item> items = new HashMap<>();
+    protected HashMap<String, TagKey<Item>> itemTags = new HashMap<>();
+    private final MapColor mapColor;
+    private final int materialIndex;
 
 
-    public BlockMaterial(String namespace, String name, MapColor mapColor) {
+    public BlockMaterial(String namespace, String name, MapColor mapColor, int materialIndex) {
         this.name = name.toLowerCase();
         this.namespace = namespace;
         this.mapColor = mapColor;
+        this.materialIndex = materialIndex;
     }
 
     public abstract void register(String namespace);
@@ -46,7 +48,7 @@ public abstract class BlockMaterial {
     public List<TagKey<Block>> getBlockTags(List<String> tags) {
         List<TagKey<Block>> blockTags = new ArrayList<>();
         for(var tag : tags){
-            blockTags.add(this.blockTags.get(tag));
+            blockTags.add(this.getBlockTag(tag));
         }
         return blockTags;
     }
@@ -54,7 +56,7 @@ public abstract class BlockMaterial {
     public List<TagKey<Item>> getItemTags(List<String> tags) {
         List<TagKey<Item>> itemTags = new ArrayList<>();
         for(var tag : tags){
-            itemTags.add(this.itemTags.get(tag));
+            itemTags.add(this.getItemTag(tag));
         }
         return itemTags;
     }
@@ -74,11 +76,17 @@ public abstract class BlockMaterial {
     }
 
     public TagKey<Block> getBlockTag(String name) {
-        return blockTags.get(name);
+        if(blockTags.containsKey(name)) return blockTags.get(name);
+        var blockTagKey = TagKeyHelper.createBlockTagKey(new ResourceLocation(namespace,this+"_"+name));
+        addBlockTag(name, blockTagKey);
+        return blockTagKey;
     }
 
     public TagKey<Item> getItemTag(String name) {
-        return itemTags.get(name);
+        if(itemTags.containsKey(name)) return itemTags.get(name);
+        var blockTagKey = TagKeyHelper.createItemTagKey(new ResourceLocation(namespace,this+"_"+name));
+        addItemTag(name, blockTagKey);
+        return blockTagKey;
     }
 
     public String getNamespace() {
@@ -114,8 +122,8 @@ public abstract class BlockMaterial {
         var sortedFactories = factories.entrySet().stream().sorted(Comparator.comparing(keys->keys.getKey().index)).map(Map.Entry::getValue).toList();
         for(List<BlockFactory<T>> factoriesList : sortedFactories){
             for(BlockFactory<T> factory : factoriesList){
-                var blockTagKey = TagKeyHelper.createBlockTagKey(new ResourceLocation(CompleteConsistency.MOD_ID,material+"_"+factory.blockName));
-                var itemTagKey = TagKeyHelper.createItemTagKey(new ResourceLocation(CompleteConsistency.MOD_ID,material+"_"+factory.blockName));
+                var blockTagKey = TagKeyHelper.createBlockTagKey(new ResourceLocation(material.namespace,material+"_"+factory.blockName));
+                var itemTagKey = TagKeyHelper.createItemTagKey(new ResourceLocation(material.namespace,material+"_"+factory.blockName));
                 material.addBlockTag(factory.blockName, blockTagKey);
                 material.addItemTag(factory.blockName, itemTagKey);
             }
@@ -156,5 +164,11 @@ public abstract class BlockMaterial {
 
     public Item getItem(String name) {
         return items.get(name);
+    }
+
+    public abstract int getIndex(String type);
+
+    public int getMaterialIndex() {
+        return this.materialIndex;
     }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "complete_consistency:block/ladder",
+  "textures": {
+    "all": "minecraft:block/mangrove_ladder"
+  }
+}

@@ -1,235 +1,1539 @@
 {
   "values": [
     {
-      "id": "#complete_consistency:oak_log",
+      "id": "#minecraft:oak_log",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood",
+      "id": "#minecraft:oak_wood",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stripped_log",
+      "id": "#minecraft:oak_stripped_log",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stripped_wood",
+      "id": "#minecraft:oak_stripped_wood",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_planks",
+      "id": "#minecraft:oak_planks",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stripped_wood_stairs",
+      "id": "#minecraft:oak_stripped_wood_stairs",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stripped_wood_slab",
+      "id": "#minecraft:oak_stripped_wood_slab",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stripped_wood_wall",
+      "id": "#minecraft:oak_stripped_wood_wall",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stripped_wood_button",
+      "id": "#minecraft:oak_stripped_wood_button",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stripped_wood_trapdoor",
+      "id": "#minecraft:oak_stripped_wood_trapdoor",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stripped_wood_fence",
+      "id": "#minecraft:oak_stripped_wood_fence",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stripped_wood_fence_gate",
+      "id": "#minecraft:oak_stripped_wood_fence_gate",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stripped_wood_pressure_plate",
+      "id": "#minecraft:oak_stripped_wood_pressure_plate",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood_stairs",
+      "id": "#minecraft:oak_wood_stairs",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood_slab",
+      "id": "#minecraft:oak_wood_slab",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood_wall",
+      "id": "#minecraft:oak_wood_wall",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood_button",
+      "id": "#minecraft:oak_wood_button",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood_trapdoor",
+      "id": "#minecraft:oak_wood_trapdoor",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood_fence",
+      "id": "#minecraft:oak_wood_fence",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood_fence_gate",
+      "id": "#minecraft:oak_wood_fence_gate",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood_pressure_plate",
+      "id": "#minecraft:oak_wood_pressure_plate",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_stairs",
+      "id": "#minecraft:oak_stairs",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_slab",
+      "id": "#minecraft:oak_slab",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wall",
+      "id": "#minecraft:oak_wall",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_button",
+      "id": "#minecraft:oak_button",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_trapdoor",
+      "id": "#minecraft:oak_door",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_fence",
+      "id": "#minecraft:oak_trapdoor",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_fence_gate",
+      "id": "#minecraft:oak_fence",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_pressure_plate",
+      "id": "#minecraft:oak_fence_gate",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_log",
+      "id": "#minecraft:oak_pressure_plate",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood",
+      "id": "#minecraft:oak_ladder",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_log",
+      "id": "#minecraft:oak_chest",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood",
+      "id": "#minecraft:spruce_log",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_planks",
+      "id": "#minecraft:spruce_wood",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood_stairs",
+      "id": "#minecraft:spruce_stripped_log",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood_slab",
+      "id": "#minecraft:spruce_stripped_wood",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood_wall",
+      "id": "#minecraft:spruce_planks",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood_button",
+      "id": "#minecraft:spruce_stripped_wood_stairs",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood_trapdoor",
+      "id": "#minecraft:spruce_stripped_wood_slab",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood_fence",
+      "id": "#minecraft:spruce_stripped_wood_wall",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood_fence_gate",
+      "id": "#minecraft:spruce_stripped_wood_button",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood_pressure_plate",
+      "id": "#minecraft:spruce_stripped_wood_trapdoor",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood_stairs",
+      "id": "#minecraft:spruce_stripped_wood_fence",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood_slab",
+      "id": "#minecraft:spruce_stripped_wood_fence_gate",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood_wall",
+      "id": "#minecraft:spruce_stripped_wood_pressure_plate",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood_button",
+      "id": "#minecraft:spruce_wood_stairs",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood_trapdoor",
+      "id": "#minecraft:spruce_wood_slab",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood_fence",
+      "id": "#minecraft:spruce_wood_wall",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood_fence_gate",
+      "id": "#minecraft:spruce_wood_button",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood_pressure_plate",
+      "id": "#minecraft:spruce_wood_trapdoor",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stairs",
+      "id": "#minecraft:spruce_wood_fence",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_slab",
+      "id": "#minecraft:spruce_wood_fence_gate",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wall",
+      "id": "#minecraft:spruce_wood_pressure_plate",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_button",
+      "id": "#minecraft:spruce_stairs",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_trapdoor",
+      "id": "#minecraft:spruce_slab",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_fence",
+      "id": "#minecraft:spruce_wall",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_fence_gate",
+      "id": "#minecraft:spruce_button",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_pressure_plate",
+      "id": "#minecraft:spruce_door",
+      "required": false
+    },
+    {
+      "id": "#minecraft:spruce_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:spruce_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:spruce_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:spruce_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:spruce_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:spruce_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_planks",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_door",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_planks",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_door",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_planks",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_door",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_planks",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_door",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_planks",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_door",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_planks",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_door",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_planks",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_door",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_planks",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_door",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_planks",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_door",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_log",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_planks",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stairs",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wall",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_button",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_door",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_fence",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_fence_gate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_chest",
       "required": false
     }
   ]

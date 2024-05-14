@@ -3,7 +3,7 @@
   "category": "redstone",
   "ingredients": [
     {
-      "tag": "complete_consistency:oak_wood"
+      "tag": "minecraft:oak_wood"
     }
   ],
   "result": {

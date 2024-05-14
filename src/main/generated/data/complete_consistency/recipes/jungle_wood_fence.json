@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "P": {
+      "tag": "minecraft:jungle_wood"
+    },
+    "S": {
+      "item": "minecraft:jungle_stick"
+    }
+  },
+  "pattern": [
+    "PSP",
+    "PSP"
+  ],
+  "result": {
+    "count": 2,
+    "id": "minecraft:jungle_wood_fence"
+  }
+}

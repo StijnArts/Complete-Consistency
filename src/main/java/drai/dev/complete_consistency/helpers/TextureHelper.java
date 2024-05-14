@@ -13,9 +13,9 @@ import java.util.*;
 
 public class TextureHelper {
 
-	public static File woodPresetPalette = RelativeFileHelper.getTemplateData("/wood/Palletes/base_palette.png");
-	public static File stonePresetPalette = RelativeFileHelper.getTemplateData("/stone/palletes/stone_palette.png");
-	public static File metalPresetPalette = RelativeFileHelper.getTemplateData("/metal/Pallete/cast_iron_pallete.png");
+	public static File woodPresetPalette = RelativeFileHelper.getAssetLocation("/minecraft/palettes/wood/base_palette.png");
+	public static File stonePresetPalette = RelativeFileHelper.getAssetLocation("/minecraft/palettes/stone/stone_palette.png");
+	public static File metalPresetPalette = RelativeFileHelper.getAssetLocation("/minecraft/palettes/metal/cast_iron_pallete.png");
 	public static ArrayList<Runnable> requiredTextures = new ArrayList<>();
 
 	public static void addTexture(Runnable runnable){
@@ -112,12 +112,12 @@ public class TextureHelper {
 		return rotatedImage;
 	}
 
-	public static BufferedImage overlayTexture(BufferedImage bottom, BufferedImage overlay, int xLocation, int yLocation,
+	public static BufferedImage overlayTexture(BufferedImage overloadedImage, BufferedImage overlay, int xLocation, int yLocation,
 											   String outputLocation, String outputDir, String id) throws IOException {
-		Graphics g = bottom.getGraphics();
+		Graphics g = overloadedImage.getGraphics();
 		g.drawImage(overlay, xLocation, yLocation, null);
-		saveImage(bottom, outputLocation, outputDir, id);
-		return bottom;
+		saveImage(overloadedImage, outputLocation, outputDir, id);
+		return overloadedImage;
 	}
 	public static BufferedImage overlayTexture(BufferedImage bottom, BufferedImage overlay, int xLocation, int yLocation,
 											   String outputLocation, String outputDir, String id, float opacityPercent) throws IOException {

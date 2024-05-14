@@ -3,7 +3,7 @@
   "category": "redstone",
   "key": {
     "P": {
-      "tag": "complete_consistency:oak_wood"
+      "tag": "minecraft:oak_wood"
     }
   },
   "pattern": [

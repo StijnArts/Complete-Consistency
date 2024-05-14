@@ -15,7 +15,7 @@ public class ItemMixin {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void reset(Item.Properties properties, CallbackInfo ci){
-        if(CompleteConsistency.STARTED_GENERATION) System.out.println("Created an item");
-        else System.out.println("Created an item but outside of the generation for complete consistency");
+//        if(CompleteConsistency.STARTED_GENERATION) System.out.println("Created an item");
+//        else System.out.println("Created an item but outside of the generation for complete consistency");
     }
 }

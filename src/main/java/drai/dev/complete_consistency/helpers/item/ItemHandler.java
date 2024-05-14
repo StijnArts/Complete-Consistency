@@ -17,40 +17,46 @@ public class ItemHandler {
 
 	public static Item registerItem(String name, String translation, String modId, Item item,
 									BiConsumer<ItemModelGenerators, Item> itemModelGeneratorsConsumer,
+									Consumer<ItemLike> itemGroupEntriesConsumer,
 									List<TagKey<Item>> itemTags){
 		Item returnItem = Registry.register(BuiltInRegistries.ITEM, modId +":"+name,item);
 		System.out.println("Registered item "+modId+":"+name);
 		LanguageHelper.getEnglishTranslations().addTranslation(returnItem,translation);
 		ItemModelHelper.addItemModel(returnItem,itemModelGeneratorsConsumer);
 		TagHelper.addItemTags(returnItem, itemTags);
+		itemGroupEntriesConsumer.accept(returnItem);
 		return returnItem;
 	}
 
 	public static Item registerItemWithRecipe(String name, String translation, String modId, Item item,
+											  Consumer<ItemLike> itemGroupEntriesConsumer,
 											  BiConsumer<ItemModelGenerators, Item> itemModelGeneratorsConsumer,
 											  BiConsumer<RecipeOutput, ItemLike> recipeConsumer,
 											  List<TagKey<Item>> itemTags){
-		Item returnItem = Registry.register(BuiltInRegistries.ITEM, CompleteConsistency.MOD_ID +":"+name,item);
+		Item returnItem = Registry.register(BuiltInRegistries.ITEM, modId +":"+name,item);
 		System.out.println("Registered item "+modId+":"+name);
 		LanguageHelper.getEnglishTranslations().addTranslation(returnItem,translation);
 		ItemModelHelper.addItemModel(returnItem,itemModelGeneratorsConsumer);
 		RecipeHelper.addRecipe(returnItem,recipeConsumer);
 		TagHelper.addItemTags(returnItem, itemTags);
+		itemGroupEntriesConsumer.accept(returnItem);
 		return returnItem;
 	}
 
 	public static Item registerItemWithRecipeWithBlockState(String name, String translation, String modId, Item item,
+															Consumer<ItemLike> itemGroupEntriesConsumer,
 															BiConsumer<ItemModelGenerators, Item> itemModelGeneratorsConsumer,
 															BiConsumer<BlockModelGenerators, ItemLike> blockModelGeneratorsConsumer,
 															BiConsumer<RecipeOutput, ItemLike> recipeConsumer,
 															List<TagKey<Item>> itemTags){
-		Item returnItem = Registry.register(BuiltInRegistries.ITEM, CompleteConsistency.MOD_ID +":"+name,item);
+		Item returnItem = Registry.register(BuiltInRegistries.ITEM, modId +":"+name,item);
 		System.out.println("Registered item "+modId+":"+name);
 		LanguageHelper.getEnglishTranslations().addTranslation(returnItem,translation);
 		ItemModelHelper.addItemModel(returnItem,itemModelGeneratorsConsumer);
 		BlockStateHelper.addBlockModel(returnItem, blockModelGeneratorsConsumer);
 		RecipeHelper.addRecipe(returnItem,recipeConsumer);
 		TagHelper.addItemTags(returnItem, itemTags);
+		itemGroupEntriesConsumer.accept(returnItem);
 		return returnItem;
 	}
 }

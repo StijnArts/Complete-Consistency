@@ -1,5 +1,6 @@
 package drai.dev.complete_consistency.client;
 
+import drai.dev.complete_consistency.registry.*;
 import net.fabricmc.api.*;
 
 public class CompleteConsistencyClient implements ClientModInitializer {
@@ -9,6 +10,6 @@ public class CompleteConsistencyClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-
+        BaseBlockEntityRenders.register();
     }
 }

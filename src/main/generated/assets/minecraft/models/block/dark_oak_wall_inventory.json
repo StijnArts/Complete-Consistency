@@ -1,0 +1,9 @@
+{
+  "parent": "complete_consistency:block/log_wall_inventory",
+  "textures": {
+    "bottom": "minecraft:block/dark_oak_planks",
+    "particle": "minecraft:block/dark_oak_planks",
+    "side": "minecraft:block/dark_oak_planks",
+    "top": "minecraft:block/dark_oak_planks"
+  }
+}

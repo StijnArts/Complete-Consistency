@@ -1,27 +1,147 @@
 {
   "values": [
     {
-      "id": "#complete_consistency:oak_stripped_wood_slab",
+      "id": "#minecraft:oak_stripped_wood_slab",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood_slab",
+      "id": "#minecraft:oak_wood_slab",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_slab",
+      "id": "#minecraft:oak_slab",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood_slab",
+      "id": "#minecraft:spruce_stripped_wood_slab",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood_slab",
+      "id": "#minecraft:spruce_wood_slab",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_slab",
+      "id": "#minecraft:spruce_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood_slab",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_slab",
       "required": false
     }
   ]

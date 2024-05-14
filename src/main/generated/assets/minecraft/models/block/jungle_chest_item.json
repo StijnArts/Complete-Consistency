@@ -1,0 +1,6 @@
+{
+  "parent": "complete_consistency:block/chest_item",
+  "textures": {
+    "texture": "minecraft:block/chest/jungle_chest"
+  }
+}

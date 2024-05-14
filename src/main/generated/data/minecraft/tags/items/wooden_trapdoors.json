@@ -1,27 +1,147 @@
 {
   "values": [
     {
-      "id": "#complete_consistency:oak_stripped_wood_trapdoor",
+      "id": "#minecraft:oak_stripped_wood_trapdoor",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_wood_trapdoor",
+      "id": "#minecraft:oak_wood_trapdoor",
       "required": false
     },
     {
-      "id": "#complete_consistency:oak_trapdoor",
+      "id": "#minecraft:oak_trapdoor",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_stripped_wood_trapdoor",
+      "id": "#minecraft:spruce_stripped_wood_trapdoor",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_wood_trapdoor",
+      "id": "#minecraft:spruce_wood_trapdoor",
       "required": false
     },
     {
-      "id": "#complete_consistency:mushroom_trapdoor",
+      "id": "#minecraft:spruce_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_stripped_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_wood_trapdoor",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_trapdoor",
       "required": false
     }
   ]

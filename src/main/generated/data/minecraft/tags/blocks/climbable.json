@@ -1,0 +1,100 @@
+{
+  "values": [
+    {
+      "id": "#minecraft:oak_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:oak_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:spruce_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:spruce_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:birch_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:jungle_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:acacia_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:dark_oak_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mangrove_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:cherry_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:bamboo_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:crimson_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:warped_chest",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_ladder",
+      "required": false
+    },
+    {
+      "id": "#minecraft:mushroom_chest",
+      "required": false
+    }
+  ]
+}

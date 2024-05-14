@@ -20,5 +20,6 @@ public class EnglishLanguageProvider extends FabricLanguageProvider {
 	public void generateTranslations(HolderLookup.Provider registryLookup, TranslationBuilder translationBuilder) {
 		LanguageHelper.getEnglishTranslations().getBlockTranslations().forEach((Pair<Block,String> pair)->translationBuilder.add(pair.getFirst(),pair.getSecond()));
 		LanguageHelper.getEnglishTranslations().getItemTranslations().forEach((Pair<Item,String> pair)->translationBuilder.add(pair.getFirst(),pair.getSecond()));
+		LanguageHelper.getEnglishTranslations().getTagTranslations().forEach(translationBuilder::add);
 	}
 }
