@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cartography_table",
+  "textures": {
+    "down": "minecraft:block/crimson_planks",
+    "east": "minecraft:block/crimson_cartography_table_side3",
+    "north": "minecraft:block/crimson_cartography_table_side3",
+    "particle": "minecraft:block/crimson_cartography_table_side3",
+    "south": "minecraft:block/crimson_cartography_table_side1",
+    "up": "minecraft:block/crimson_cartography_table_top",
+    "west": "minecraft:block/crimson_cartography_table_side2"
+  }
+}

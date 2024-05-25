@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "tag": "minecraft:mushroom_slab"
+    },
+    "P": {
+      "tag": "minecraft:mushroom_planks"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "BBB",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:mushroom_chiseled_bookshelf"
+  }
+}

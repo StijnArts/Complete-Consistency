@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "tag": "minecraft:crimson_slab"
+    },
+    "P": {
+      "tag": "minecraft:crimson_planks"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "BBB",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:crimson_chiseled_bookshelf"
+  }
+}

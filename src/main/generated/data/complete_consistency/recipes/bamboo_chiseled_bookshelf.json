@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "tag": "minecraft:bamboo_slab"
+    },
+    "P": {
+      "tag": "minecraft:bamboo_planks"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "BBB",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:bamboo_chiseled_bookshelf"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "values": [
+    "minecraft:dark_oak_soul_torch",
+    {
+      "id": "#complete_consistency:soul_torches",
+      "required": false
+    }
+  ]
+}

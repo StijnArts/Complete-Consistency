@@ -6,7 +6,7 @@ import drai.dev.complete_consistency.items.boat.*;
 import drai.dev.complete_consistency.materials.*;
 import drai.dev.complete_consistency.mixin.accessors.*;
 import drai.dev.complete_consistency.modules.*;
-import drai.dev.complete_consistency.modules.minecraft.materials.wood.*;
+import drai.dev.complete_consistency.modules.minecraft.materials.wood.enums.*;
 import drai.dev.complete_consistency.registry.*;
 import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.*;

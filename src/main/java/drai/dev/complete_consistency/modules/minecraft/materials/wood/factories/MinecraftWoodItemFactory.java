@@ -4,12 +4,19 @@ import drai.dev.complete_consistency.helpers.*;
 import drai.dev.complete_consistency.helpers.item.*;
 import drai.dev.complete_consistency.helpers.itemgroup.*;
 import drai.dev.complete_consistency.helpers.languages.*;
-import drai.dev.complete_consistency.items.boat.*;
+import drai.dev.complete_consistency.items.*;
 import drai.dev.complete_consistency.materials.impl.*;
+import drai.dev.complete_consistency.model.*;
 import drai.dev.complete_consistency.modules.minecraft.generic.*;
+import drai.dev.complete_consistency.registry.*;
 import drai.dev.complete_consistency.tag.*;
 import net.fabricmc.fabric.api.datagen.v1.provider.*;
+import net.minecraft.client.model.*;
+import net.minecraft.client.resources.model.*;
+import net.minecraft.core.*;
+import net.minecraft.core.registries.*;
 import net.minecraft.data.models.*;
+import net.minecraft.data.models.blockstates.*;
 import net.minecraft.data.models.model.*;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.*;
@@ -23,7 +30,7 @@ import java.io.*;
 import java.util.*;
 import java.util.function.*;
 
-import static drai.dev.complete_consistency.modules.minecraft.materials.wood.MinecraftWoodBlocks.*;
+import static drai.dev.complete_consistency.modules.minecraft.materials.wood.enums.MinecraftWoodBlocks.*;
 
 public class MinecraftWoodItemFactory {
     public static void stickItem(WoodMaterial material){
@@ -159,5 +166,198 @@ public class MinecraftWoodItemFactory {
                 throw new RuntimeException(e);
             }
         });
+    }
+
+    public static void torchItem(WoodMaterial material) {
+        MinecraftPlankBlockFactory.torchBlock(material);
+        MinecraftPlankBlockFactory.wallTorchBlock(material);
+        var torch = material.getBlock(TORCH.getName());
+        var wallTorch = material.getBlock(WALL_TORCH.getName());
+        var stick = material.getItem(STICK.getName());
+        var torchTag = material.getItemTag(TORCH_ITEM.getName());
+        TagHelper.addItemTags(UpgradedVanillaTags.TORCH_ITEM_TAG, List.of(torchTag));
+        BiFunction<String, String, Item> itemSupplier = (String id, String langFileName) -> ItemHandler.registerItemWithRecipeWithBlockState(id, langFileName,
+                material.getNamespace(), new StandingAndWallBlockItem(torch, wallTorch, new Item.Properties(), Direction.DOWN),
+                item-> ItemGroupHelper.addToGroup(CreativeModeTabs.FUNCTIONAL_BLOCKS, material, TORCH_ITEM.getName(), true, ()->Items.TORCH),
+                (itemModelGenerator,item)->{},
+                (blockModelGenerators,block)->{
+                    TextureMapping textureMapping = TextureMapping.torch(torch);
+                    blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(torch, ModelTemplates.TORCH.create(torch, textureMapping,blockModelGenerators.modelOutput)));
+                    blockModelGenerators.blockStateOutput.accept(MultiVariantGenerator.multiVariant(wallTorch, Variant.variant().with(VariantProperties.MODEL, ModelTemplates.WALL_TORCH.create(wallTorch, textureMapping, blockModelGenerators.modelOutput))).with(BlockModelGenerators.createTorchHorizontalDispatch()));
+                    blockModelGenerators.createSimpleFlatItemModel(torch);
+                    blockModelGenerators.skipAutoItemBlock(wallTorch);
+                },
+                ((finishedRecipeConsumer, item) -> {
+                    ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, item,4).define('S',stick).define('C',ItemTags.COALS)
+                            .pattern("C")
+                            .pattern("S")
+                            .unlockedBy("has_"+material+"_sticks", FabricRecipeProvider.has(stick))
+                            .save(finishedRecipeConsumer);
+                }), List.of(torchTag));
+        Item returnItem = GenericItemFactory.createItem(material, TORCH_ITEM.getName(), material + "_torch", itemSupplier, List.of());
+        if(returnItem != null) {
+            TextureHelper.addTexture(() -> {
+                try {
+                    File torchTextureLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\block\\MATERIAL_torch.png");
+                    BufferedImage torchTexture = TextureHelper.swapColors("block\\" + material + "_torch_block", "block", material.getNamespace(), ImageIO.read(torchTextureLocation), TextureHelper.woodPresetPalette, material.palette);
+                    File torchOverlay = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\overlay\\block\\MATERIAL_torch.png");
+                    TextureHelper.overlayTexture(torchTexture, ImageIO.read(torchOverlay), 0, 0, "block\\" + material + "_torch_block", "block", material.getNamespace());
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+        }
+    }
+
+    public static void soulTorchItem(WoodMaterial material) {
+        MinecraftPlankBlockFactory.soulTorchBlock(material);
+        MinecraftPlankBlockFactory.wallSoulTorchBlock(material);
+        var torch = material.getBlock(SOUL_TORCH.getName());
+        var wallTorch = material.getBlock(SOUL_WALL_TORCH.getName());
+        var stick = material.getItem(STICK.getName());
+        var torchTag = material.getItemTag(SOUL_TORCH_ITEM.getName());
+        TagHelper.addItemTags(UpgradedVanillaTags.SOUL_TORCH_ITEM_TAG, List.of(torchTag));
+        BiFunction<String, String, Item> itemSupplier = (String id, String langFileName) -> ItemHandler.registerItemWithRecipeWithBlockState(id, langFileName,
+                material.getNamespace(), new StandingAndWallBlockItem(torch, wallTorch, new Item.Properties(), Direction.DOWN),
+                item-> ItemGroupHelper.addToGroup(CreativeModeTabs.FUNCTIONAL_BLOCKS, material, SOUL_TORCH_ITEM.getName(), true, ()->Items.SOUL_TORCH),
+                (itemModelGenerator,item)->{},
+                (blockModelGenerators,block)->{
+                    TextureMapping textureMapping = TextureMapping.torch(torch);
+                    blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(torch, ModelTemplates.TORCH.create(torch, textureMapping,blockModelGenerators.modelOutput)));
+                    blockModelGenerators.blockStateOutput.accept(MultiVariantGenerator.multiVariant(wallTorch, Variant.variant().with(VariantProperties.MODEL, ModelTemplates.WALL_TORCH.create(wallTorch, textureMapping, blockModelGenerators.modelOutput))).with(BlockModelGenerators.createTorchHorizontalDispatch()));
+                    blockModelGenerators.createSimpleFlatItemModel(torch);
+                    blockModelGenerators.skipAutoItemBlock(wallTorch);
+                },
+                ((finishedRecipeConsumer, item) -> {
+                    ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, item,4).define('S',stick).define('F',ItemTags.SOUL_FIRE_BASE_BLOCKS).define('C', UVCommonItemTags.COAL)
+                            .pattern("C")
+                            .pattern("S")
+                            .pattern("F")
+                            .unlockedBy("has_"+material+"_soul_fire_base_blocks", FabricRecipeProvider.has(ItemTags.SOUL_FIRE_BASE_BLOCKS))
+                            .save(finishedRecipeConsumer);
+                }), List.of(torchTag));
+        Item returnItem = GenericItemFactory.createItem(material, SOUL_TORCH_ITEM.getName(), material + "_soul_torch", itemSupplier, List.of());
+        if(returnItem != null) {
+            TextureHelper.addTexture(() -> {
+                try {
+                    File leverTextureLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\block\\MATERIAL_soul_torch.png");
+                    BufferedImage leverTexture = TextureHelper.swapColors("block\\"+material +"_soul_torch_block", "block", material.getNamespace(), ImageIO.read(leverTextureLocation), TextureHelper.woodPresetPalette,material.palette);
+                    File leverOverlay = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\overlay\\block\\MATERIAL_soul_torch.png");
+                    TextureHelper.overlayTexture(leverTexture,ImageIO.read(leverOverlay), 0,0,"block\\"+material + "_soul_torch_block", "block", material.getNamespace());
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+        }
+    }
+
+    public static void redstoneTorchItem(WoodMaterial material) {
+        MinecraftPlankBlockFactory.redstoneTorchBlock(material);
+        MinecraftPlankBlockFactory.wallRedstoneTorchBlock(material);
+        var torch = material.getBlock(REDSTONE_TORCH.getName());
+        var wallTorch = material.getBlock(REDSTONE_WALL_TORCH.getName());
+        var stick = material.getItem(STICK.getName());
+        var torchTag = material.getItemTag(REDSTONE_TORCH_ITEM.getName());
+        TagHelper.addItemTags(UpgradedVanillaTags.REDSTONE_TORCH_ITEM_TAG, List.of(torchTag));
+        BiFunction<String, String, Item> itemSupplier = (String id, String langFileName) -> ItemHandler.registerItemWithRecipeWithBlockState(id, langFileName,
+                material.getNamespace(), new StandingAndWallBlockItem(torch, wallTorch, new Item.Properties(), Direction.DOWN),
+                item-> ItemGroupHelper.addToGroup(CreativeModeTabs.FUNCTIONAL_BLOCKS, material, REDSTONE_TORCH_ITEM.getName(), true, ()->Items.REDSTONE_TORCH),
+                (itemModelGenerator,item)->{},
+                (blockModelGenerators,block)->{
+                    TextureMapping textureMapping = TextureMapping.torch(torch);
+                    blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(torch, ModelTemplates.TORCH.create(torch, textureMapping,blockModelGenerators.modelOutput)));
+                    blockModelGenerators.blockStateOutput.accept(MultiVariantGenerator.multiVariant(wallTorch, Variant.variant().with(VariantProperties.MODEL, ModelTemplates.WALL_TORCH.create(wallTorch, textureMapping, blockModelGenerators.modelOutput))).with(BlockModelGenerators.createTorchHorizontalDispatch()));
+                    blockModelGenerators.createSimpleFlatItemModel(torch);
+                    blockModelGenerators.skipAutoItemBlock(wallTorch);
+                },
+                ((finishedRecipeConsumer, item) -> {
+                    ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, item,4).define('S',stick).define('C',Items.REDSTONE)
+                            .pattern("C")
+                            .pattern("S")
+                            .unlockedBy("has_"+material+"_sticks", FabricRecipeProvider.has(stick))
+                            .save(finishedRecipeConsumer);
+                }), List.of(torchTag));
+        Item returnItem = GenericItemFactory.createItem(material, REDSTONE_TORCH_ITEM.getName(), material + "_redstone_torch", itemSupplier, List.of());
+        if(returnItem != null) {
+            TextureHelper.addTexture(() -> {
+                try {
+                    File redstoneTorchOnLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\block\\MATERIAL_redstone_torch.png");
+                    File redstoneTorchOffLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\block\\MATERIAL_redstone_torch_off.png");
+                    BufferedImage redstoneTorchONTexture = TextureHelper.swapColors("block\\"+material +"_redstone_torch_block", "block", material.getNamespace(), ImageIO.read(redstoneTorchOnLocation), TextureHelper.woodPresetPalette,material.palette);
+                    File redstoneTorchOnOverlay = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\overlay\\block\\MATERIAL_redstone_torch.png");
+                    TextureHelper.overlayTexture(redstoneTorchONTexture,ImageIO.read(redstoneTorchOnOverlay), 0,0,"block\\"+material + "_redstone_torch_block", "block", material.getNamespace());
+                    BufferedImage redstoneTorchOffTexture = TextureHelper.swapColors("block\\"+material +"_redstone_torch_off_block", "block", material.getNamespace(), ImageIO.read(redstoneTorchOffLocation), TextureHelper.woodPresetPalette,material.palette);
+                    File redstoneTorchOffOverlay = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\overlay\\block\\MATERIAL_redstone_torch_off.png");
+                    TextureHelper.overlayTexture(redstoneTorchOffTexture,ImageIO.read(redstoneTorchOffOverlay), 0,0,"block\\"+material + "_redstone_torch_off_block", "block", material.getNamespace());
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+        }
+    }
+
+    public static void scaffoldingBlockItem(WoodMaterial material) {
+        MinecraftPlankBlockFactory.scaffoldingBlock(material);
+        var scaffoldingBlock = material.getBlock(SCAFFOLDING.getName());
+        var stick = material.getItem(STICK.getName());
+        var torchTag = material.getItemTag(SCAFFOLDING_ITEM.getName());
+        BiFunction<String, String, Item> itemSupplier = (String id, String langFileName) -> ItemHandler.registerItemWithRecipeWithBlockState(id, langFileName,
+                material.getNamespace(), new ScaffoldingBlockItem(scaffoldingBlock, new Item.Properties()),
+                item-> ItemGroupHelper.addToGroup(CreativeModeTabs.FUNCTIONAL_BLOCKS, material, SCAFFOLDING_ITEM.getName(), true, ()->Items.SCAFFOLDING),
+                (itemModelGenerator,item)->{},
+                (blockModelGenerators,block)->{
+                },
+                ((finishedRecipeConsumer, item) -> {
+                    ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, item,6).define('S',stick).define('C',Items.STRING)
+                            .pattern("SCS")
+                            .pattern("S S")
+                            .pattern("S S")
+                            .unlockedBy("has_"+material+"_sticks", FabricRecipeProvider.has(stick))
+                            .save(finishedRecipeConsumer);
+                }), List.of(torchTag));
+        GenericItemFactory.createItem(material, SCAFFOLDING_ITEM.getName(), material + "_scaffolding", itemSupplier, List.of());
+    }
+
+    public static void itemFrame(WoodMaterial material) {
+        MinecraftPlankBlockFactory.scaffoldingBlock(material);
+        var plankBlock = material.getBlock(PLANKS.getName());
+        var stick = material.getItem(STICK.getName());
+        var torchTag = material.getItemTag(ITEM_FRAME.getName());
+        BiFunction<String, String, Item> itemSupplier = (String id, String langFileName) -> ItemHandler.registerItemWithRecipeWithBlockState(id, langFileName,
+                material.getNamespace(), new CCItemFrameItem(BaseBlockEntities.ITEM_FRAME, new Item.Properties(), material),
+                item-> ItemGroupHelper.addToGroup(CreativeModeTabs.FUNCTIONAL_BLOCKS, material, ITEM_FRAME.getName(), true, ()->Items.ITEM_FRAME),
+                (itemModelGenerator,item)->{
+                    TextureMapping textureMapping = new TextureMapping()
+                            .put(TextureSlot.BACK, new ResourceLocation("minecraft", "block/item_frame"))
+                            .put(UpgradedVanillaModelTemplates.WOOD, TextureMapping.getBlockTexture(plankBlock))
+                            .put(TextureSlot.PARTICLE, TextureMapping.getBlockTexture(plankBlock));
+                    UpgradedVanillaModelTemplates.ITEM_FRAME.create(BuiltInRegistries.ITEM.getKey(item).withPrefix("block/"), textureMapping, itemModelGenerator.output);
+                    UpgradedVanillaModelTemplates.ITEM_FRAME_MAP.create(BuiltInRegistries.ITEM.getKey(item).withPrefix("block/").withSuffix("_map"), textureMapping, itemModelGenerator.output);
+                    itemModelGenerator.generateFlatItem(item, ModelTemplates.FLAT_ITEM);
+                },
+                (blockModelGenerators,block)->{
+                },
+                ((finishedRecipeConsumer, item) -> {
+                    ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, item,6).define('S',stick).define('L',Items.LEATHER)
+                            .pattern("SSS")
+                            .pattern("SLS")
+                            .pattern("SSS")
+                            .unlockedBy("has_"+material+"_sticks", FabricRecipeProvider.has(stick))
+                            .save(finishedRecipeConsumer);
+                }), List.of(torchTag));
+        var returnItem = GenericItemFactory.createItem(material, ITEM_FRAME.getName(), material + "_item_frame", itemSupplier, List.of());
+        if(returnItem != null) {
+            TextureHelper.addTexture(() -> {
+                try {
+                    File birchPalette = RelativeFileHelper.getAssetLocation("/minecraft/palettes/wood/birch_palette.png");
+                    File redstoneTorchOnLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\item\\item_frame.png");
+                    BufferedImage redstoneTorchONTexture = TextureHelper.swapColors("item\\"+material +"_item_frame", "item", material.getNamespace(), ImageIO.read(redstoneTorchOnLocation), birchPalette,material.palette);
+                    File redstoneTorchOnOverlay = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\overlay\\item\\item_frame.png");
+                    TextureHelper.overlayTexture(redstoneTorchONTexture,ImageIO.read(redstoneTorchOnOverlay), 0,0,"item\\"+material +"_item_frame", "item", material.getNamespace());
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+        }
     }
 }

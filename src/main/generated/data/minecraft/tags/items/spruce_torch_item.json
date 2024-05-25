@@ -1,0 +1,9 @@
+{
+  "values": [
+    "minecraft:spruce_torch",
+    {
+      "id": "#complete_consistency:torches",
+      "required": false
+    }
+  ]
+}

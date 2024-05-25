@@ -1,0 +1,28 @@
+{
+  "values": [
+    "minecraft:bookshelf",
+    "minecraft:chiseled_bookshelf",
+    "minecraft:spruce_bookshelf",
+    "minecraft:spruce_chiseled_bookshelf",
+    "minecraft:birch_bookshelf",
+    "minecraft:birch_chiseled_bookshelf",
+    "minecraft:jungle_bookshelf",
+    "minecraft:jungle_chiseled_bookshelf",
+    "minecraft:acacia_bookshelf",
+    "minecraft:acacia_chiseled_bookshelf",
+    "minecraft:dark_oak_bookshelf",
+    "minecraft:dark_oak_chiseled_bookshelf",
+    "minecraft:mangrove_bookshelf",
+    "minecraft:mangrove_chiseled_bookshelf",
+    "minecraft:cherry_bookshelf",
+    "minecraft:cherry_chiseled_bookshelf",
+    "minecraft:bamboo_bookshelf",
+    "minecraft:bamboo_chiseled_bookshelf",
+    "minecraft:crimson_bookshelf",
+    "minecraft:crimson_chiseled_bookshelf",
+    "minecraft:warped_bookshelf",
+    "minecraft:warped_chiseled_bookshelf",
+    "minecraft:mushroom_bookshelf",
+    "minecraft:mushroom_chiseled_bookshelf"
+  ]
+}

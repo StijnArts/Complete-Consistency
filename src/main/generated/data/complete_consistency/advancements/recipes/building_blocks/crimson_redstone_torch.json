@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crimson_sticks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:crimson_stick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:crimson_redstone_torch"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_crimson_sticks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:crimson_redstone_torch"
+    ]
+  }
+}

@@ -30,6 +30,7 @@ import java.util.*;
 public class BaseBarrelBlock extends BarrelBlock {
     public BaseBarrelBlock(Block source) {
         this(Properties.ofFullCopy(source).noOcclusion());
+        BaseBlockEntities.BARREL.registerBlock(this);
     }
 
     public BaseBarrelBlock(Properties properties) {

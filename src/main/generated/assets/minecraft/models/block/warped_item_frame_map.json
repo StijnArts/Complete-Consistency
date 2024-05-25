@@ -1,0 +1,8 @@
+{
+  "parent": "complete_consistency:block/item_frame_map",
+  "textures": {
+    "back": "minecraft:block/item_frame",
+    "particle": "minecraft:block/warped_planks",
+    "wood": "minecraft:block/warped_planks"
+  }
+}

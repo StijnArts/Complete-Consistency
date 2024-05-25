@@ -1,0 +1,9 @@
+{
+  "parent": "complete_consistency:block/scaffolding_stable",
+  "textures": {
+    "bottom": "minecraft:block/mushroom_scaffolding_block_bottom",
+    "particle": "minecraft:block/mushroom_scaffolding_block_top",
+    "side": "minecraft:block/mushroom_scaffolding_block_side",
+    "top": "minecraft:block/mushroom_scaffolding_block_top"
+  }
+}

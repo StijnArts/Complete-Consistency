@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crimson_logs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:crimson_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:crimson_campfire"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_crimson_logs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:crimson_campfire"
+    ]
+  }
+}

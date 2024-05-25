@@ -38,6 +38,7 @@ public class CompleteConsistency implements ModInitializer {
         UpgradedVanillaTags.register();
         TagManager.ensureStaticallyLoaded();
         BaseBlockEntities.register();
+//        PoiManager.registerAll();
         MinecraftModule.register();
     }
 

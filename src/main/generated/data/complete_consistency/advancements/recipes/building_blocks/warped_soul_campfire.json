@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:warped_soul_campfire"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_warped_logs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:warped_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_warped_logs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:warped_soul_campfire"
+    ]
+  }
+}

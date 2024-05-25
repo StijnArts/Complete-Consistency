@@ -1,6 +1,7 @@
 package drai.dev.complete_consistency.modules.minecraft.materials.wood;
 
 import drai.dev.complete_consistency.materials.impl.*;
+import drai.dev.complete_consistency.modules.minecraft.materials.wood.enums.*;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.material.*;
@@ -45,5 +46,7 @@ public class Birch extends WoodMaterial {
 
         this.addBlock(MinecraftWoodBlocks.FLETCHING_TABLE.getName(), Blocks.FLETCHING_TABLE);
         this.addItem(MinecraftWoodBlocks.FLETCHING_TABLE.getName(), Items.FLETCHING_TABLE);
+        this.addItem(MinecraftWoodBlocks.ITEM_FRAME.getName(), Items.ITEM_FRAME);
+        this.addItem(MinecraftWoodBlocks.GLOW_ITEM_FRAME.getName(), Items.GLOW_ITEM_FRAME);
     }
 }

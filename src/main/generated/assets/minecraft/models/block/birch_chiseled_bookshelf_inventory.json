@@ -1,0 +1,8 @@
+{
+  "parent": "complete_consistency:block/chiseled_bookshelf_inventory",
+  "textures": {
+    "front": "minecraft:block/birch_chiseled_bookshelf_empty",
+    "side": "minecraft:block/birch_chiseled_bookshelf_side",
+    "top": "minecraft:block/birch_chiseled_bookshelf_top"
+  }
+}

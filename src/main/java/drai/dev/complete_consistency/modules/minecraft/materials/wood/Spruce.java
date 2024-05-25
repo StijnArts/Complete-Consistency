@@ -1,12 +1,10 @@
 package drai.dev.complete_consistency.modules.minecraft.materials.wood;
 
 import drai.dev.complete_consistency.materials.impl.*;
+import drai.dev.complete_consistency.modules.minecraft.materials.wood.enums.*;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.material.*;
-
-import java.util.function.*;
 
 public class Spruce extends WoodMaterial {
     public Spruce(String namespace, int index) {

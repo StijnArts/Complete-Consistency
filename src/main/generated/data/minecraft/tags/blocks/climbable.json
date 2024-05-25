@@ -1,5 +1,17 @@
 {
   "values": [
+    "minecraft:oak_scaffolding_block",
+    "minecraft:spruce_scaffolding_block",
+    "minecraft:birch_scaffolding_block",
+    "minecraft:jungle_scaffolding_block",
+    "minecraft:acacia_scaffolding_block",
+    "minecraft:dark_oak_scaffolding_block",
+    "minecraft:mangrove_scaffolding_block",
+    "minecraft:cherry_scaffolding_block",
+    "minecraft:scaffolding",
+    "minecraft:crimson_scaffolding_block",
+    "minecraft:warped_scaffolding_block",
+    "minecraft:mushroom_scaffolding_block",
     {
       "id": "#minecraft:oak_ladder",
       "required": false

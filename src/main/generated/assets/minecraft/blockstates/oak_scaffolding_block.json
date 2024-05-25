@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "bottom=false": {
+      "model": "minecraft:block/oak_scaffolding_blockstable"
+    },
+    "bottom=true": {
+      "model": "minecraft:block/oak_scaffolding_blockunstable"
+    }
+  }
+}

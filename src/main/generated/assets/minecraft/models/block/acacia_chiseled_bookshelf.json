@@ -1,0 +1,7 @@
+{
+  "parent": "complete_consistency:block/chiseled_bookshelf_template",
+  "textures": {
+    "side": "minecraft:block/acacia_chiseled_bookshelf_side",
+    "top": "minecraft:block/acacia_chiseled_bookshelf_top"
+  }
+}

@@ -4,6 +4,7 @@ import drai.dev.complete_consistency.helpers.*;
 import drai.dev.complete_consistency.materials.impl.*;
 import drai.dev.complete_consistency.modules.*;
 import drai.dev.complete_consistency.modules.minecraft.materials.wood.*;
+import drai.dev.complete_consistency.modules.minecraft.materials.wood.enums.*;
 import drai.dev.complete_consistency.modules.minecraft.materials.wood.factories.*;
 import drai.dev.complete_consistency.registry.*;
 import drai.dev.complete_consistency.tag.*;
@@ -41,6 +42,8 @@ public class MinecraftModule extends MaterialModule {
 
     private void registerRecipeReplacements() {
         RecipeReplacementsHelper.addReplacement(()->Items.STICK, UpgradedVanillaTags.STICKS);
+        RecipeReplacementsHelper.addReplacement(()->Items.TORCH, UpgradedVanillaTags.TORCH_ITEM_TAG);
+        RecipeReplacementsHelper.addReplacement(()->Items.SOUL_TORCH, UpgradedVanillaTags.SOUL_TORCH_ITEM_TAG);
     }
 
     private void registerWoodTypes() {
@@ -81,5 +84,22 @@ public class MinecraftModule extends MaterialModule {
         WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.TRAPPED_CHEST.getName(), MinecraftPlankBlockFactory::trappedChestBlock);
         WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.BOAT.getName(), MinecraftWoodItemFactory::boatItem);
         WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.CHEST_BOAT.getName(), MinecraftWoodItemFactory::chestBoatItem);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.BARREL.getName(), MinecraftPlankBlockFactory::barrelBlock);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.TORCH_ITEM.getName(), MinecraftWoodItemFactory::torchItem);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.SOUL_TORCH_ITEM.getName(), MinecraftWoodItemFactory::soulTorchItem);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.REDSTONE_TORCH_ITEM.getName(), MinecraftWoodItemFactory::redstoneTorchItem);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.CRAFTING_TABLE.getName(), MinecraftPlankBlockFactory::craftingTableBlock);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.CAMPFIRE.getName(), MinecraftLogBlockFactory::campfireBlock);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.SOUL_CAMPFIRE.getName(), MinecraftLogBlockFactory::soulCampfireBlock);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.BOOKSHELF.getName(), MinecraftPlankBlockFactory::bookshelfBlock);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.CHISELED_BOOKSHELF.getName(), MinecraftPlankBlockFactory::chiseledBookshelfBlock);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.LECTERN.getName(), MinecraftPlankBlockFactory::lecternBlock);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.BEEHIVE.getName(), MinecraftPlankBlockFactory::beehiveBlock);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.COMPOSTER.getName(), MinecraftPlankBlockFactory::composterBlock);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.CARTOGRAPHY_TABLE.getName(), MinecraftPlankBlockFactory::cartographyTableBlock);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.FLETCHING_TABLE.getName(), MinecraftPlankBlockFactory::fletchingTableBlock);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.SCAFFOLDING_ITEM.getName(), MinecraftWoodItemFactory::scaffoldingBlockItem);
+        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.ITEM_FRAME.getName(), MinecraftWoodItemFactory::itemFrame);
+//        WoodMaterial.addFactoryType(this, MinecraftWoodBlocks.GLOW_ITEM_FRAME.getName(), MinecraftWoodItemFactory::glowItemFrame);
     }
 }

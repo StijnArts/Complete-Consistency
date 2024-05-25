@@ -3,7 +3,7 @@ package drai.dev.complete_consistency.materials;
 import drai.dev.complete_consistency.*;
 import drai.dev.complete_consistency.helpers.*;
 import drai.dev.complete_consistency.modules.*;
-import drai.dev.complete_consistency.modules.minecraft.materials.wood.*;
+import drai.dev.complete_consistency.modules.minecraft.materials.wood.enums.*;
 import net.minecraft.resources.*;
 import net.minecraft.tags.*;
 import net.minecraft.world.item.*;

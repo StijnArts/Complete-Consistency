@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "bottom=false": {
+      "model": "minecraft:block/jungle_scaffolding_blockstable"
+    },
+    "bottom=true": {
+      "model": "minecraft:block/jungle_scaffolding_blockunstable"
+    }
+  }
+}

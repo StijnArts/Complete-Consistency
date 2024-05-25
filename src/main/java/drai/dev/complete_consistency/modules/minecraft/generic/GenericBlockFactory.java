@@ -49,6 +49,9 @@ public class GenericBlockFactory {
             var foundBlockId = BuiltInRegistries.BLOCK.getKey(block).getPath();
             if(!foundBlockId.contains(material.getName())) {
                 blockId = material.getName() + "_" + foundBlockId;
+                if(blockType.contains("redstone_torch")) blockId = material.getName() + "_redstone_torch";
+                else if(blockType.contains("soul_torch")) blockId = material.getName() + "_soul_torch";
+                else if(blockType.contains("torch")) blockId = material.getName() + "_torch";
                 blockLangFileName = "";
                 for (String segment : blockId.split("_")) {
                     blockLangFileName = blockLangFileName + " " + StringUtil.capitalizeWord(segment);

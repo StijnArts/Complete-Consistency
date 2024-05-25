@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "tag": "c:coal"
+    },
+    "F": {
+      "tag": "minecraft:soul_fire_base_blocks"
+    },
+    "S": {
+      "item": "minecraft:cherry_stick"
+    }
+  },
+  "pattern": [
+    "C",
+    "S",
+    "F"
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:cherry_soul_torch"
+  }
+}

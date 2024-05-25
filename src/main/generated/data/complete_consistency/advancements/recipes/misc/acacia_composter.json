@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_acacia_slabs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:acacia_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:acacia_composter"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_acacia_slabs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:acacia_composter"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "values": [
+    "minecraft:dark_oak_torch",
+    {
+      "id": "#complete_consistency:torches",
+      "required": false
+    }
+  ]
+}

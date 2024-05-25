@@ -1,0 +1,9 @@
+{
+  "values": [
+    "minecraft:warped_soul_torch",
+    {
+      "id": "#complete_consistency:soul_torches",
+      "required": false
+    }
+  ]
+}

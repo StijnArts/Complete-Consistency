@@ -1,0 +1,9 @@
+{
+  "values": [
+    "minecraft:jungle_torch",
+    {
+      "id": "#complete_consistency:torches",
+      "required": false
+    }
+  ]
+}

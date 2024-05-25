@@ -5,16 +5,21 @@ import drai.dev.complete_consistency.blocks.logs.*;
 import drai.dev.complete_consistency.helpers.*;
 import drai.dev.complete_consistency.helpers.block.*;
 import drai.dev.complete_consistency.helpers.itemgroup.*;
+import drai.dev.complete_consistency.helpers.languages.*;
 import drai.dev.complete_consistency.materials.impl.*;
+import drai.dev.complete_consistency.model.*;
 import drai.dev.complete_consistency.modules.minecraft.generic.*;
-import drai.dev.complete_consistency.modules.minecraft.materials.wood.*;
+import drai.dev.complete_consistency.modules.minecraft.materials.wood.enums.*;
 import drai.dev.complete_consistency.tag.*;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.*;
 import net.fabricmc.fabric.api.datagen.v1.provider.*;
+import net.fabricmc.fabric.api.object.builder.v1.block.*;
 import net.fabricmc.fabric.api.registry.*;
 import net.minecraft.client.renderer.*;
+import net.minecraft.client.renderer.blockentity.*;
 import net.minecraft.data.loot.*;
 import net.minecraft.data.models.*;
+import net.minecraft.data.models.blockstates.*;
 import net.minecraft.data.models.model.*;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.*;
@@ -22,12 +27,17 @@ import net.minecraft.tags.*;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.*;
+import net.minecraft.world.level.block.state.properties.*;
+import org.apache.commons.io.*;
 
+import javax.imageio.*;
+import java.awt.image.*;
+import java.io.*;
 import java.util.*;
 import java.util.function.*;
 import java.util.stream.*;
 
-import static drai.dev.complete_consistency.modules.minecraft.materials.wood.MinecraftWoodBlocks.*;
+import static drai.dev.complete_consistency.modules.minecraft.materials.wood.enums.MinecraftWoodBlocks.*;
 
 public class MinecraftLogBlockFactory {
     public static void logBlock(WoodMaterial material) {
@@ -374,5 +384,144 @@ public class MinecraftLogBlockFactory {
                 ()-> new StrippableFenceGateBlock(material.getWoodType(), BlockBehaviour.Properties.ofFullCopy(plankBlock), strippedFenceGate), logBlock);
         TagKey<Block> blockTag = material.getBlockTag((WOOD_FENCE_GATE.getName()));
         TagHelper.addBlockTags(blockTag, List.of(BlockTags.FENCE_GATES, BlockTags.MINEABLE_WITH_AXE));
+    }
+
+    public static void campfireBlock(WoodMaterial material) {
+        List<TagKey<Block>> blockTags = material.getBlockTags(Stream.of(CAMPFIRE).map(MinecraftWoodBlocks::getName).toList());
+        blockTags.add(BlockTags.CAMPFIRES);
+        List<TagKey<Item>> itemTags = material.getItemTags(Stream.of(MinecraftWoodBlocks.CAMPFIRE).map(MinecraftWoodBlocks::getName).toList());
+        itemTags.add(UpgradedVanillaTags.CAMPFIRE_ITEM_TAG);
+        var logs = material.getItemTag(LOG.getName());
+        var stick = material.getItem(STICK.getName());
+        BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) -> BlockHandler.registerBlockWithRecipe(id, langFileName,
+                material.getNamespace(), new CampfireBlock(true,1, BlockBehaviour.Properties.ofFullCopy(Blocks.CAMPFIRE).noOcclusion()),
+                item-> ItemGroupHelper.addToGroup(CreativeModeTabs.FUNCTIONAL_BLOCKS, material, CAMPFIRE.getName(), false, ()->Blocks.CAMPFIRE),
+                (blockModelGenerators,block)->{
+                    ResourceLocation off = new ResourceLocation(material.getNamespace(),"block/"+material+"_campfire_log");
+                    ResourceLocation lit = new ResourceLocation(material.getNamespace(),"block/"+material+"_campfire_log_lit");
+                    TextureMapping textureMappingOff = (new TextureMapping()).put(TextureSlot.PARTICLE, off)
+                            .put(UpgradedVanillaModelTemplates.LOG, off);
+                    TextureMapping textureMapping = (new TextureMapping()).put(TextureSlot.FIRE, new ResourceLocation("minecraft","block/campfire_fire"))
+                            .put(TextureSlot.LIT_LOG, lit);
+                    ResourceLocation campfireTemplate = UpgradedVanillaModelTemplates.CAMPFIRE_TEMPLATE.create((Block) block, textureMappingOff, blockModelGenerators.modelOutput);
+                    ModelTemplate campfireModel = new ModelTemplate(Optional.of(new ResourceLocation(material.getNamespace(),"block/"+material+"_campfire_template")),
+                            Optional.of(""),TextureSlot.FIRE,TextureSlot.LIT_LOG);
+                    ResourceLocation campfire = campfireModel.create((Block) block, textureMapping, blockModelGenerators.modelOutput);
+                    ResourceLocation campfireOff = UpgradedVanillaModelTemplates.CAMPFIRE_OFF.create((Block) block, textureMappingOff, blockModelGenerators.modelOutput);
+                    blockModelGenerators.blockStateOutput.accept(MultiVariantGenerator.multiVariant((Block) block).with(BlockModelGenerators.createBooleanModelDispatch(BlockStateProperties.LIT, campfire, campfireOff)).with(BlockModelGenerators.createHorizontalFacingDispatchAlt()));
+                    blockModelGenerators.createSimpleFlatItemModel((Block) block);
+                },
+                ((finishedRecipeConsumer, item) -> {
+                    ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, item,1).define('L',logs).define('C',ItemTags.COALS).define('S',stick)
+                            .pattern(" S ")
+                            .pattern("SCS")
+                            .pattern("LLL")
+                            .unlockedBy("has_"+material+"_logs", FabricRecipeProvider.has(logs))
+                            .save(finishedRecipeConsumer);
+                }),
+                BlockLootSubProvider::dropSelf,
+                blockTags, itemTags);
+        var returnBlock = GenericBlockFactory.createBlock(material, CAMPFIRE.getName(), material + "_campfire", blockSupplier,
+                blockTags, itemTags);
+        if(returnBlock != null) {
+            TextureHelper.addTexture(() -> {
+                try {
+                    File campfireLogTextureLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\block\\MATERIAL_campfire_log.png");
+                    File campfireLogLitTextureLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\block\\MATERIAL_campfire_log_lit.png");
+                    File campfireItemTextureLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\item\\MATERIAL_campfire.png");
+                    FileUtils.copyFile(RelativeFileHelper.getTemplateData("/wood/assets/textures/block/MATERIAL_campfire_log_lit.png.mcmeta"),
+                            RelativeFileHelper.getTemplateData("/upgradedvanilla/textures/block/" + material + "_campfire_log_lit.png.mcmeta"));
+                    BufferedImage campfireLogTexture = TextureHelper.swapColors("block\\" + material + "_campfire_log", "block", material.getNamespace(), ImageIO.read(campfireLogTextureLocation), TextureHelper.woodPresetPalette, material.palette);
+                    File campfireLogOverLayLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\overlay\\block\\MATERIAL_campfire_log.png");
+                    TextureHelper.overlayTexture(campfireLogTexture, ImageIO.read(campfireLogOverLayLocation), 0, 0, "block\\" + material + "_campfire_log", "block", material.getNamespace());
+                    BufferedImage campfireLogLitTexture = TextureHelper.swapColors("block\\" + material + "_campfire_log_lit", "block", material.getNamespace(), ImageIO.read(campfireLogLitTextureLocation), TextureHelper.woodPresetPalette, material.palette);
+                    File campfireLogLitOverlayLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\overlay\\block\\MATERIAL_campfire_log_lit.png");
+                    TextureHelper.overlayTexture(campfireLogLitTexture, ImageIO.read(campfireLogLitOverlayLocation), 0, 0, "block\\" + material + "_campfire_log_lit", "block", material.getNamespace());
+                    BufferedImage craftingTableTopTexture = TextureHelper.swapColors("block\\" + material + "_campfire", "block", material.getNamespace(), ImageIO.read(campfireItemTextureLocation), TextureHelper.woodPresetPalette, material.palette);
+                    File craftingTableTopOverlayLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\overlay\\item\\MATERIAL_campfire.png");
+                    TextureHelper.overlayTexture(craftingTableTopTexture, ImageIO.read(craftingTableTopOverlayLocation), 0, 0, "block\\" + material + "_campfire", "block", material.getNamespace());
+
+
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+            if(CompleteConsistency.isClient()){
+                BlockRenderLayerMap.INSTANCE.putBlock(returnBlock, RenderType.cutout());
+            }
+        }
+    }
+
+    public static void soulCampfireBlock(WoodMaterial material) {
+        List<TagKey<Block>> blockTags = material.getBlockTags(Stream.of(SOUL_CAMPFIRE).map(MinecraftWoodBlocks::getName).toList());
+        blockTags.add(BlockTags.CAMPFIRES);
+        List<TagKey<Item>> itemTags = material.getItemTags(Stream.of(MinecraftWoodBlocks.SOUL_CAMPFIRE).map(MinecraftWoodBlocks::getName).toList());
+        itemTags.add(UpgradedVanillaTags.CAMPFIRE_ITEM_TAG);
+        var logs = material.getItemTag(LOG.getName());
+        var stick = material.getItem(STICK.getName());
+        BiFunction<String, String, Block> blockSupplier = (String id, String langFileName) -> BlockHandler.registerBlockWithRecipe(id, langFileName,
+                material.getNamespace(), new CampfireBlock(false,2,BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_CAMPFIRE).noOcclusion()),
+                item-> ItemGroupHelper.addToGroup(CreativeModeTabs.FUNCTIONAL_BLOCKS, material, SOUL_CAMPFIRE.getName(), false, ()->Blocks.SOUL_CAMPFIRE),
+                (blockModelGenerators,block)->{
+                    ResourceLocation off = new ResourceLocation(material.getNamespace(),"block/"+material+"_campfire_log");
+                    ResourceLocation lit = new ResourceLocation(material.getNamespace(),"block/"+material+"_soul_campfire_log_lit");
+                    TextureMapping textureMappingOff = (new TextureMapping()).put(TextureSlot.PARTICLE, off)
+                            .put(UpgradedVanillaModelTemplates.LOG, off);
+                    TextureMapping textureMapping = (new TextureMapping()).put(TextureSlot.FIRE, new ResourceLocation("minecraft","block/soul_campfire_fire"))
+                            .put(TextureSlot.LIT_LOG, lit);
+                    ResourceLocation campfireTemplate = UpgradedVanillaModelTemplates.CAMPFIRE_TEMPLATE.create((Block) block, textureMappingOff, blockModelGenerators.modelOutput);
+                    ModelTemplate campfireModel = new ModelTemplate(Optional.of(new ResourceLocation(material.getNamespace(),"block/"+material+"_campfire_template")),
+                            Optional.of(""),TextureSlot.FIRE,TextureSlot.LIT_LOG);
+                    ResourceLocation campfire = campfireModel.create((Block) block, textureMapping, blockModelGenerators.modelOutput);
+                    ResourceLocation campfireOff = UpgradedVanillaModelTemplates.CAMPFIRE_OFF.create((Block) block, textureMappingOff, blockModelGenerators.modelOutput);
+                    blockModelGenerators.blockStateOutput.accept(MultiVariantGenerator.multiVariant((Block) block).with(BlockModelGenerators.createBooleanModelDispatch(BlockStateProperties.LIT, campfire, campfireOff)).with(BlockModelGenerators.createHorizontalFacingDispatchAlt()));
+                    blockModelGenerators.createSimpleFlatItemModel((Block) block);
+                },
+                ((finishedRecipeConsumer, item) -> {
+                    //TODO Haunting Recipe
+                    ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, item,1).define('L',logs).define('C',ItemTags.SOUL_FIRE_BASE_BLOCKS).define('S',stick)
+                            .pattern(" S ")
+                            .pattern("SCS")
+                            .pattern("LLL")
+                            .unlockedBy("has_"+material+"_logs", FabricRecipeProvider.has(logs))
+                            .save(finishedRecipeConsumer);
+                }),
+                BlockLootSubProvider::dropSelf,
+                blockTags, itemTags);
+        var returnBlock = GenericBlockFactory.createBlock(material, SOUL_CAMPFIRE.getName(), material + "_soul_campfire", blockSupplier,
+                blockTags, itemTags);
+        if(returnBlock != null) {
+            TextureHelper.addTexture(() -> {
+                try {
+                    File soulCampfireLogLitTextureLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\block\\MATERIAL_soul_campfire_log_lit.png");
+                    File soulCampfireItemTextureLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\item\\MATERIAL_soul_campfire.png");
+                    FileUtils.copyFile(RelativeFileHelper.getTemplateData("/wood/assets/textures/block/MATERIAL_soul_campfire_log_lit.png.mcmeta"),
+                            RelativeFileHelper.getTemplateData("/upgradedvanilla/textures/block/" + material + "_soul_campfire_log_lit.png.mcmeta"));
+                    BufferedImage soulCampfireLogLitTexture = TextureHelper.swapColors("block\\" + material + "_soul_campfire_log_lit", "block", material.getNamespace(), ImageIO.read(soulCampfireLogLitTextureLocation), TextureHelper.woodPresetPalette, material.palette);
+                    File soulCampfireLogLitOverlayLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\overlay\\block\\MATERIAL_soul_campfire_log_lit.png");
+                    TextureHelper.overlayTexture(soulCampfireLogLitTexture, ImageIO.read(soulCampfireLogLitOverlayLocation), 0, 0, "block\\" + material + "_soul_campfire_log_lit", "block", material.getNamespace());
+                    BufferedImage campfireItemTexture = TextureHelper.swapColors("block\\" + material + "_soul_campfire", "block", material.getNamespace(), ImageIO.read(soulCampfireItemTextureLocation), TextureHelper.woodPresetPalette, material.palette);
+                    File soulCampfireItemOverlayLocation = RelativeFileHelper.getTemplateData("\\wood\\assets\\textures\\overlay\\item\\MATERIAL_soul_campfire.png");
+                    TextureHelper.overlayTexture(campfireItemTexture, ImageIO.read(soulCampfireItemOverlayLocation), 0, 0, "block\\" + material + "_soul_campfire", "block", material.getNamespace());
+                    var contents = """
+                            {
+                                "animation": {
+                                    "interpolate": true,
+                                    "frametime": 20
+                                }
+                            }
+                            """;
+                    var campfireMcMetaFile = RelativeFileHelper.getAssetLocation("\\"+material.getNamespace()+"\\textures\\block\\"+material+"_soul_campfire_log_lit.png.mcmeta");
+                    BufferedWriter writer = new BufferedWriter(new FileWriter(campfireMcMetaFile));
+                    writer.write(contents);
+                    writer.close();
+
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+//        ProcessingRecipeHelper.addHauntingRecipe(returnBlock,(gen, item)->{gen.convert(campfireBlock,item);});
+            if(CompleteConsistency.isClient()) BlockRenderLayerMap.INSTANCE.putBlock(returnBlock, RenderType.cutout());
+        }
     }
 }

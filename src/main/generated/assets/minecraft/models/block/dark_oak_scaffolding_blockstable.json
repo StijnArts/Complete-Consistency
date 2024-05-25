@@ -1,0 +1,9 @@
+{
+  "parent": "complete_consistency:block/scaffolding_stable",
+  "textures": {
+    "bottom": "minecraft:block/dark_oak_scaffolding_block_bottom",
+    "particle": "minecraft:block/dark_oak_scaffolding_block_top",
+    "side": "minecraft:block/dark_oak_scaffolding_block_side",
+    "top": "minecraft:block/dark_oak_scaffolding_block_top"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "values": [
+    "minecraft:mangrove_torch",
+    {
+      "id": "#complete_consistency:torches",
+      "required": false
+    }
+  ]
+}

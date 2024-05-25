@@ -1,0 +1,9 @@
+{
+  "values": [
+    "minecraft:mushroom_redstone_torch",
+    {
+      "id": "#complete_consistency:redstone_torches",
+      "required": false
+    }
+  ]
+}

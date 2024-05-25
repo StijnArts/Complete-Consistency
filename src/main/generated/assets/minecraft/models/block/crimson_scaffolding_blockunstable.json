@@ -1,0 +1,9 @@
+{
+  "parent": "complete_consistency:block/scaffolding_unstable",
+  "textures": {
+    "bottom": "minecraft:block/crimson_scaffolding_block_bottom",
+    "particle": "minecraft:block/crimson_scaffolding_block_top",
+    "side": "minecraft:block/crimson_scaffolding_block_side",
+    "top": "minecraft:block/crimson_scaffolding_block_top"
+  }
+}

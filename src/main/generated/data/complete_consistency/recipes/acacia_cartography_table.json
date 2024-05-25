@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "minecraft:acacia_planks"
+    },
+    "S": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    "SS",
+    "PP",
+    "PP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:acacia_cartography_table"
+  }
+}

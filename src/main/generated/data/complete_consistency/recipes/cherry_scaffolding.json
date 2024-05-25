@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "item": "minecraft:string"
+    },
+    "S": {
+      "item": "minecraft:cherry_stick"
+    }
+  },
+  "pattern": [
+    "SCS",
+    "S S",
+    "S S"
+  ],
+  "result": {
+    "count": 6,
+    "id": "minecraft:cherry_scaffolding"
+  }
+}

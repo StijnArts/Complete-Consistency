@@ -1,6 +1,30 @@
 {
   "values": [
     "minecraft:campfire",
-    "minecraft:soul_campfire"
+    "minecraft:soul_campfire",
+    "minecraft:campfire",
+    "minecraft:soul_campfire",
+    "minecraft:spruce_campfire",
+    "minecraft:spruce_soul_campfire",
+    "minecraft:birch_campfire",
+    "minecraft:birch_soul_campfire",
+    "minecraft:jungle_campfire",
+    "minecraft:jungle_soul_campfire",
+    "minecraft:acacia_campfire",
+    "minecraft:acacia_soul_campfire",
+    "minecraft:dark_oak_campfire",
+    "minecraft:dark_oak_soul_campfire",
+    "minecraft:mangrove_campfire",
+    "minecraft:mangrove_soul_campfire",
+    "minecraft:cherry_campfire",
+    "minecraft:cherry_soul_campfire",
+    "minecraft:bamboo_campfire",
+    "minecraft:bamboo_soul_campfire",
+    "minecraft:crimson_campfire",
+    "minecraft:crimson_soul_campfire",
+    "minecraft:warped_campfire",
+    "minecraft:warped_soul_campfire",
+    "minecraft:mushroom_campfire",
+    "minecraft:mushroom_soul_campfire"
   ]
 }

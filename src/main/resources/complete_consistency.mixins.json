@@ -12,11 +12,13 @@
     "common.BoatMixin",
     "common.IngredientMixin",
     "common.ItemStackMixin",
+    "common.ScaffoldingBlockMixin",
     "debug.BlockMixin",
     "debug.ItemMixin"
   ],
   "client": [
-    "client.BoatRendererMixin"
+    "client.BoatRendererMixin",
+    "client.ItemFrameRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

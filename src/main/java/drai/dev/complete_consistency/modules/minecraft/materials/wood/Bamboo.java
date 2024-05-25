@@ -1,6 +1,7 @@
 package drai.dev.complete_consistency.modules.minecraft.materials.wood;
 
 import drai.dev.complete_consistency.materials.impl.*;
+import drai.dev.complete_consistency.modules.minecraft.materials.wood.enums.*;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.material.*;
@@ -40,7 +41,7 @@ public class Bamboo extends WoodMaterial {
         this.addItem(MinecraftWoodBlocks.CHEST_BOAT.getName(), Items.BAMBOO_CHEST_RAFT);
 
         this.addBlock(MinecraftWoodBlocks.SCAFFOLDING.getName(), Blocks.SCAFFOLDING);
-        this.addItem(MinecraftWoodBlocks.SCAFFOLDING.getName(), Items.SCAFFOLDING);
+        this.addItem(MinecraftWoodBlocks.SCAFFOLDING_ITEM.getName(), Items.SCAFFOLDING);
         this.addItem(MinecraftWoodBlocks.STICK.getName(), Items.BAMBOO);
     }
 }

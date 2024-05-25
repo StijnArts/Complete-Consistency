@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_torch",
+  "textures": {
+    "torch": "minecraft:block/acacia_soul_torch_block"
+  }
+}

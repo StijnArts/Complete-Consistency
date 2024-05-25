@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "minecraft:block/birch_redstone_torch_block"
+    }
+  }
+}

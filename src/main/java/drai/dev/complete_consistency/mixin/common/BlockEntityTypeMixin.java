@@ -25,6 +25,8 @@ public class BlockEntityTypeMixin<T extends BlockEntity> {
 			info.setReturnValue(true);
 		} else if (BlockEntityType.LECTERN.equals(that) && (state.getBlock() instanceof LecternBlock)){
 			info.setReturnValue(true);
+		} else if (BlockEntityType.CHISELED_BOOKSHELF.equals(that) && (state.getBlock() instanceof ChiseledBookShelfBlock)){
+			info.setReturnValue(true);
 		} else if (BlockEntityType.CAMPFIRE.equals(that) && (state.getBlock() instanceof CampfireBlock)){
 			info.setReturnValue(true);
 		} //else if (BaseBlockEntities.BED.equals(that) && (state.getBlock() instanceof BaseBedBlock)){

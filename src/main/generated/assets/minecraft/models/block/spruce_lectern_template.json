@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "base": "minecraft:block/spruce_lectern_base",
+    "bottom": "minecraft:block/spruce_planks",
+    "front": "minecraft:block/spruce_lectern_front",
+    "particle": "minecraft:block/spruce_lectern_sides",
+    "sides": "minecraft:block/spruce_lectern_sides",
+    "top": "minecraft:block/spruce_lectern_top"
+  }
+}

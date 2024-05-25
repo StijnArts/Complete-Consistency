@@ -1,6 +1,7 @@
 package drai.dev.complete_consistency.modules.minecraft.materials.wood;
 
 import drai.dev.complete_consistency.materials.impl.*;
+import drai.dev.complete_consistency.modules.minecraft.materials.wood.enums.*;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.material.*;
@@ -43,6 +44,9 @@ public class Oak extends WoodMaterial {
         this.addItem(MinecraftWoodBlocks.BOAT.getName(), Items.OAK_BOAT);
         this.addItem(MinecraftWoodBlocks.CHEST_BOAT.getName(), Items.OAK_CHEST_BOAT);
 
+        this.addItem(MinecraftWoodBlocks.TORCH_ITEM.getName(), Items.TORCH);
+        this.addItem(MinecraftWoodBlocks.REDSTONE_TORCH_ITEM.getName(), Items.REDSTONE_TORCH);
+        this.addItem(MinecraftWoodBlocks.SOUL_TORCH_ITEM.getName(), Items.SOUL_TORCH);
         this.addBlock(MinecraftWoodBlocks.TORCH.getName(), Blocks.TORCH);
         this.addBlock(MinecraftWoodBlocks.WALL_TORCH.getName(), Blocks.WALL_TORCH);
         this.addBlock(MinecraftWoodBlocks.REDSTONE_TORCH.getName(), Blocks.REDSTONE_TORCH);
@@ -61,8 +65,6 @@ public class Oak extends WoodMaterial {
         this.addItem(MinecraftWoodBlocks.BEEHIVE.getName(), Items.BEEHIVE);
         this.addBlock(MinecraftWoodBlocks.BOOKSHELF.getName(), Blocks.BOOKSHELF);
         this.addItem(MinecraftWoodBlocks.BOOKSHELF.getName(), Items.BOOKSHELF);
-        this.addBlock(MinecraftWoodBlocks.LOOM.getName(), Blocks.LOOM);
-        this.addItem(MinecraftWoodBlocks.LOOM.getName(), Items.LOOM);
         this.addBlock(MinecraftWoodBlocks.CHISELED_BOOKSHELF.getName(), Blocks.CHISELED_BOOKSHELF);
         this.addItem(MinecraftWoodBlocks.CHISELED_BOOKSHELF.getName(), Items.CHISELED_BOOKSHELF);
         this.addBlock(MinecraftWoodBlocks.LECTERN.getName(), Blocks.LECTERN);
@@ -70,7 +72,5 @@ public class Oak extends WoodMaterial {
 
         this.addItem(MinecraftWoodBlocks.TORCH_ITEM.getName(), Items.TORCH);
         this.addItem(MinecraftWoodBlocks.SOUL_TORCH_ITEM.getName(), Items.SOUL_TORCH);
-        this.addItem(MinecraftWoodBlocks.ITEM_FRAME.getName(), Items.ITEM_FRAME);
-        this.addItem(MinecraftWoodBlocks.GLOW_ITEM_FRAME.getName(), Items.GLOW_ITEM_FRAME);
     }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_campfire",
+  "textures": {
+    "log": "minecraft:block/mushroom_campfire_log",
+    "particle": "minecraft:block/mushroom_campfire_log"
+  }
+}

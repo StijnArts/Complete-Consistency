@@ -15,6 +15,8 @@ public class BaseBlockEntityRenders {
     public static void register() {
         BlockEntityRenderers.register(BaseBlockEntities.CHEST, BaseChestBlockEntityRenderer::new);
         BlockEntityRenderers.register(BaseBlockEntities.TRAPPED_CHEST, BaseTrappedChestBlockEntityRenderer::new);
+        EntityRenderers.register(BaseBlockEntities.ITEM_FRAME, ItemFrameRenderer::new);
+        EntityRenderers.register(BaseBlockEntities.GLOW_ITEM_FRAME, ItemFrameRenderer::new);
 
         LayerDefinition boatModel = BoatModel.createBodyModel();
         LayerDefinition chestBoatModel = ChestBoatModel.createBodyModel();

@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "base": "minecraft:block/bamboo_lectern_base",
+    "bottom": "minecraft:block/bamboo_planks",
+    "front": "minecraft:block/bamboo_lectern_front",
+    "particle": "minecraft:block/bamboo_lectern_sides",
+    "sides": "minecraft:block/bamboo_lectern_sides",
+    "top": "minecraft:block/bamboo_lectern_top"
+  }
+}

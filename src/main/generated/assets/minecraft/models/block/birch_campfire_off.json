@@ -1,0 +1,7 @@
+{
+  "parent": "complete_consistency:block/campfire_off",
+  "textures": {
+    "log": "minecraft:block/birch_campfire_log",
+    "particle": "minecraft:block/birch_campfire_log"
+  }
+}
